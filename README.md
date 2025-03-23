@@ -9,7 +9,7 @@
 </div>
 
 <p align="center">
-  A CSS framework for the web with abbreviated styles.
+  Yumma CSS Play with Sandpack.
   <br>
   <a href="https://yummacss.com"><strong>Read the documentation ↝</strong></a>
 </p>
