@@ -11,21 +11,22 @@
 <p align="center">
   Yumma CSS Play with Sandpack.
   <br>
-  <a href="https://yummacss.com"><strong>Read the documentation ↝</strong></a>
+  <a href="https://play.yummacss.com"><strong>Launch website ↝</strong></a>
 </p>
 
----
+## Community
 
-### Support
+Join the Yumma CSS community! Share your experiences and help Yumma CSS grow and be the best it can be.
 
-[Join our Discord server](https://discord.gg/CGw5vyqmQ6). To get support just create a post in the `#help` channel with the <kbd>yummacss</kbd> tag.
+- Follow [@yummacss on X (Twitter)](https://x.com/yummacss)
+- Subscribe to [@yummacss on YouTube](https://www.youtube.com/@yummacss)
+- Join discussions on [`#yummacss` Discord](https://discord.gg/Zd2y6yVqgK)
 
-### Contributing
+## Built with
 
-I'd love your help with Yumma CSS. I've included some links below which you might find useful.
+- [Gulp](https://gulpjs.com/) — A toolkit to automate & enhance your workflow.
+- [SCSS](https://sass-lang.com/documentation/syntax/) — CSS with superpowers.
 
-- [Join us on the `#yummacss` channel on Discord](https://discord.gg/V6s5jg5TfX)
+## Licensing
 
-### Licensing
-
-MIT — Copyright (c) 2023–present [Renildo Pereira](https://github.com/yumma-lib/yumma-css/graphs/contributors).
+MIT — Copyright (c) 2022–present
