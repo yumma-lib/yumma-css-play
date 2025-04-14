@@ -23,18 +23,18 @@
     "lucide-react": "^0.475.0",
     "next": "^15.2.3",
     "prettier": "^3.5.1",
+    "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-resizable-panels": "^2.1.7",
-    "react-responsive": "^10.0.0",
-    "react": "^18.3.1",
-    "yummacss": "^2.1.0"
+    "react-responsive": "^10.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react-dom": "^18",
     "@types/react": "^18",
-    "eslint-config-next": "14.2.5",
+    "@types/react-dom": "^18",
     "eslint": "^8",
-    "typescript": "^5"
+    "eslint-config-next": "14.2.5",
+    "typescript": "^5",
+    "yummacss": "^3.0.0"
   }
 }

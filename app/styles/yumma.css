@@ -1,0 +1,101 @@
+*, :before, :after {
+  box-sizing: border-box;
+  border: 0 solid;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: #0000;
+  padding: .5rem;
+  font-family: inherit;
+}
+
+button:not([class]) {
+  border: 1px solid #bfc2c7;
+}
+
+button:focus {
+  outline: 2px solid #0000;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+code {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.b-1 {
+  border-width: 1px;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-1 {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+}
+
+.py-3 {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.tc-white {
+  color: #fff;
+}
+
+.fw-w {
+  flex-wrap: wrap;
+}
+
+@media (width >= 40rem) {
+  .sm\:fw-nw {
+    flex-wrap: nowrap;
+  }
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+@media (width >= 40rem) {
+  .sm\:jc-fs {
+    justify-content: flex-start;
+  }
+}
+
+.d-f {
+  display: flex;
+}
+
+.fs-sm {
+  font-size: .875rem;
+}
