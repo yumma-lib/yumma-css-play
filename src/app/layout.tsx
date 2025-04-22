@@ -40,6 +40,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <meta name="theme-color" content="#ffffff" />
+        <meta name="msvalidate.01" content="AF8A1080D3AA38E031467BB3C0186136" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
