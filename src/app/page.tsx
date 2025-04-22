@@ -1,7 +1,7 @@
 "use client";
 
-import Navbar from "./components/nav";
-import Playground from "./components/playground";
+import Navbar from "@/components/nav";
+import Playground from "@/components/play";
 
 const Home = () => {
   return (

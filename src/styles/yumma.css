@@ -8,17 +8,23 @@
   padding: 0;
 }
 
-button {
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+button, input {
   background-color: #0000;
   padding: .5rem;
   font-family: inherit;
 }
 
-button:not([class]) {
+button:not([class]), input:not([class]) {
   border: 1px solid #bfc2c7;
 }
 
-button:focus {
+button:focus, input:focus {
   outline: 2px solid #0000;
 }
 
@@ -26,9 +32,23 @@ button {
   cursor: pointer;
 }
 
-button:disabled {
+button:disabled, input:disabled {
   cursor: not-allowed;
   opacity: .5;
+}
+
+h1, p {
+  overflow-wrap: break-word;
+}
+
+h1 {
+  text-wrap: balance;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 code {
@@ -44,9 +64,18 @@ code {
   height: auto;
 }
 
+.h-dvh {
+  height: 100dvh;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .px-4 {
@@ -66,6 +95,14 @@ code {
 
 .w-full {
   width: 100%;
+}
+
+.tc-indigo-7 {
+  color: #4d4fbb;
+}
+
+.tc-lead {
+  color: #3f3f4e;
 }
 
 .tc-white {
@@ -92,10 +129,35 @@ code {
   }
 }
 
+.pi-c {
+  place-items: center;
+}
+
 .d-f {
   display: flex;
 }
 
+.d-g {
+  display: grid;
+}
+
 .fs-sm {
   font-size: .875rem;
+}
+
+.fs-xl {
+  font-size: 1.25rem;
+}
+
+.fs-4xl {
+  font-size: 2.25rem;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.ff-c {
+  font-family: Charter, Bitstream Charter, Sitka Text, Cambria, serif;
+  font-weight: 500;
 }

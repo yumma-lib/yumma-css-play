@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-import "./styles/globals.css";
+import "../styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Yumma CSS Play",
