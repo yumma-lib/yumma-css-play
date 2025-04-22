@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   title: "Yumma CSS Play",
   description: "Yumma CSS Play based on Sandpack.",
   icons: {
-    icon: "https://play.yummacss.com/favicon.ico",
-    apple: "https://play.yummacss.com/apple-touch-icon.png",
+    icon: "/favicon/favicon.ico",
+    apple: "/favicon/apple-touch-icon.png",
   },
   openGraph: {
     title: "Yumma CSS Play",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://play.yummacss.com/og.png",
+        url: "/og.png",
       },
     ],
   },
@@ -33,6 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Yumma CSS" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );

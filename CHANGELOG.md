@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Yumma Play will be documented in this file.
+All notable changes to the Yumma CSS Play will be documented in this file.
 
 ## Changelog for 0.1.1 🎉
 
@@ -9,10 +9,9 @@ All notable changes to the Yumma Play will be documented in this file.
     <b>Features</b>
 </summary>
 
-- Added better support for small devices
 - Added CDN customization via code editor
 - Added code editor tabs
-- Added Monaco Editor support
+- Added Monaco Editor
 - Added support for custom css
 
 </details>
@@ -23,7 +22,7 @@ All notable changes to the Yumma Play will be documented in this file.
     <b>Breaking changes</b>
 </summary>
 
-- Removed utility classes auto-completion
+- Remove mobile support
 
 </details>
 

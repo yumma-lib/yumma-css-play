@@ -1,7 +1,7 @@
-export const defaultCode: string = `<div class="d-g h-dvh pi-c">
+export const defaultCode: string = `<div class="bg-indigo-12 d-g h-dvh pi-c">
   <div class="mx-4 ta-c">
     <h1 class="ff-c fs-4xl tc-indigo-7">You're running Yumma CSS 3.0!</h1>
-    <p class="fs-xl tc-lead">
+    <p class="fs-xl tc-silver-4">
       Start by using the code editor in your left to edit the HTML.
     </p>
   </div>

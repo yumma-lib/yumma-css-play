@@ -56,10 +56,6 @@ code {
   font-size: 1em;
 }
 
-.b-1 {
-  border-width: 1px;
-}
-
 .h-auto {
   height: auto;
 }
@@ -78,55 +74,33 @@ code {
   margin-right: 1rem;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-1 {
-  padding-top: .25rem;
-  padding-bottom: .25rem;
-}
-
 .py-3 {
   padding-top: .75rem;
   padding-bottom: .75rem;
 }
 
-.w-full {
-  width: 100%;
+.bg-indigo-12 {
+  background-color: #0e0f23;
 }
 
 .tc-indigo-7 {
   color: #4d4fbb;
 }
 
-.tc-lead {
-  color: #3f3f4e;
+.tc-silver-4 {
+  color: #dadcdf;
 }
 
 .tc-white {
   color: #fff;
 }
 
-.fw-w {
-  flex-wrap: wrap;
-}
-
-@media (width >= 40rem) {
-  .sm\:fw-nw {
-    flex-wrap: nowrap;
-  }
+.f-1 {
+  flex: 1;
 }
 
 .jc-c {
   justify-content: center;
-}
-
-@media (width >= 40rem) {
-  .sm\:jc-fs {
-    justify-content: flex-start;
-  }
 }
 
 .pi-c {
@@ -139,10 +113,6 @@ code {
 
 .d-g {
   display: grid;
-}
-
-.fs-sm {
-  font-size: .875rem;
 }
 
 .fs-xl {

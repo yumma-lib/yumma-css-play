@@ -1,21 +1,18 @@
 import { handleMount } from "../themes/midnight";
-import {
-  useActiveCode,
-  SandpackStack,
-  FileTabs,
-  SandpackFileExplorer,
-  RoundedButton,
-  useSandpack,
-} from "@codesandbox/sandpack-react";
+import { useActiveCode, SandpackStack, FileTabs, useSandpack } from "@codesandbox/sandpack-react";
 import Editor from "@monaco-editor/react";
+import Logotype from "./logotype";
+
+import "../styles/globals.css";
 
 function MonacoEditor() {
   const { code, updateCode } = useActiveCode();
   const { sandpack } = useSandpack();
   return (
-    <SandpackStack style={{ height: "calc(100dvh - 4rem)", margin: 0 }}>
-      <FileTabs />
-      <div style={{ flex: 1 }}>
+    <SandpackStack style={{ height: "100dvh", margin: 0 }}>
+      <Logotype />
+      <FileTabs style={{ borderTop: "1px solid #31365e" }} />
+      <div className="f-1">
         <Editor
           defaultValue={code}
           onMount={handleMount}

@@ -1,12 +1,11 @@
 "use client";
 
-import Navbar from "@/components/nav";
+import Navbar from "@/components/logotype";
 import Playground from "@/components/play";
 
 const Home = () => {
   return (
     <>
-      <Navbar />
       <Playground />
     </>
   );

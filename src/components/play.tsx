@@ -1,6 +1,6 @@
 import { defaultCode, defaultStyles } from "../constants/content";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
-import { SandpackProvider, SandpackLayout, SandpackPreview, SandpackFileExplorer } from "@codesandbox/sandpack-react";
+import { SandpackProvider, SandpackLayout, SandpackPreview } from "@codesandbox/sandpack-react";
 import { useMediaQuery } from "react-responsive";
 import customSpTheme from "../themes/spMidnight";
 import MonacoEditor from "./monaco";
@@ -28,7 +28,7 @@ const Playground: React.FC = () => {
               <SandpackPreview
                 showOpenInCodeSandbox={false}
                 showRefreshButton={false}
-                style={{ height: "calc(100dvh - 6.5rem)" }}
+                style={{ height: "100dvh" }}
                 title="Preview"
               />
             ) : (
@@ -38,13 +38,20 @@ const Playground: React.FC = () => {
         </>
       ) : (
         <SandpackLayout>
-          <MonacoEditor />
-          <SandpackPreview
-            showOpenInCodeSandbox={false}
-            showRefreshButton={false}
-            style={{ height: "calc(100dvh - 4rem)" }}
-            title="Preview"
-          />
+          <PanelGroup direction="horizontal" style={{ height: "100dvh" }}>
+            <Panel maxSize={80} minSize={20} defaultSize={50}>
+              <MonacoEditor />
+            </Panel>
+            <PanelResizeHandle />
+            <Panel>
+              <SandpackPreview
+                showOpenInCodeSandbox={false}
+                showRefreshButton={false}
+                style={{ height: "100dvh" }}
+                title="Preview"
+              />
+            </Panel>
+          </PanelGroup>
         </SandpackLayout>
       )}
     </SandpackProvider>
