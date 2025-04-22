@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon"></link>
         <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
         <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
         <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
