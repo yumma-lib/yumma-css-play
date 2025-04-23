@@ -1,16 +1,14 @@
 <div align="center">
   <a href="https://yummacss.com" target="_blank" target="_blank" rel="noopener noreferrer">
-    <picture>
-      <img alt="Yumma CSS" src="https://www.yummacss.com/trademark/logo.png" width="110" style="max-width: 100%;">
-    </picture>
+    <img alt="Yumma CSS" src="https://play.yummacss.com/logo.png" width="250" style="max-width: 100%;">
   </a>
 </div>
 
-<p align="center">
+<div align="center">
   Yumma CSS Play with Sandpack.
   <br>
   <a href="https://play.yummacss.com"><strong>Launch website ↝</strong></a>
-</p>
+</div>
 
 ## Community
 
@@ -22,8 +20,8 @@ Join the Yumma CSS community! Share your experiences and help Yumma CSS grow and
 
 ## Built with
 
-- [Gulp](https://gulpjs.com/) — A toolkit to automate & enhance your workflow.
-- [SCSS](https://sass-lang.com/documentation/syntax/) — CSS with superpowers.
+- [Sandpack](https://sandpack.codesandbox.io/) - A toolkit for creating live code.
+- [Next.js](https://nextjs.org/) — An advanced React framework.
 
 ## Licensing
 
