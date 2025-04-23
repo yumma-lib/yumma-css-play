@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://yummacss.com" target="_blank" target="_blank" rel="noopener noreferrer">
-    <img alt="Yumma CSS" src="https://play.yummacss.com/logo.png" width="250" style="max-width: 100%;">
+    <img alt="Yumma CSS" src="https://play.yummacss.com/dark-logomark.png" width="250" style="max-width: 100%;">
   </a>
 </div>
 
