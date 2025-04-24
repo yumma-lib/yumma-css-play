@@ -4,7 +4,7 @@ import { SandpackProvider, SandpackLayout, SandpackPreview } from "@codesandbox/
 import { useMediaQuery } from "react-responsive";
 import customSpTheme from "../themes/spMidnight";
 import MonacoEditor from "./monaco";
-import React, { useState } from "react";
+import React from "react";
 
 const Playground: React.FC = () => {
   const isLarge = useMediaQuery({ maxWidth: 1024 });
