@@ -8,7 +8,6 @@ import React, { useState } from "react";
 
 const Playground: React.FC = () => {
   const isLarge = useMediaQuery({ maxWidth: 1024 });
-  const [showPreview, setShowPreview] = useState<boolean>(false);
 
   return (
     <SandpackProvider
@@ -17,25 +16,9 @@ const Playground: React.FC = () => {
       theme={customSpTheme}
       options={{ externalResources: ["/styles.css"] }}>
       {isLarge ? (
-        <>
-          <div className="d-f jc-c py-3">
-            <button className="tc-white" onClick={() => setShowPreview((prev) => !prev)}>
-              {showPreview ? "Show Editor" : "Show Preview"}
-            </button>
-          </div>
-          <SandpackLayout>
-            {showPreview ? (
-              <SandpackPreview
-                showOpenInCodeSandbox={false}
-                showRefreshButton={false}
-                style={{ height: "100dvh" }}
-                title="Preview"
-              />
-            ) : (
-              <MonacoEditor />
-            )}
-          </SandpackLayout>
-        </>
+        <div className="h-dvh d-g pi-c bg-indigo-12">
+          <h1 className="ff-c tc-white fs-xl ta-c">We don&apos;t support small screens for now, sorry.</h1>
+        </div>
       ) : (
         <SandpackLayout>
           <PanelGroup direction="horizontal" style={{ height: "100dvh" }}>

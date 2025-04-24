@@ -51,6 +51,11 @@ p {
   text-wrap: pretty;
 }
 
+small {
+  font-size: 80%;
+  line-height: 1.4;
+}
+
 code {
   font-family: monospace;
   font-size: 1em;
@@ -74,11 +79,6 @@ code {
   margin-right: 1rem;
 }
 
-.py-3 {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-}
-
 .bg-indigo-12 {
   background-color: #0e0f23;
 }
@@ -99,16 +99,8 @@ code {
   flex: 1;
 }
 
-.jc-c {
-  justify-content: center;
-}
-
 .pi-c {
   place-items: center;
-}
-
-.d-f {
-  display: flex;
 }
 
 .d-g {
