@@ -26,7 +26,7 @@ const Playground: React.FC = () => {
               <MonacoEditor />
             </Panel>
             <PanelResizeHandle />
-            <Panel>
+            <Panel defaultSize={50}>
               <SandpackPreview
                 showOpenInCodeSandbox={false}
                 showRefreshButton={false}
