@@ -16,8 +16,8 @@ const Playground: React.FC = () => {
       theme={customSpTheme}
       options={{ externalResources: ["/styles.css"] }}>
       {isLarge ? (
-        <div className="h-dvh d-g pi-c bg-indigo-12">
-          <h1 className="ff-c tc-white fs-xl ta-c">We don&apos;t support small screens for now, sorry.</h1>
+        <div className="bg-indigo-12 d-g h-dvh pi-c">
+          <h1 className="ff-c fs-xl ta-c tc-white">Sorry, but we don&apos;t support your screen size for now.</h1>
         </div>
       ) : (
         <SandpackLayout>

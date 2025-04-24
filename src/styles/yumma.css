@@ -51,11 +51,6 @@ p {
   text-wrap: pretty;
 }
 
-small {
-  font-size: 80%;
-  line-height: 1.4;
-}
-
 code {
   font-family: monospace;
   font-size: 1em;
