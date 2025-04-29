@@ -22,7 +22,8 @@ All notable changes to the Yumma CSS Play will be documented in this file.
     <b>Breaking changes</b>
 </summary>
 
-- Remove mobile support
+- Remove mobile support (Temporary)
+- Remove completion support (Temporary)
 
 </details>
 
