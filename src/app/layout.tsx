@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Yumma CSS Play",
   description: "Yumma CSS Play based on Sandpack.",
   icons: {
-    apple: "/favicon/apple-touch-icon.png",
+    apple: "/apple-touch.png",
     icon: "/favicon.ico",
   },
   openGraph: {
@@ -34,9 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="apple-mobile-web-app-title" content="Yumma CSS" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
