@@ -9,9 +9,9 @@ All notable changes to the Yumma CSS Play will be documented in this file.
     <b>Features</b>
 </summary>
 
-- Added CDN customization via code editor
-- Added code editor tabs
-- Added Monaco Editor
+- Added editor tabs
+- Added emmet abbreviation support
+- Added Monaco editor support
 - Added support for custom css
 
 </details>
