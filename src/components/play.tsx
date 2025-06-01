@@ -1,20 +1,43 @@
 import { defaultCode, defaultStyles } from "../constants/content";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
-import { SandpackProvider, SandpackLayout, SandpackPreview } from "@codesandbox/sandpack-react";
+import { SandpackProvider, SandpackLayout, SandpackPreview, SandpackFileExplorer } from "@codesandbox/sandpack-react";
 import { useMediaQuery } from "react-responsive";
 import customSpTheme from "../themes/spMidnight";
 import MonacoEditor from "./monaco";
-import React from "react";
+import React, { useMemo } from "react";
 
 const Playground: React.FC = () => {
   const isLarge = useMediaQuery({ maxWidth: 1024 });
 
+  const files = useMemo(() => {
+    return {
+      "index.html": defaultCode,
+      "styles.css": defaultStyles,
+    };
+  }, []);
+
   return (
     <SandpackProvider
-      files={{ "index.html": defaultCode, "styles.css": defaultStyles }}
+      files={files}
       template="static"
       theme={customSpTheme}
-      options={{ externalResources: ["/styles.css"] }}>
+      options={{
+        externalResources: ["/styles.css"],
+        minimap: { enabled: false },
+        ...({
+          emmet: {
+            enabled: true,
+            triggerExpansionOnTab: true,
+            showAbbreviationSuggestions: true,
+            showExpandedAbbreviation: "always",
+            showSuggestionsAsSnippets: true,
+            preferences: {},
+            showExcluded: true,
+            syntaxProfiles: {},
+            variables: {},
+          },
+        } as any),
+      }}>
       {isLarge ? (
         <div className="bg-indigo-12 d-g h-dvh pi-c">
           <h1 className="ff-c fs-xl ta-c tc-white">Sorry, but we don&apos;t support your screen size for now.</h1>
