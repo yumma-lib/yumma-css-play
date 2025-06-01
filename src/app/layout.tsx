@@ -34,8 +34,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="apple-touch-icon" href="/apple-touch.png" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <meta name="apple-mobile-web-app-title" content="Yumma CSS" />
       </head>
       <body className={inter.className}>{children}</body>
