@@ -12,7 +12,7 @@ All notable changes to the Yumma CSS Play will be documented in this file.
 - Added editor tabs
 - Added emmet abbreviation support
 - Added Monaco editor support
-- Added support for custom css
+- Added support for custom CSS
 
 </details>
 

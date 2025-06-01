@@ -37,18 +37,11 @@ button:disabled, input:disabled {
   opacity: .5;
 }
 
-h1, p {
-  overflow-wrap: break-word;
-}
-
 h1 {
+  overflow-wrap: break-word;
   text-wrap: balance;
   font-size: 1rem;
   font-weight: 600;
-}
-
-p {
-  text-wrap: pretty;
 }
 
 code {
@@ -64,26 +57,21 @@ code {
   height: 100dvh;
 }
 
+.mt-2 {
+  margin-top: .5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 .bg-indigo-12 {
   background-color: #0e0f23;
 }
 
-.tc-indigo-7 {
-  color: #4d4fbb;
-}
-
-.tc-silver-4 {
-  color: #dadcdf;
+.tc-indigo-1 {
+  color: #e4e5f9;
 }
 
 .tc-white {

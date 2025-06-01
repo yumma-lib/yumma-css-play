@@ -3,7 +3,7 @@ import Logo from "../../public/dark-logomark.png";
 
 const Header = () => {
   return (
-    <div className="mx-auto">
+    <div className="mt-2 mx-auto">
       <Image className="h-auto" width={140} src={Logo} alt="Yumma CSS Play Logo" />
     </div>
   );
