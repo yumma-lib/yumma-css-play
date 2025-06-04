@@ -1,10 +1,11 @@
 import "../styles/globals.css";
 import { emmetHTML } from "emmet-monaco-es";
 import { handleMount } from "../themes/midnight";
-import { useActiveCode, SandpackStack, FileTabs, useSandpack, SandpackFileExplorer } from "@codesandbox/sandpack-react";
+import { useActiveCode, SandpackStack, FileTabs, useSandpack } from "@codesandbox/sandpack-react";
 import { useRef } from "react";
 import Editor from "@monaco-editor/react";
 import Header from "./header";
+import { registerProviders } from "../utils/providers";
 
 function MonacoEditor() {
   const { code, updateCode } = useActiveCode();
@@ -17,6 +18,7 @@ function MonacoEditor() {
     monacoRef.current = monaco;
 
     emmetHTML(monaco);
+    registerProviders(monaco);
 
     if (handleMount) {
       handleMount(editor, monaco);
