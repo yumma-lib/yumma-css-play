@@ -14,6 +14,11 @@ body {
   line-height: 1.5;
 }
 
+svg {
+  max-width: 100%;
+  display: block;
+}
+
 button, input {
   background-color: #0000;
   padding: .5rem;
@@ -66,8 +71,16 @@ code {
   margin-right: auto;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .bg-indigo-12 {
   background-color: #0e0f23;
+}
+
+.bg-white {
+  background-color: #fff;
 }
 
 .tc-indigo-1 {

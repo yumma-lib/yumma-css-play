@@ -1,5 +1,5 @@
 // TODO: Get data from Yumma CSS API
-function createUtilities(range: any) {
+function createUtilities(monaco: any, range: any) {
   return [
     {
       detail: "background-color: white",
@@ -46,7 +46,7 @@ export function registerProviders(monaco: any) {
         endColumn: word.endColumn,
       };
       return {
-        suggestions: createUtilities(range),
+        suggestions: createUtilities(monaco, range),
       };
     },
   });
