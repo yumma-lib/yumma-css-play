@@ -1,53 +1,48 @@
-// TODO: Get data from Yumma CSS API
-function createUtilities(monaco: any, range: any) {
-  return [
-    {
-      detail: "background-color: white",
-      insertText: "bg-white",
-      kind: monaco.languages.CompletionItemKind.Constant,
-      label: "bg-white",
-      range: range,
-    },
-    {
-      detail: "text-align: center",
-      insertText: "ta-c",
-      kind: monaco.languages.CompletionItemKind.Constant,
-      label: "ta-c",
-      range: range,
-    },
-    {
-      detail: "padding: 1rem",
-      insertText: "p-4",
-      kind: monaco.languages.CompletionItemKind.Constant,
-      label: "p-4",
-      range: range,
-    },
-  ];
-}
+import { fetchUtilities } from "./fetchUtilities";
+
+let cachedSuggestions: any[] | null = null;
+let lastFetchTime = 0;
 
 export function registerProviders(monaco: any) {
   monaco.languages.registerCompletionItemProvider("html", {
-    provideCompletionItems: function (model: any, position: any) {
-      var textUntilPosition = model.getValueInRange({
+    provideCompletionItems: async function (model: any, position: any) {
+      const textUntilPosition = model.getValueInRange({
         startLineNumber: 1,
         startColumn: 1,
         endLineNumber: position.lineNumber,
         endColumn: position.column,
       });
-      var match = textUntilPosition.match(/class\s*=\s*"(.*?)$/);
-      if (!match) {
-        return { suggestions: [] };
-      }
-      var word = model.getWordUntilPosition(position);
-      var range = {
+
+      const match = textUntilPosition.match(/class\s*=\s*"([^"]*)$/);
+      if (!match) return { suggestions: [] };
+
+      const word = model.getWordUntilPosition(position);
+      const range = {
         startLineNumber: position.lineNumber,
         endLineNumber: position.lineNumber,
         startColumn: word.startColumn,
         endColumn: word.endColumn,
       };
-      return {
-        suggestions: createUtilities(monaco, range),
-      };
+
+      // Cache management (5 minute cache)
+      const now = Date.now();
+      if (!cachedSuggestions || now - lastFetchTime > 300000) {
+        try {
+          cachedSuggestions = await fetchUtilities(monaco);
+          lastFetchTime = now;
+        } catch (error) {
+          console.error("Error fetching suggestions:", error);
+          return { suggestions: [] };
+        }
+      }
+
+      // Apply current range to all suggestions
+      const suggestionsWithRange = cachedSuggestions.map((suggestion) => ({
+        ...suggestion,
+        range: range,
+      }));
+
+      return { suggestions: suggestionsWithRange };
     },
   });
 }

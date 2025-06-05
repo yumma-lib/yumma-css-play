@@ -29,7 +29,7 @@ button:not([class]), input:not([class]) {
   border: 1px solid #bfc2c7;
 }
 
-button:focus, input:focus {
+a:focus, button:focus, input:focus {
   outline: 2px solid #0000;
 }
 
@@ -54,6 +54,11 @@ code {
   font-size: 1em;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .h-auto {
   height: auto;
 }
@@ -71,16 +76,8 @@ code {
   margin-right: auto;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .bg-indigo-12 {
   background-color: #0e0f23;
-}
-
-.bg-white {
-  background-color: #fff;
 }
 
 .tc-indigo-1 {
