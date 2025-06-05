@@ -40,11 +40,13 @@ const Playground: React.FC = () => {
       }}>
       {isLarge ? (
         <div className="bg-indigo-12 d-g h-dvh pi-c">
-          <h1 className="ff-c fs-xl ta-c tc-white">Sorry, but we don&apos;t support your screen size for now.</h1>
+          <h1 className="ff-c fs-xl ta-c tc-white">
+            Sorry, Yumma CSS Play does not support the screen size of your device.
+          </h1>
         </div>
       ) : (
         <SandpackLayout>
-          <PanelGroup direction="horizontal">
+          <PanelGroup direction="horizontal" className="h-dvh">
             <Panel maxSize={80} minSize={20} defaultSize={50}>
               <MonacoEditor />
             </Panel>
