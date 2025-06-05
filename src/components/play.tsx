@@ -18,8 +18,8 @@ const Playground: React.FC = () => {
 
   return (
     <SandpackProvider
-      // files={files}
-      template="react-ts"
+      files={files}
+      template="static"
       theme={customSpTheme}
       options={{
         externalResources: ["/styles.css"],
@@ -40,7 +40,7 @@ const Playground: React.FC = () => {
       }}>
       {isLarge ? (
         <div className="bg-indigo-12 d-g h-dvh pi-c">
-          <h1 className="ff-c fs-xl ta-c tc-white">
+          <h1 className="ff-c fs-3xl ta-c tc-white">
             Sorry, Yumma CSS Play does not support the screen size of your device.
           </h1>
         </div>
