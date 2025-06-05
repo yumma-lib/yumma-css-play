@@ -18,8 +18,8 @@ const Playground: React.FC = () => {
 
   return (
     <SandpackProvider
-      files={files}
-      template="static"
+      // files={files}
+      template="react-ts"
       theme={customSpTheme}
       options={{
         externalResources: ["/styles.css"],
@@ -44,18 +44,13 @@ const Playground: React.FC = () => {
         </div>
       ) : (
         <SandpackLayout>
-          <PanelGroup direction="horizontal" style={{ height: "100dvh" }}>
+          <PanelGroup direction="horizontal">
             <Panel maxSize={80} minSize={20} defaultSize={50}>
               <MonacoEditor />
             </Panel>
             <PanelResizeHandle />
             <Panel defaultSize={50}>
-              <SandpackPreview
-                showOpenInCodeSandbox={false}
-                showRefreshButton={false}
-                style={{ height: "100dvh" }}
-                title="Preview"
-              />
+              <SandpackPreview className="h-dvh" showOpenInCodeSandbox={false} showRefreshButton={false} />
             </Panel>
           </PanelGroup>
         </SandpackLayout>
