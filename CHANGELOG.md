@@ -9,10 +9,8 @@ All notable changes to the Yumma CSS Play will be documented in this file.
     <b>Features</b>
 </summary>
 
-- Added editor tabs
 - Added emmet abbreviation support
 - Added Monaco editor support
-- Added support for custom CSS
 
 </details>
 
@@ -22,7 +20,7 @@ All notable changes to the Yumma CSS Play will be documented in this file.
     <b>Breaking changes</b>
 </summary>
 
-- Remove mobile support
+- None
 
 </details>
 

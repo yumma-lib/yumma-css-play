@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import { emmetHTML } from "emmet-monaco-es";
 import { handleMount } from "../themes/midnight";
-import { useActiveCode, SandpackStack, FileTabs, useSandpack } from "@codesandbox/sandpack-react";
+import { useActiveCode, SandpackStack, useSandpack } from "@codesandbox/sandpack-react";
 import { useRef } from "react";
 import Editor from "@monaco-editor/react";
 import Header from "./header";
@@ -33,17 +33,16 @@ function MonacoEditor() {
   };
 
   return (
-    <SandpackStack style={{ height: "100dvh", margin: 0 }}>
+    <SandpackStack className="h-dvh m-0">
       <Header />
-      <FileTabs style={{ borderTop: "1px solid #31365e" }} />
-      <div className="f-1">
+      <div className="f-1" style={{ borderTop: "1px solid #31365e" }}>
         <Editor
           defaultValue={code}
           key={sandpack.activeFile}
           language={getLanguage(sandpack.activeFile)}
           onChange={(value) => updateCode(value || "")}
           onMount={handleEditorDidMount}
-          options={{ minimap: { enabled: false } }}
+          options={{ minimap: { enabled: false }, padding: { top: 8 }, scrollBeyondLastLine: false }}
           theme="midnight"
         />
       </div>

@@ -5,7 +5,7 @@ export const midnight = EditorView.theme({
   ".cm-tooltip": {
     backgroundColor: customSpTheme.colors.surface1,
     color: `${customSpTheme.syntax.plain}`,
-    border: `1px solid ${customSpTheme.colors.clickable}`,
+    // border: `1px solid ${customSpTheme.colors.clickable}`,
     borderRadius: "4px",
     fontFamily: customSpTheme.font.body,
     fontSize: customSpTheme.font.size,
