@@ -1,6 +1,6 @@
 import { initialCode, initialStyles } from "../constants/content";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
-import { SandpackProvider, SandpackLayout, SandpackPreview, SandpackConsole } from "@codesandbox/sandpack-react";
+import { SandpackProvider, SandpackLayout, SandpackPreview } from "@codesandbox/sandpack-react";
 import customSpTheme from "../themes/spMidnight";
 import MonacoEditor from "./monaco";
 import React, { useMemo } from "react";

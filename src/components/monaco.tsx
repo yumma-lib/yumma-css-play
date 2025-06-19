@@ -3,10 +3,11 @@ import { emmetHTML } from "emmet-monaco-es";
 import { handleMount } from "../themes/midnight";
 import { registerProviders } from "../utils/providers";
 import { setupKeybindings } from "../utils/keybindings";
-import { useActiveCode, SandpackStack, useSandpack } from "@codesandbox/sandpack-react";
+import { useActiveCode, SandpackStack, useSandpack, RoundedButton } from "@codesandbox/sandpack-react";
 import { useRef } from "react";
 import Editor from "@monaco-editor/react";
 import Header from "./header";
+import FormatButton from "./format";
 
 function MonacoEditor() {
   const { code, updateCode } = useActiveCode();
@@ -27,6 +28,16 @@ function MonacoEditor() {
     }
   };
 
+  const handleFormat = () => {
+    if (editorRef.current) {
+      try {
+        editorRef.current.trigger("format-button", "editor.action.formatDocument", null);
+      } catch (error) {
+        console.warn("Format document failed:", error);
+      }
+    }
+  };
+
   const getLanguage = (filename: string) => {
     if (filename.endsWith(".css")) return "css";
     if (filename.endsWith(".html")) return "html";
@@ -37,7 +48,8 @@ function MonacoEditor() {
   return (
     <SandpackStack className="h-dvh m-0">
       <Header />
-      <div className="f-1" style={{ borderTop: "1px solid #31365e" }}>
+      {/* <FormatButton onFormat={handleFormat} /> */}
+      <div className="f-1 relative" style={{ borderTop: "1px solid #31365e" }}>
         <Editor
           defaultValue={code}
           key={sandpack.activeFile}
