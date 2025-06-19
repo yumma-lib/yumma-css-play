@@ -1,11 +1,12 @@
 import "../styles/globals.css";
 import { emmetHTML } from "emmet-monaco-es";
 import { handleMount } from "../themes/midnight";
+import { registerProviders } from "../utils/providers";
+import { setupKeybindings } from "../utils/keybindings";
 import { useActiveCode, SandpackStack, useSandpack } from "@codesandbox/sandpack-react";
 import { useRef } from "react";
 import Editor from "@monaco-editor/react";
 import Header from "./header";
-import { registerProviders } from "../utils/providers";
 
 function MonacoEditor() {
   const { code, updateCode } = useActiveCode();
@@ -19,6 +20,7 @@ function MonacoEditor() {
 
     emmetHTML(monaco);
     registerProviders(monaco);
+    setupKeybindings(editor, monaco);
 
     if (handleMount) {
       handleMount(editor, monaco);
