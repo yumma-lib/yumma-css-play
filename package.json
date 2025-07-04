@@ -19,6 +19,7 @@
     "@codesandbox/sandpack-client": "^2.18.2",
     "@codesandbox/sandpack-react": "^2.18.2",
     "@monaco-editor/react": "^4.7.0",
+    "@vercel/speed-insights": "^1.2.0",
     "emmet-monaco-es": "^5.5.0",
     "lodash.debounce": "^4.0.8",
     "lucide-react": "^0.475.0",
