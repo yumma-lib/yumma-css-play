@@ -5,26 +5,20 @@
   "license": "MIT",
   "name": "yummacss-css-play",
   "private": true,
+  "type": "module",
   "version": "0.1.1",
   "scripts": {
-    "dev": "concurrently \"next dev --turbopack\" \"yummacss watch\"",
     "build": "next build && yummacss build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "concurrently \"next dev --turbopack\" \"yummacss watch\"",
+    "lint": "next lint",
+    "start": "next start"
   },
   "dependencies": {
-    "@codemirror/autocomplete": "^6.18.4",
-    "@codemirror/search": "^6.5.9",
-    "@codemirror/view": "^6.36.2",
-    "@codesandbox/sandpack-client": "^2.18.2",
     "@codesandbox/sandpack-react": "^2.18.2",
     "@monaco-editor/react": "^4.7.0",
     "@vercel/speed-insights": "^1.2.0",
     "emmet-monaco-es": "^5.5.0",
-    "lodash.debounce": "^4.0.8",
-    "lucide-react": "^0.475.0",
     "next": "^15.2.3",
-    "prettier": "^3.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-resizable-panels": "^2.1.7"
