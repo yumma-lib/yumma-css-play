@@ -83,10 +83,6 @@ code {
   color: #e4e5f9;
 }
 
-.as-fe {
-  align-self: flex-end;
-}
-
 .f-1 {
   flex: 1;
 }
@@ -95,16 +91,8 @@ code {
   place-items: center;
 }
 
-.ps-e {
-  place-self: end;
-}
-
 .d-g {
   display: grid;
-}
-
-.p-a {
-  position: absolute;
 }
 
 .fs-4xl {

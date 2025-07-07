@@ -1,28 +1,17 @@
-<div align="center">
-  <a href="https://yummacss.com" target="_blank" rel="noopener noreferrer">
-    <img alt="Yumma CSS" src="https://play.yummacss.com/dark-logomark.png" width="250" style="max-width: 100%;">
-  </a>
-</div>
+# [@yummacss/play](https://play.yummacss.com)
 
-<div align="center">
-  Yumma CSS Play with Sandpack.
-  <br>
-  <a href="https://play.yummacss.com"><strong>Launch website ↝</strong></a>
-</div>
+Sandpack-based playground for Yumma CSS.
 
-## Community
+## Documentation
 
-Join the Yumma CSS community! Share your experiences and help Yumma CSS grow and be the best it can be.
-
-- Follow [@yummacss on X (Twitter)](https://x.com/yummacss)
-- Subscribe to [@yummacss on YouTube](https://www.youtube.com/@yummacss)
-- Join discussions on [`#yummacss` Discord](https://discord.gg/Zd2y6yVqgK)
+Head over to [yummacss.com](https://www.yummacss.com) for the full documentation.
 
 ## Built with
 
-- [Sandpack](https://sandpack.codesandbox.io/) - A toolkit for creating live code.
-- [Next.js](https://nextjs.org/) — An advanced React framework.
+- [next](https://nextjs.org/) — An advanced React framework.
+- [@codesandbox/sandpack-react](https://sandpack.codesandbox.io/) -  Sandboxes that run in the browser.
+- [@monaco-editor/react](https://microsoft.github.io/monaco-editor/) - The code editor that powers VS Code.
 
-## Licensing
+## License
 
-MIT — Copyright (c) 2022–present
+This project is licensed under the [MIT License](LICENSE)
