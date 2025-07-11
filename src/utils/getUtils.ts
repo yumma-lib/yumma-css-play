@@ -1,4 +1,4 @@
-import { getAllUtils } from "yumma-css-api";
+import { getAllUtils } from "@yummacss/api";
 
 export function getUtilities(monaco: any): any[] {
   try {
