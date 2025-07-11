@@ -27,16 +27,6 @@ function MonacoEditor() {
     }
   };
 
-  const handleFormat = () => {
-    if (editorRef.current) {
-      try {
-        editorRef.current.trigger("format-button", "editor.action.formatDocument", null);
-      } catch (error) {
-        console.warn("Format document failed:", error);
-      }
-    }
-  };
-
   const getLanguage = (filename: string) => {
     if (filename.endsWith(".css")) return "css";
     if (filename.endsWith(".html")) return "html";
@@ -47,7 +37,6 @@ function MonacoEditor() {
   return (
     <SandpackStack className="h-dvh m-0">
       <Header />
-      {/* <FormatButton onFormat={handleFormat} /> */}
       <div className="f-1 relative" style={{ borderTop: "1px solid #31365e" }}>
         <Editor
           defaultValue={code}
