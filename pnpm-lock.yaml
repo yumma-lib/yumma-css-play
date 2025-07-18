@@ -61,8 +61,8 @@ importers:
         specifier: ^5
         version: 5.7.3
       yummacss:
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: ^3.0.1
+        version: 3.0.1
 
 packages:
 
@@ -2178,8 +2178,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  yummacss@3.0.0:
-    resolution: {integrity: sha512-X7LvWef0tF9fweSbCf2OxOyzmeYOfcobdQTRkXsx1w0rRBbWYMw8BOp7Eiy8ZxCoO1d1oKddarUtFgIO0R/KxA==}
+  yummacss@3.0.1:
+    resolution: {integrity: sha512-TcgWsiSYVWqgGTq4qsxVBCIRecmmeymxPVwLazK0hID6VYz+9p7twHCwgi4tGlEyx0+OTgc2SxMQNvmdnnhELw==}
     hasBin: true
 
 snapshots:
@@ -4545,7 +4545,7 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  yummacss@3.0.0:
+  yummacss@3.0.1:
     dependencies:
       chokidar: 4.0.3
       commander: 13.1.0
