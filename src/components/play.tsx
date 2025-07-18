@@ -37,7 +37,6 @@ const Playground: React.FC = () => {
       }}>
       <SandpackLayout style={{ border: 0 }}>
         <PanelGroup direction="horizontal" className="h-dvh">
-          
           <Panel maxSize={80} minSize={20} defaultSize={50}>
             <MonacoEditor />
           </Panel>
