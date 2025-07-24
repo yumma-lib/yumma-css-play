@@ -1,6 +1,6 @@
 # [@yummacss/play](https://play.yummacss.com)
 
-Sandpack-based playground for Yumma CSS.
+Sandpack-based playground for Yumma CSS with Monaco Editor.
 
 ## Documentation
 
