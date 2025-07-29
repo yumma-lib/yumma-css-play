@@ -1,8 +1,8 @@
-import "../styles/globals.css";
+import "@/styles/globals.css";
 import { emmetHTML } from "emmet-monaco-es";
-import { handleMount } from "../themes/midnight";
-import { registerProviders } from "../utils/providers";
-import { setupKeybindings } from "../utils/keybindings";
+import { handleMount } from "@/themes/midnight";
+import { registerProviders } from "@/utils/providers";
+import { setupKeybindings } from "@/utils/keybindings";
 import { useActiveCode, SandpackStack, useSandpack } from "@codesandbox/sandpack-react";
 import { useRef } from "react";
 import Editor from "@monaco-editor/react";
