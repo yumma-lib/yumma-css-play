@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../../public/dark-logomark.png";
+import Logo from "@/public/dark-logomark.png";
 
 const Header = () => {
   return (
