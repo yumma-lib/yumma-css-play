@@ -37,7 +37,7 @@ function MonacoEditor() {
   return (
     <SandpackStack className="h-dvh m-0">
       <Header />
-      <div className="f-1 relative" style={{ borderTop: "1px solid #31365e" }}>
+      <div className="f-1" style={{ borderTop: "1px solid #31365e" }}>
         <Editor
           defaultValue={code}
           key={sandpack.activeFile}
