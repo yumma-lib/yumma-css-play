@@ -1,0 +1,13 @@
+.gitignore
+.prettierignore
+
+node_modules/
+pnpm-lock.yaml
+
+*.tsbuildinfo
+coverage/
+
+.next/
+.vercel/
+
+yumma.css
