@@ -12,7 +12,7 @@
     "build": "next build && yummacss build",
     "dev": "concurrently \"next dev --turbopack\" \"yummacss watch\"",
     "lint": "next lint",
-    "release": "pnpm up yummacss @yummacss/api",
+    "release": "pnpm up yummacss @yummacss/api --latest",
     "start": "next start"
   },
   "dependencies": {
