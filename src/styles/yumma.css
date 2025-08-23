@@ -1,6 +1,4 @@
-*,
-:before,
-:after {
+*, :before, :after {
   box-sizing: border-box;
   border: 0 solid;
 }
@@ -16,25 +14,17 @@ body {
   line-height: 1.5;
 }
 
-svg {
-  max-width: 100%;
-  display: block;
-}
-
-button,
-input {
+button, input {
   background-color: #0000;
-  padding: 0.5rem;
+  padding: .5rem;
   font-family: inherit;
 }
 
-button:not([class]),
-input:not([class]) {
+button:not([class]), input:not([class]) {
   border: 1px solid #bfc2c7;
 }
 
-button:focus,
-input:focus {
+button:focus, input:focus {
   outline: 2px solid #0000;
 }
 
@@ -42,10 +32,9 @@ button {
   cursor: pointer;
 }
 
-button:disabled,
-input:disabled {
+button:disabled, input:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: .5;
 }
 
 h1 {
@@ -73,7 +62,7 @@ code {
 }
 
 .mt-2 {
-  margin-top: 0.5rem;
+  margin-top: .5rem;
 }
 
 .mx-auto {
@@ -110,11 +99,6 @@ code {
 }
 
 .ff-c {
-  font-family:
-    Charter,
-    Bitstream Charter,
-    Sitka Text,
-    Cambria,
-    serif;
+  font-family: Charter, Bitstream Charter, Sitka Text, Cambria, serif;
   font-weight: 500;
 }

@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import { Metadata } from "next";
 const inter = Inter({ subsets: ["latin"] });
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import "@/styles/globals.css";
+import "@/styles/yumma.css";
 
 export const metadata: Metadata = {
   title: "Yumma CSS Play",
@@ -32,14 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="apple-touch-icon" href="/apple-touch.png" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <meta name="apple-mobile-web-app-title" content="Yumma CSS" />
-      </head>
-      <body className={inter.className}>
+      <body className={inter.className} style={{ backgroundColor: "#151724;"}}>
         {children}
         <SpeedInsights />
       </body>

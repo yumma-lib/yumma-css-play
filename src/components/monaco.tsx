@@ -1,4 +1,3 @@
-import "@/styles/globals.css";
 import { emmetHTML } from "emmet-monaco-es";
 import { handleMount } from "@/themes/midnight";
 import { registerProviders } from "@/utils/providers";
