@@ -15,6 +15,7 @@
     "release": "pnpm up yummacss @yummacss/api --latest",
     "start": "next start"
   },
+  "packageManager": "pnpm@10.15.0",
   "dependencies": {
     "@codemirror/view": "^6.38.0",
     "@codesandbox/sandpack-react": "^2.18.2",
