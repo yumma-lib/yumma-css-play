@@ -42,7 +42,7 @@ const Playground: React.FC = () => {
           </Panel>
           <PanelResizeHandle onDoubleClick={() => {}} />
           <Panel defaultSize={50}>
-            <SandpackPreview className="h-dvh" showOpenInCodeSandbox={true} showRefreshButton={false} />
+            <SandpackPreview className="h-dvh" showOpenInCodeSandbox={false} showRefreshButton={false} />
           </Panel>
         </PanelGroup>
       </SandpackLayout>
