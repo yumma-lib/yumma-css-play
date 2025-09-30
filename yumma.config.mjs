@@ -1,6 +1,6 @@
 export default {
   source: ["src/**/*.{ts,tsx}"],
-  output: "src/styles/yumma.css",
+  output: "src/styles/out.css",
   buildOptions: {
     reset: true,
     minify: false,
