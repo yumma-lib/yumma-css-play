@@ -1,6 +1,6 @@
 "use client";
 
-import Playground from "@/components/play";
+import Playground from "@/components/editor";
 
 const Home = () => {
   return <Playground />;

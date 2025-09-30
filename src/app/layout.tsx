@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import { Metadata } from "next";
 const inter = Inter({ subsets: ["latin"] });
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import "@/styles/yumma.css";
+import "@/styles/out.css";
 
 export const metadata: Metadata = {
   title: "Yumma CSS Play",
