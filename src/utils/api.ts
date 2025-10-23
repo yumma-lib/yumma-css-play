@@ -1,8 +1,8 @@
-import { getAllUtils } from "@yummacss/api";
+import { coreUtils } from "@yummacss/api";
 
-export function getUtilities(monaco: any): any[] {
+export function getUtils(monaco: any): any[] {
   try {
-    const allUtils = getAllUtils();
+    const allUtils = coreUtils();
     const suggestions: any[] = [];
 
     // Iterate through each utility category

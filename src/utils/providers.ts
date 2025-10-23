@@ -1,4 +1,4 @@
-import { getUtilities } from "./getUtils";
+import { getUtils } from "./api";
 
 export function registerProviders(monaco: any) {
   monaco.languages.registerCompletionItemProvider("html", {
@@ -22,7 +22,7 @@ export function registerProviders(monaco: any) {
       };
 
       try {
-        const suggestions = getUtilities(monaco);
+        const suggestions = getUtils(monaco);
         const suggestionsWithRange = suggestions.map((suggestion) => ({
           ...suggestion,
           range: range,

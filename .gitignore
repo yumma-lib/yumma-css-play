@@ -1,26 +1,43 @@
-# debug
-npm-debug.log*
-
 # dependencies
 node_modules/
 
-# local env files
-.env*.local
+# production
+build/
+dist/
 
 # next.js
 .next/
-out/
 
-# production
-build/
+# misc
+.DS_Store
+*.pem
+.npmrc
 
-# tree
-project-hierarchy.txt
+# debug
+npm-debug.log*
+pnpm-debug.log*
+
+# env files
+.env*
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 
-# vs code
+# IDE
 .vscode/
-.vercel
+.zed/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+
+# testing
+project-hierarchy.txt
+coverage/
+*.tgz
+
+# vercel
+.vercel/
