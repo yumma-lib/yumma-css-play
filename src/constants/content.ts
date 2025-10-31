@@ -12,15 +12,14 @@ export const initialCode: string = `<div class="p-r min-h-dvh w-full bg-indigo-1
     <h1 class="fs-6xl fw-700 mb-4">Yumma CSS Play</h1>
     <p class="fs-lg ff-s lh-6 tc-silver-4 max-w-xl">
       Zero-config, fully responsive playground powered by the Monaco editor.<br>
-    Built-in utility completions, familiar shortcuts —
-      no setup required.
+        Built-in utility completions, and much more!
     </p>
 
     <div class="d-f g-4 mt-8 fw-500 ff-s fs-sm">
       <div class="py-1 px-3 bg-indigo-11 b-1 bc-indigo-10 tc-silver-2">Zero-Config</div>
       <div class="py-1 px-3 bg-indigo-11 b-1 bc-indigo-10 tc-silver-2">Responsive Panels</div>
       <div class="py-1 px-3 bg-indigo-11 b-1 bc-indigo-10 tc-silver-2">Utility Completions</div>
-      <div class="py-1 px-3 bg-indigo-11 b-1 bc-indigo-10 tc-silver-2">Monaco Shortcuts</div>
+      <div class="py-1 px-3 bg-indigo-11 b-1 bc-indigo-10 tc-silver-2">Monaco Support</div>
     </div>
   </section>
 </div>`;
