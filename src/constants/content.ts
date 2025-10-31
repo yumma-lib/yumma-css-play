@@ -1,4 +1,4 @@
-export const initialCode: string = `<div class="p-r min-h-dvh w-full bg-indigo-12 ff-c tc-white ov-h">
+export const initialCode: string = `<div class="p-r min-h-dvh w-full bg-indigo-12 ff-c tc-white o-h">
   <div class="p-a i-0 zi-0 o-20" style="
       background-image:
         linear-gradient(90deg, rgba(49, 54, 94) 1px, transparent 0),
