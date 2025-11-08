@@ -11,7 +11,7 @@
     "format": "prettier --write .",
     "build": "next build && yummacss build",
     "dev": "concurrently \"next dev --turbopack\" \"yummacss watch\"",
-    "lint": "next lint",
+    "lint": "biome check --write .",
     "release": "pnpm up yummacss @yummacss/api --latest",
     "start": "next start"
   },
@@ -20,6 +20,7 @@
     "@codemirror/view": "^6.38.0",
     "@codesandbox/sandpack-react": "^2.18.2",
     "@monaco-editor/react": "^4.7.0",
+    "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "@yummacss/api": "^1.7.2",
     "emmet-monaco-es": "^5.5.0",
@@ -29,13 +30,11 @@
     "react-resizable-panels": "^2.1.7"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.3.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "concurrently": "^9.1.2",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5",
-    "prettier-plugin-organize-imports": "^4.2.0",
     "typescript": "^5",
     "yummacss": "^3.5.0"
   }
