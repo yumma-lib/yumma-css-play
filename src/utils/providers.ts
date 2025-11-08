@@ -2,7 +2,7 @@ import { getUtils } from "./api";
 
 export function registerProviders(monaco: any) {
   monaco.languages.registerCompletionItemProvider("html", {
-    provideCompletionItems: function (model: any, position: any) {
+    provideCompletionItems: (model: any, position: any) => {
       const textUntilPosition = model.getValueInRange({
         startLineNumber: 1,
         startColumn: 1,

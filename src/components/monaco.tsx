@@ -1,10 +1,14 @@
-import { emmetHTML } from "emmet-monaco-es";
-import { handleMount } from "@/themes/midnight";
-import { registerProviders } from "@/utils/providers";
-import { setupKeybindings } from "@/utils/keybindings";
-import { useActiveCode, SandpackStack, useSandpack } from "@codesandbox/sandpack-react";
-import { useRef } from "react";
+import {
+  SandpackStack,
+  useActiveCode,
+  useSandpack,
+} from "@codesandbox/sandpack-react";
 import Editor from "@monaco-editor/react";
+import { emmetHTML } from "emmet-monaco-es";
+import { useRef } from "react";
+import { handleMount } from "@/themes/midnight";
+import { setupKeybindings } from "@/utils/keybindings";
+import { registerProviders } from "@/utils/providers";
 import Navbar from "./navbar";
 
 function MonacoEditor() {
@@ -43,7 +47,11 @@ function MonacoEditor() {
           language={getLanguage(sandpack.activeFile)}
           onChange={(value) => updateCode(value || "")}
           onMount={handleEditorDidMount}
-          options={{ minimap: { enabled: false }, padding: { top: 8 }, scrollBeyondLastLine: false }}
+          options={{
+            minimap: { enabled: false },
+            padding: { top: 8 },
+            scrollBeyondLastLine: false,
+          }}
           theme="midnight"
         />
       </div>

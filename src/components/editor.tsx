@@ -1,9 +1,14 @@
-import { initialCode, initialStyles } from "@/constants/content";
+import {
+  SandpackLayout,
+  SandpackPreview,
+  SandpackProvider,
+} from "@codesandbox/sandpack-react";
+import type React from "react";
+import { useMemo } from "react";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
-import { SandpackProvider, SandpackLayout, SandpackPreview } from "@codesandbox/sandpack-react";
+import { initialCode, initialStyles } from "@/constants/content";
 import customSpTheme from "@/themes/spMidnight";
 import MonacoEditor from "./monaco";
-import React, { useMemo } from "react";
 
 const Playground: React.FC = () => {
   const files = useMemo(() => {
@@ -34,7 +39,8 @@ const Playground: React.FC = () => {
             variables: {},
           },
         } as any),
-      }}>
+      }}
+    >
       <SandpackLayout style={{ border: 0 }}>
         <PanelGroup direction="horizontal" className="h-dvh">
           <Panel maxSize={80} minSize={20} defaultSize={50}>
@@ -42,7 +48,11 @@ const Playground: React.FC = () => {
           </Panel>
           <PanelResizeHandle onDoubleClick={() => {}} />
           <Panel defaultSize={50}>
-            <SandpackPreview className="h-dvh" showOpenInCodeSandbox={false} showRefreshButton={false} />
+            <SandpackPreview
+              className="h-dvh"
+              showOpenInCodeSandbox={false}
+              showRefreshButton={false}
+            />
           </Panel>
         </PanelGroup>
       </SandpackLayout>

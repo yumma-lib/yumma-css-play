@@ -1,7 +1,9 @@
-import { Inter } from "next/font/google";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+
 const inter = Inter({ subsets: ["latin"] });
-import { Analytics } from '@vercel/analytics/next';
+
+import { Analytics } from "@vercel/analytics/next";
 import "@/styles/out.css";
 
 export const metadata: Metadata = {
@@ -32,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} style={{ backgroundColor: "#151724;"}}>
+      <body className={inter.className} style={{ backgroundColor: "#151724;" }}>
         {children}
         <Analytics />
       </body>

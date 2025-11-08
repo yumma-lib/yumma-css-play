@@ -9,7 +9,8 @@ export function getUtils(monaco: any): any[] {
     Object.values(allUtils).forEach((util: any) => {
       // Iterate through each value in the utility
       Object.entries(util.values).forEach(([suffix, cssValue]) => {
-        const fullPrefix = suffix === "" ? util.prefix : `${util.prefix}-${suffix}`;
+        const fullPrefix =
+          suffix === "" ? util.prefix : `${util.prefix}-${suffix}`;
         const cssProperty = util.properties[0]; // Take the first property for display
 
         suggestions.push({
