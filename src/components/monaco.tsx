@@ -5,7 +5,7 @@ import { setupKeybindings } from "@/utils/keybindings";
 import { useActiveCode, SandpackStack, useSandpack } from "@codesandbox/sandpack-react";
 import { useRef } from "react";
 import Editor from "@monaco-editor/react";
-import Header from "./header";
+import Navbar from "./navbar";
 
 function MonacoEditor() {
   const { code, updateCode } = useActiveCode();
@@ -35,7 +35,7 @@ function MonacoEditor() {
 
   return (
     <SandpackStack className="h-dvh m-0">
-      <Header />
+      <Navbar />
       <div className="f-1" style={{ borderTop: "1px solid #31365e" }}>
         <Editor
           defaultValue={code}
