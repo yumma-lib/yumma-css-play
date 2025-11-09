@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className="" style={{ backgroundColor: "#1e2039" }}>
       <Image
-        className="h-auto py-2 mx-auto"
+        className="h-auto py-2"
         width={80}
         src={Logo}
         alt="Yumma CSS Play Logo"
