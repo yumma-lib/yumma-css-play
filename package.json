@@ -15,11 +15,12 @@
     "release": "pnpm up yummacss @yummacss/api --latest",
     "start": "next start"
   },
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "pnpm@10.20.0",
   "dependencies": {
     "@codemirror/view": "^6.38.0",
     "@codesandbox/sandpack-react": "^2.18.2",
     "@monaco-editor/react": "^4.7.0",
+    "@radix-ui/react-icons": "^1.3.2",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "@yummacss/api": "^1.7.2",

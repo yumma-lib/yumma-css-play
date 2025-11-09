@@ -237,6 +237,11 @@ summary {
   margin-top: 2rem;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -303,4 +308,11 @@ summary {
 
 .zi-0 {
   z-index: 0;
+}
+
+@media (width >= 40rem) {
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

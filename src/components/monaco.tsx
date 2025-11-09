@@ -51,6 +51,7 @@ function MonacoEditor() {
             minimap: { enabled: false },
             padding: { top: 8 },
             scrollBeyondLastLine: false,
+            wordWrap: "on",
           }}
           theme="midnight"
         />

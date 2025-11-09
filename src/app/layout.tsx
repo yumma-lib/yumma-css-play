@@ -3,8 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 
-const description =
-  "Yumma CSS Play based on Sandpack.";
+const description = "Yumma CSS Play based on Sandpack.";
 
 export const metadata: Metadata = {
   title: "Yumma CSS Play",
