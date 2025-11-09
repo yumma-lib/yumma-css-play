@@ -1,26 +1,22 @@
+import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
-import "@/styles/out.css";
+
+const description =
+  "A CLI-first CSS framework for the web with abbreviated styles.";
 
 export const metadata: Metadata = {
   title: "Yumma CSS Play",
-  description: "Yumma CSS Play based on Sandpack.",
+  description,
   icons: {
-    apple: "/apple-touch.png",
+    apple: "/apple-touch-icon.png",
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
+  metadataBase: new URL("https://play.yummacss.com"),
   openGraph: {
-    title: "Yumma CSS Play",
-    description: "Yumma CSS Play based on Sandpack.",
-    siteName: "Yumma CSS Play",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "/og.png",
-      },
-    ],
+    images: "/og.png",
   },
 };
 
@@ -31,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{ backgroundColor: "#151724;" }}>
+      <body suppressHydrationWarning style={{ backgroundColor: "#151724" }}>
         {children}
         <Analytics />
         <SpeedInsights />

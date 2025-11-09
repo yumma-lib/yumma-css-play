@@ -1,13 +1,12 @@
 import Image from "next/image";
-import Logo from "../../public/dark-logomark.png";
 
 const Navbar = () => {
   return (
-    <div className="" style={{ backgroundColor: "#1e2039" }}>
+    <div style={{ backgroundColor: "#1e2039" }}>
       <Image
-        className="h-auto py-2"
+        className="h-auto py-2 mx-auto"
         width={80}
-        src={Logo}
+        src="/logotype.png"
         alt="Yumma CSS Play Logo"
       />
     </div>
