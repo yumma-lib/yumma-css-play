@@ -4,7 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 
 const description =
-  "A CLI-first CSS framework for the web with abbreviated styles.";
+  "Yumma CSS Play based on Sandpack.";
 
 export const metadata: Metadata = {
   title: "Yumma CSS Play",
