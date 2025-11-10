@@ -2,7 +2,6 @@ import "@/styles/out.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
-import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 const description = "Yumma CSS Play based on Sandpack.";
 
@@ -28,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning style={{ backgroundColor: "#151724" }}>
-        <NuqsAdapter>{children}</NuqsAdapter>
+        {children}
         <Analytics />
         <SpeedInsights />
       </body>
