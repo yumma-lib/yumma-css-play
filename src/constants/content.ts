@@ -23,7 +23,3 @@ export const initialCode: string = `<div class="p-r min-h-dvh w-full bg-indigo-1
     </div>
   </section>
 </div>`;
-
-export const initialStyles: string = `@import url("https://cdn.jsdelivr.net/gh/yumma-lib/yumma-css@3.0.3/dist/yumma.css");
-
-/* Add your custom styles here */`;

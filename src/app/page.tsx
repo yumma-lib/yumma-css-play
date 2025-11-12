@@ -9,14 +9,13 @@ import type React from "react";
 import { useMemo } from "react";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import MonacoEditor from "@/components/monaco";
-import { initialCode, initialStyles } from "@/constants/content";
+import { initialCode } from "@/constants/content";
 import customSpTheme from "@/themes/spMidnight";
 
 const Home: React.FC = () => {
   const files = useMemo(() => {
     return {
       "index.html": initialCode,
-      "styles.css": initialStyles,
     };
   }, []);
 
@@ -26,7 +25,9 @@ const Home: React.FC = () => {
       template="static"
       theme={customSpTheme}
       options={{
-        externalResources: ["/styles.css"],
+        externalResources: [
+          "https://cdn.jsdelivr.net/npm/@yummacss/runtime@0.1.0/dist/index.iife.js",
+        ],
         minimap: { enabled: false },
         ...({
           emmet: {
