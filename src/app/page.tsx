@@ -9,7 +9,7 @@ import type React from "react";
 import { useMemo } from "react";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import MonacoEditor from "@/components/monaco";
-import { initialCode } from "@/constants/content";
+import { initialCode } from "@/constants/code";
 import customSpTheme from "@/themes/spMidnight";
 
 const Home: React.FC = () => {
