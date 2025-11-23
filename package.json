@@ -8,7 +8,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "format": "prettier --write .",
     "build": "next build && yummacss build",
     "dev": "concurrently \"next dev --turbopack\" \"yummacss watch\"",
     "lint": "biome check --write .",
