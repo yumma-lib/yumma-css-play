@@ -141,6 +141,10 @@ summary {
   display: flex;
 }
 
+.d-g {
+  display: grid;
+}
+
 .f-1 {
   flex: 1;
 }
@@ -193,6 +197,10 @@ summary {
   gap: 1rem;
 }
 
+.gtc-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .h-auto {
   height: auto;
 }
@@ -217,16 +225,16 @@ summary {
   margin: 0;
 }
 
-.max-w-xl {
-  max-width: 80rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
 
 .min-h-dvh {
   min-height: 100dvh;
+}
+
+.min-h-vh {
+  min-height: 100vh;
 }
 
 .mr-5 {
@@ -267,6 +275,11 @@ summary {
   padding-right: .75rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .py-1 {
   padding-top: .25rem;
   padding-bottom: .25rem;
@@ -297,17 +310,21 @@ summary {
   width: 100%;
 }
 
-.w-xl {
-  width: 80rem;
-}
-
 .zi-0 {
   z-index: 0;
 }
 
 @media (width >= 40rem) {
+  .sm\:gtc-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .sm\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .sm\:w-auto {
+    width: auto;
   }
 }
