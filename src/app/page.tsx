@@ -6,22 +6,45 @@ import {
   SandpackProvider,
 } from "@codesandbox/sandpack-react";
 import type React from "react";
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import MonacoEditor from "@/components/monaco";
 import { initialCode } from "@/constants/code";
 import customSpTheme from "@/themes/spMidnight";
+import { getCodeFromUrl } from "@/utils/share";
 
 const Home: React.FC = () => {
-  const files = useMemo(() => {
-    return {
-      "index.html": initialCode,
+  const [code, setCode] = useState<string>(initialCode);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const loadSharedCode = async () => {
+      const sharedCode = await getCodeFromUrl();
+      if (sharedCode) {
+        setCode(sharedCode);
+      }
+      setIsLoading(false);
     };
+
+    loadSharedCode();
   }, []);
+
+  // don't render Sandpack until we've checked for shared code
+  if (isLoading) {
+    return (
+      <div className="d-f ai-c jc-c h-dvh tc-white">
+        <div className="ta-c">
+          <div className="fs-lg">Loading...</div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <SandpackProvider
-      files={files}
+      files={{
+        "index.html": code,
+      }}
       template="static"
       theme={customSpTheme}
       options={{

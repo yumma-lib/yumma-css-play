@@ -193,6 +193,10 @@ summary {
   font-weight: 700;
 }
 
+.g-2 {
+  gap: .5rem;
+}
+
 .g-4 {
   gap: 1rem;
 }
@@ -215,6 +219,10 @@ summary {
 
 .jc-c {
   justify-content: center;
+}
+
+.jc-sb {
+  justify-content: space-between;
 }
 
 .lh-6 {
@@ -245,9 +253,9 @@ summary {
   margin-top: 2rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .o-20 {
@@ -317,11 +325,6 @@ summary {
 @media (width >= 40rem) {
   .sm\:gtc-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .sm\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .sm\:w-auto {
