@@ -1,5 +1,5 @@
 import { useActiveCode } from "@codesandbox/sandpack-react";
-import { CodeIcon, EyeIcon, Share2Icon } from "@radix-ui/react-icons";
+import { CodeIcon, EyeOpenIcon, Share2Icon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
@@ -90,7 +90,7 @@ const Navbar = ({ isMobile, showingPreview, onToggleView }: NavbarProps) => {
               </>
             ) : (
               <>
-                <EyeIcon width={16} height={16} />
+                <EyeOpenIcon width={16} height={16} />
                 <span className="d-none md:d-ib">Preview</span>
               </>
             )}
