@@ -13,7 +13,7 @@ import { initialCode } from "@/constants/code";
 import customSpTheme from "@/themes/spMidnight";
 import { getCodeFromUrl } from "@/utils/share";
 
-const Home: React.FC = () => {
+export default function Home () {
   const [code, setCode] = useState<string>(initialCode);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -85,5 +85,3 @@ const Home: React.FC = () => {
     </SandpackProvider>
   );
 };
-
-export default Home;
