@@ -9,7 +9,6 @@ import { useRef } from "react";
 import { handleMount } from "@/themes/midnight";
 import { setupKeybindings } from "@/utils/keybindings";
 import { registerProviders } from "@/utils/providers";
-import Navbar from "./navbar";
 
 function MonacoEditor() {
   const { code, updateCode } = useActiveCode();
@@ -39,7 +38,6 @@ function MonacoEditor() {
 
   return (
     <SandpackStack className="h-dvh m-0">
-      <Navbar />
       <div className="f-1" style={{ borderTop: "1px solid #31365e" }}>
         <Editor
           defaultValue={code}
