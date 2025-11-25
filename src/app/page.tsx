@@ -14,7 +14,7 @@ import { initialCode } from "@/constants/code";
 import customSpTheme from "@/themes/spMidnight";
 import { getCodeFromUrl } from "@/utils/share";
 
-export default function Home {
+export default function Home () {
   const [code, setCode] = useState<string>(initialCode);
   const [isLoading, setIsLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
