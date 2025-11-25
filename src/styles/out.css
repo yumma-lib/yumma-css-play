@@ -113,6 +113,10 @@ summary {
   align-items: center;
 }
 
+.b-0 {
+  border-width: 0;
+}
+
 .b-1 {
   border-width: 1px;
 }
@@ -143,6 +147,14 @@ summary {
 
 .d-g {
   display: grid;
+}
+
+.d-ib {
+  display: inline-block;
+}
+
+.d-none {
+  display: none;
 }
 
 .f-1 {
@@ -213,6 +225,10 @@ summary {
   height: 100dvh;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .i-0 {
   inset: 0;
 }
@@ -223,6 +239,10 @@ summary {
 
 .jc-sb {
   justify-content: space-between;
+}
+
+.l-0 {
+  left: 0;
 }
 
 .lh-6 {
@@ -251,11 +271,6 @@ summary {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 .o-20 {
@@ -298,6 +313,10 @@ summary {
   padding-bottom: .5rem;
 }
 
+.t-0 {
+  top: 0;
+}
+
 .ta-c {
   text-align: center;
 }
@@ -329,5 +348,11 @@ summary {
 
   .sm\:w-auto {
     width: auto;
+  }
+}
+
+@media (width >= 48rem) {
+  .md\:d-ib {
+    display: inline-block;
   }
 }

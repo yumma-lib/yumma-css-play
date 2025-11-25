@@ -14,7 +14,7 @@ import { initialCode } from "@/constants/code";
 import customSpTheme from "@/themes/spMidnight";
 import { getCodeFromUrl } from "@/utils/share";
 
-export default function Home () {
+export default function Home() {
   const [code, setCode] = useState<string>(initialCode);
   const [isLoading, setIsLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
@@ -82,51 +82,39 @@ export default function Home () {
         } as any),
       }}
     >
-      <SandpackLayout style={{ border: 0 }}>
-        {isMobile ? (
-          // Mobile: Single panel with toggle
-          <div className="d-f fd-c h-dvh">
-            <Navbar
-              isMobile={isMobile}
-              showingPreview={showPreview}
-              onToggleView={() => setShowPreview(!showPreview)}
-            />
-            <div className="f-1 p-r o-h">
-              {/* Editor */}
-              <div
-                className="p-a t-0 l-0 w-full h-full"
-                style={{
-                  transform: showPreview ? "translateX(-100%)" : "translateX(0)",
-                  transition: "transform 0.3s ease-in-out",
-                }}
-              >
-                <MonacoEditor />
+      <div className="d-f fd-c h-dvh">
+        {/* Navbar - Always at top, inside SandpackProvider */}
+        <Navbar
+          isMobile={isMobile}
+          showingPreview={showPreview}
+          onToggleView={() => setShowPreview(!showPreview)}
+        />
+
+        {/* Content Area */}
+        <div className="f-1 o-h">
+          <SandpackLayout className="b-0 h-full">
+            {isMobile ? (
+              // Mobile: Single panel with slide animation
+              <div className="p-r h-full o-h">
+                {/* Editor Panel */}
+                <div className="p-a t-0 l-0 w-full h-full">
+                  <MonacoEditor />
+                </div>
+                {/* Preview Panel */}
+                <div className="p-a t-0 l-0 w-full h-full">
+                  <SandpackPreview
+                    showOpenInCodeSandbox={false}
+                    showRefreshButton={false}
+                  />
+                </div>
               </div>
-              {/* Preview */}
-              <div
-                className="p-a t-0 l-0 w-full h-full"
-                style={{
-                  transform: showPreview ? "translateX(0)" : "translateX(100%)",
-                  transition: "transform 0.3s ease-in-out",
-                }}
-              >
-                <SandpackPreview
-                  showOpenInCodeSandbox={false}
-                  showRefreshButton={false}
-                />
-              </div>
-            </div>
-          </div>
-        ) : (
-          // Desktop: Side-by-side panels
-          <div className="d-f fd-c h-dvh">
-            <Navbar isMobile={false} />
-            <div className="f-1">
-              <PanelGroup direction="horizontal">
+            ) : (
+              // Desktop: Side-by-side panels
+              <PanelGroup direction="horizontal" style={{ height: "100%" }}>
                 <Panel maxSize={80} minSize={20} defaultSize={50}>
                   <MonacoEditor />
                 </Panel>
-                <PanelResizeHandle onDoubleClick={() => {}} />
+                <PanelResizeHandle onDoubleClick={() => { }} />
                 <Panel defaultSize={50}>
                   <SandpackPreview
                     className="h-full"
@@ -135,10 +123,10 @@ export default function Home () {
                   />
                 </Panel>
               </PanelGroup>
-            </div>
-          </div>
-        )}
-      </SandpackLayout>
+            )}
+          </SandpackLayout>
+        </div>
+      </div>
     </SandpackProvider>
   );
-};
+}
