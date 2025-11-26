@@ -137,12 +137,25 @@ summary {
   border-right-width: 1px;
 }
 
+.d-4 {
+  width: 1rem;
+  height: 1rem;
+}
+
 .d-f {
   display: flex;
 }
 
 .d-g {
   display: grid;
+}
+
+.d-ib {
+  display: inline-block;
+}
+
+.d-none {
+  display: none;
 }
 
 .f-1 {
@@ -211,6 +224,10 @@ summary {
 
 .h-dvh {
   height: 100dvh;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .i-0 {
@@ -329,5 +346,19 @@ summary {
 
   .sm\:w-auto {
     width: auto;
+  }
+}
+
+@media (width >= 48rem) {
+  .md\:d-f {
+    display: flex;
+  }
+
+  .md\:d-ib {
+    display: inline-block;
+  }
+
+  .md\:d-none {
+    display: none;
   }
 }

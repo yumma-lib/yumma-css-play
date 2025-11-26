@@ -1,12 +1,17 @@
 import { useActiveCode } from "@codesandbox/sandpack-react";
-import { Share2Icon } from "@radix-ui/react-icons";
+import { FileTextIcon, EyeOpenIcon, Share2Icon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import { initialCode } from "@/constants/code";
 import { copyToClipboard, createShareUrl } from "@/utils/share";
 
-const Navbar = () => {
+interface NavbarProps {
+  activePanel: "editor" | "preview";
+  onTogglePanel: () => void;
+}
+
+const Navbar = ({ activePanel, onTogglePanel }: NavbarProps) => {
   const [copied, setCopied] = useState(false);
   const { code } = useActiveCode();
 
@@ -62,19 +67,40 @@ const Navbar = () => {
         alt="Yumma CSS Play Logo"
       />
 
-      <button
-        type="button"
-        onClick={handleShare}
-        className="d-f ai-c g-2 px-3 py-2 tc-silver-2 fw-500 fs-sm"
-        style={{
-          background: "#21243f",
-          border: "1px solid #31365e",
-        }}
-        title="Copy share link to clipboard"
-      >
-        <Share2Icon width={16} height={16} />
-        <span>{copied ? "Copied!" : "Share"}</span>
-      </button>
+      <div className="d-f ai-c g-2">
+        {/* Toggle button - only visible on mobile */}
+        <button
+          type="button"
+          onClick={onTogglePanel}
+          className="d-f md:d-none ai-c g-2 px-3 py-2 tc-silver-2 fw-500 fs-sm"
+          style={{
+            background: "#21243f",
+            border: "1px solid #31365e",
+          }}
+          title={activePanel === "editor" ? "Switch to Preview" : "Switch to Editor"}
+        >
+          {activePanel === "editor" ? (
+            <EyeOpenIcon className="d-4" />
+          ) : (
+            <FileTextIcon className="d-4" />
+          )}
+        </button>
+
+        {/* Share button */}
+        <button
+          type="button"
+          onClick={handleShare}
+          className="d-f ai-c g-2 px-3 py-2 tc-silver-2 fw-500 fs-sm"
+          style={{
+            background: "#21243f",
+            border: "1px solid #31365e",
+          }}
+          title="Copy share link to clipboard"
+        >
+          <Share2Icon className="d-4" />
+          <span className="d-none md:d-ib">{copied ? "Copied!" : "Share"}</span>
+        </button>
+      </div>
     </div>
   );
 };

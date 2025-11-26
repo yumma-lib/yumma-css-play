@@ -1,4 +1,4 @@
-import "@/styles/out.css";
+import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body style={{ backgroundColor: "#151724" }}>
+      <body style={{ backgroundColor: "#1e2039" }}>
         {children}
         <Toaster
           position="top-right"

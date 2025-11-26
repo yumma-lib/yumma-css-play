@@ -9,6 +9,7 @@ import type React from "react";
 import { useEffect, useState } from "react";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import MonacoEditor from "@/components/monaco";
+import Navbar from "@/components/navbar";
 import { initialCode } from "@/constants/code";
 import customSpTheme from "@/themes/spMidnight";
 import { getCodeFromUrl } from "@/utils/share";
@@ -16,6 +17,7 @@ import { getCodeFromUrl } from "@/utils/share";
 const Home: React.FC = () => {
   const [code, setCode] = useState<string>(initialCode);
   const [isLoading, setIsLoading] = useState(true);
+  const [activePanel, setActivePanel] = useState<"editor" | "preview">("editor");
 
   useEffect(() => {
     const loadSharedCode = async () => {
@@ -28,6 +30,10 @@ const Home: React.FC = () => {
 
     loadSharedCode();
   }, []);
+
+  const togglePanel = () => {
+    setActivePanel((prev) => (prev === "editor" ? "preview" : "editor"));
+  };
 
   // don't render Sandpack until we've checked for shared code
   if (isLoading) {
@@ -67,21 +73,45 @@ const Home: React.FC = () => {
         } as any),
       }}
     >
-      <SandpackLayout style={{ border: 0 }}>
-        <PanelGroup direction="horizontal" className="h-dvh">
-          <Panel maxSize={80} minSize={20} defaultSize={50}>
-            <MonacoEditor />
-          </Panel>
-          <PanelResizeHandle onDoubleClick={() => { }} />
-          <Panel defaultSize={50}>
-            <SandpackPreview
-              className="h-dvh"
-              showOpenInCodeSandbox={false}
-              showRefreshButton={false}
-            />
-          </Panel>
-        </PanelGroup>
-      </SandpackLayout>
+      <div className="d-f fd-c h-dvh">
+        <Navbar activePanel={activePanel} onTogglePanel={togglePanel} />
+        <SandpackLayout style={{ border: 0, flex: 1 }}>
+          {/* Desktop: Show both panels with resizable layout */}
+          <div className="d-none md:d-f h-full w-full">
+            <PanelGroup direction="horizontal" className="h-full">
+              <Panel maxSize={80} minSize={20} defaultSize={50}>
+                <MonacoEditor />
+              </Panel>
+              <PanelResizeHandle onDoubleClick={() => { }} />
+              <Panel defaultSize={50}>
+                <SandpackPreview
+                  className="h-full"
+                  showOpenInCodeSandbox={false}
+                  showRefreshButton={false}
+                />
+              </Panel>
+            </PanelGroup>
+          </div>
+
+          {/* Mobile: Show only one panel at a time */}
+          <div className="d-f md:d-none h-full w-full">
+            {activePanel === "editor" ? (
+              <div className="w-full h-full">
+                <MonacoEditor />
+              </div>
+            ) : (
+              <div className="w-full h-full">
+                <SandpackPreview
+                  className="h-full"
+                  showOpenInCodeSandbox={false}
+                  showRefreshButton={false}
+                  
+                />
+              </div>
+            )}
+          </div>
+        </SandpackLayout>
+      </div>
     </SandpackProvider>
   );
 };
