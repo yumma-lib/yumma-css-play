@@ -55,7 +55,7 @@ const Home: React.FC = () => {
       theme={customSpTheme}
       options={{
         externalResources: [
-          "https://cdn.jsdelivr.net/npm/@yummacss/runtime@0.1.0/dist/index.iife.js",
+          "https://cdn.jsdelivr.net/npm/@yummacss/runtime",
         ],
         minimap: { enabled: false },
         ...({
