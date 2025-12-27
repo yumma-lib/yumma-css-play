@@ -1,20 +1,29 @@
-# [play.yummacss.com](https://play.yummacss.com)
+# [@yummacss](www.yummacss.com)
 
-A playground for Yumma CSS.
+A CLI-first CSS framework for the web with abbreviated styles.
+
+[![NPM Version](https://img.shields.io/npm/v/yummacss?style=flat&label=yummacss&labelColor=f7f7f7&color=cb3837)](https://www.npmjs.com/package/yummacss)
+[![NPM Downloads](https://img.shields.io/npm/d18m/yummacss?style=flat&label=downloads&labelColor=f7f7f7&color=cb3837)](https://www.npmjs.com/package/yummacss)
+
+## Installing
+
+Install `yummacss` as a dev dependency and initialize configuration
+
+```bash
+npm install yummacss -D
+npx yummacss init
+```
+
+Build styles
+
+```bash
+npx yummacss build
+```
 
 ## Documentation
 
-Head over to [yummacss.com](https://yummacss.com) for the full documentation.
-
-## Built with
-
-- [yummacss](https://npmjs.com/package/yummacss)
-- [@yummacss/api](https://npmjs.com/package/@yummacss/api)
-- [@yummacss/runtime](https://npmjs.com/package/@yummacss/runtime)
-- [next](https://npmjs.com/package/next)
-- [@codesandbox/sandpack-react](https://npmjs.com/package/@codesandbox/sandpack-react)
-- [@monaco-editor/react](https://npmjs.com/package/@monaco-editor/react)
+Learn more at [yummacss.com](https://yummacss.com)
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE)
+This project is licensed under the [MIT License](LICENSE).
