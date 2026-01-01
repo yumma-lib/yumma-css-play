@@ -1,5 +1,5 @@
 import { useActiveCode } from "@codesandbox/sandpack-react";
-import { FileTextIcon, EyeOpenIcon, Share2Icon } from "@radix-ui/react-icons";
+import { EyeOpenIcon, FileTextIcon, Share2Icon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
@@ -77,7 +77,9 @@ const Navbar = ({ activePanel, onTogglePanel }: NavbarProps) => {
             background: "#21243f",
             border: "1px solid #31365e",
           }}
-          title={activePanel === "editor" ? "Switch to Preview" : "Switch to Editor"}
+          title={
+            activePanel === "editor" ? "Switch to Preview" : "Switch to Editor"
+          }
         >
           {activePanel === "editor" ? (
             <EyeOpenIcon className="d-4" />

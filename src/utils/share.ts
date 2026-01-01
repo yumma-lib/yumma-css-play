@@ -1,8 +1,7 @@
 import ky from "ky";
 
 const idLength = 10;
-const chars =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
 function generateShareId(): string {
   let result = "";

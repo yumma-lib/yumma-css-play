@@ -7,7 +7,7 @@ import {
 } from "@codesandbox/sandpack-react";
 import type React from "react";
 import { useEffect, useState } from "react";
-import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
+import { Group, Panel, Separator } from "react-resizable-panels";
 import MonacoEditor from "@/components/monaco";
 import Navbar from "@/components/navbar";
 import { initialCode } from "@/constants/code";
@@ -17,7 +17,9 @@ import { getCodeFromUrl } from "@/utils/share";
 const Home: React.FC = () => {
   const [code, setCode] = useState<string>(initialCode);
   const [isLoading, setIsLoading] = useState(true);
-  const [activePanel, setActivePanel] = useState<"editor" | "preview">("editor");
+  const [activePanel, setActivePanel] = useState<"editor" | "preview">(
+    "editor",
+  );
 
   useEffect(() => {
     const loadSharedCode = async () => {
@@ -38,7 +40,7 @@ const Home: React.FC = () => {
   // don't render Sandpack until we've checked for shared code
   if (isLoading) {
     return (
-      <div className="d-f ai-c jc-c h-dvh tc-white">
+      <div className="d-f ai-c jc-c h-dvh c-white">
         <div className="ta-c">
           <div className="fs-lg">Loading...</div>
         </div>
@@ -54,9 +56,7 @@ const Home: React.FC = () => {
       template="static"
       theme={customSpTheme}
       options={{
-        externalResources: [
-          "https://cdn.jsdelivr.net/npm/@yummacss/runtime@latest/dist/index.iife.js",
-        ],
+        externalResources: ["https://unpkg.com/@yummacss/runtime"],
         minimap: { enabled: false },
         ...({
           emmet: {
@@ -78,19 +78,19 @@ const Home: React.FC = () => {
         <SandpackLayout style={{ border: 0, flex: 1 }}>
           {/* Desktop: Show both panels with resizable layout */}
           <div className="d-none md:d-f h-full w-full">
-            <PanelGroup direction="horizontal" className="h-full">
-              <Panel maxSize={80} minSize={20} defaultSize={50}>
+            <Group orientation="horizontal" className="h-full">
+              <Panel maxSize="80%" minSize="20%" defaultSize="50%">
                 <MonacoEditor />
               </Panel>
-              <PanelResizeHandle onDoubleClick={() => { }} />
-              <Panel defaultSize={50}>
+              <Separator onDoubleClick={() => {}} />
+              <Panel defaultSize="50%">
                 <SandpackPreview
                   className="h-full"
                   showOpenInCodeSandbox={false}
                   showRefreshButton={false}
                 />
               </Panel>
-            </PanelGroup>
+            </Group>
           </div>
 
           {/* Mobile: Show only one panel at a time */}
@@ -105,7 +105,6 @@ const Home: React.FC = () => {
                   className="h-full"
                   showOpenInCodeSandbox={false}
                   showRefreshButton={false}
-                  
                 />
               </div>
             )}
