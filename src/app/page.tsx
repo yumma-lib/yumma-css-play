@@ -79,10 +79,10 @@ const Home: React.FC = () => {
           {/* Desktop: Show both panels with resizable layout */}
           <div className="d-none md:d-f h-full w-full">
             <PanelGroup direction="horizontal" className="h-full">
-              <Panel maxSize={80} minSize={20} defaultSize={50}>
+              <Panel collapsible maxSize={80} minSize={20} defaultSize={50}>
                 <MonacoEditor />
               </Panel>
-              <PanelResizeHandle onDoubleClick={() => { }} />
+              <PanelResizeHandle className="p-1" onDoubleClick={() => { }} />
               <Panel defaultSize={50}>
                 <SandpackPreview
                   className="h-full"

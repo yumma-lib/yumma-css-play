@@ -291,6 +291,10 @@ summary {
   overflow: hidden;
 }
 
+.p-1 {
+  padding: .25rem;
+}
+
 .p-a {
   position: absolute;
 }
