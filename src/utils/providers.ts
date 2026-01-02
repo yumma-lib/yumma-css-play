@@ -1,6 +1,8 @@
 import { getUtils } from "./api";
+import { registerHoverProvider } from "./hoverProvider";
 
 export function registerProviders(monaco: any) {
+  // Register completion provider
   monaco.languages.registerCompletionItemProvider("html", {
     provideCompletionItems: (model: any, position: any) => {
       const textUntilPosition = model.getValueInRange({
@@ -35,4 +37,7 @@ export function registerProviders(monaco: any) {
       }
     },
   });
+
+  // Register hover provider
+  registerHoverProvider(monaco);
 }

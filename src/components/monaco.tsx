@@ -7,6 +7,7 @@ import Editor from "@monaco-editor/react";
 import { emmetHTML } from "emmet-monaco-es";
 import { useRef } from "react";
 import { handleMount } from "@/themes/midnight";
+import { setupCodeActions } from "@/utils/codeActions";
 import { setupKeybindings } from "@/utils/keybindings";
 import { registerProviders } from "@/utils/providers";
 
@@ -23,6 +24,7 @@ function MonacoEditor() {
     emmetHTML(monaco);
     registerProviders(monaco);
     setupKeybindings(editor, monaco);
+    setupCodeActions(editor, monaco);
 
     if (handleMount) {
       handleMount(editor, monaco);
