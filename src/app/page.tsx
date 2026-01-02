@@ -78,14 +78,14 @@ const Home: React.FC = () => {
       <div className="d-f fd-c h-dvh">
         <Navbar activePanel={activePanel} onTogglePanel={togglePanel} />
         <SandpackLayout style={{ border: 0, flex: 1 }}>
-          {/* Desktop: Show both panels with resizable layout */}
+          {/* Desktop */}
           <div className="d-none md:d-f h-full w-full">
             <PanelGroup direction="horizontal" className="h-full">
               <Panel collapsible maxSize={80} minSize={20} defaultSize={50}>
                 <MonacoEditor />
               </Panel>
-              <PanelResizeHandle className="p-1" onDoubleClick={() => {}} />
-              <Panel defaultSize={50}>
+              <PanelResizeHandle className="p-1" onDoubleClick={() => { }} />
+              <Panel collapsible defaultSize={50}>
                 <SandpackPreview
                   className="h-full"
                   showOpenInCodeSandbox={false}
@@ -95,7 +95,7 @@ const Home: React.FC = () => {
             </PanelGroup>
           </div>
 
-          {/* Mobile: Show only one panel at a time */}
+          {/* Mobile */}
           <div className="d-f md:d-none h-full w-full">
             {activePanel === "editor" ? (
               <div className="w-full h-full">
