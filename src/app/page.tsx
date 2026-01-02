@@ -17,7 +17,9 @@ import { getCodeFromUrl } from "@/utils/share";
 const Home: React.FC = () => {
   const [code, setCode] = useState<string>(initialCode);
   const [isLoading, setIsLoading] = useState(true);
-  const [activePanel, setActivePanel] = useState<"editor" | "preview">("editor");
+  const [activePanel, setActivePanel] = useState<"editor" | "preview">(
+    "editor",
+  );
 
   useEffect(() => {
     const loadSharedCode = async () => {
@@ -82,7 +84,7 @@ const Home: React.FC = () => {
               <Panel collapsible maxSize={80} minSize={20} defaultSize={50}>
                 <MonacoEditor />
               </Panel>
-              <PanelResizeHandle className="p-1" onDoubleClick={() => { }} />
+              <PanelResizeHandle className="p-1" onDoubleClick={() => {}} />
               <Panel defaultSize={50}>
                 <SandpackPreview
                   className="h-full"
@@ -105,7 +107,6 @@ const Home: React.FC = () => {
                   className="h-full"
                   showOpenInCodeSandbox={false}
                   showRefreshButton={false}
-
                 />
               </div>
             )}
