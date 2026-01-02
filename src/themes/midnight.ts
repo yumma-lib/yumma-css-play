@@ -135,7 +135,7 @@ export const midnightTheme = {
     "editorInfo.foreground": "#bec6f2",
     "editorInfo.background": "#4490BF00",
     "editorInfo.border": "#4490BF00",
-    "editorGutter.background": "#1e2039",
+    "editorGutter.background": "#21243f",
     "editorGutter.modifiedBackground": "#bec6f2",
     "editorGutter.addedBackground": "#c1f0cc",
     "editorGutter.deletedBackground": "#ff9499",
