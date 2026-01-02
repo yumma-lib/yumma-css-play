@@ -1,10 +1,5 @@
 export const initialCode: string = `<div class="o-h bg-indigo-12 ff-c min-h-vh p-r c-white w-full">
-  <div class="p-a i-0 zi-0 o-20" style="
-      background-image:
-        linear-gradient(90deg, rgba(49, 54, 94) 1px, transparent 0),
-        linear-gradient(180deg, rgba(49, 54, 94) 1px, transparent 0),
-        repeating-linear-gradient(45deg, rgba(49, 54, 94,0.6) 0 2px, transparent 2px 6px);
-      background-size: 24px 24px, 24px 24px, 24px 24px;"></div>
+  <div class="p-a i-0 zi-0 o-20"></div>
 
   <section class="ai-c d-f fd-c ff-c jc-c min-h-vh p-r ta-c c-white zi-1">
     <h1 class="fs-6xl fw-700 mb-4">Yumma CSS Play</h1>
