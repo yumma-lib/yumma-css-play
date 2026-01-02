@@ -84,7 +84,7 @@ const Home: React.FC = () => {
               <Panel collapsible maxSize={80} minSize={20} defaultSize={50}>
                 <MonacoEditor />
               </Panel>
-              <PanelResizeHandle className="p-1" onDoubleClick={() => { }} />
+              <PanelResizeHandle className="p-px" onDoubleClick={() => { }} />
               <Panel collapsible defaultSize={50}>
                 <SandpackPreview
                   className="h-full"
