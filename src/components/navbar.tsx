@@ -1,5 +1,5 @@
 import { useActiveCode } from "@codesandbox/sandpack-react";
-import { EyeOpenIcon, FileTextIcon, Share2Icon } from "@radix-ui/react-icons";
+import { EyeIcon, FileTextIcon, ShareIcon } from "@phosphor-icons/react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
@@ -82,7 +82,7 @@ const Navbar = ({ activePanel, onTogglePanel }: NavbarProps) => {
           }
         >
           {activePanel === "editor" ? (
-            <EyeOpenIcon className="d-4" />
+            <EyeIcon className="d-4" />
           ) : (
             <FileTextIcon className="d-4" />
           )}
@@ -99,7 +99,7 @@ const Navbar = ({ activePanel, onTogglePanel }: NavbarProps) => {
           }}
           title="Copy share link to clipboard"
         >
-          <Share2Icon className="d-4" />
+          <ShareIcon className="d-4" />
           <span className="d-none md:d-ib">{copied ? "Copied!" : "Share"}</span>
         </button>
       </div>
