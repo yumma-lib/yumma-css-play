@@ -89,7 +89,7 @@ export function registerCodeActionsProvider(monaco: any) {
 
       // Only provide actions for our conflict markers
       const conflictMarkers = markers.filter(
-        (m: any) => m.source === "yumma-css",
+        (m: any) => m.source === "yummacss",
       );
 
       for (const marker of conflictMarkers) {
@@ -162,12 +162,12 @@ export function updateConflictMarkers(editor: any, monaco: any) {
         startColumn: conflict.range.startColumn,
         endLineNumber: conflict.range.endLineNumber,
         endColumn: conflict.range.endColumn,
-        source: "yumma-css",
+        source: "yummacss",
       });
     }
   }
 
-  monaco.editor.setModelMarkers(model, "yumma-css", markers);
+  monaco.editor.setModelMarkers(model, "yummacss", markers);
 }
 
 export function setupCodeActions(editor: any, monaco: any) {
