@@ -1,6 +1,6 @@
 import { coreUtils } from "@yummacss/api";
 
-// Build a map of utilities to their CSS properties (for conflict detection)
+// build a map of utilities to their CSS properties (for conflict detection)
 function buildPropertyMap(): Map<string, string[]> {
   const map = new Map<string, string[]>();
   const allUtils = coreUtils();
@@ -24,7 +24,7 @@ interface Conflict {
   range: any;
 }
 
-// Find conflicting utilities in a class attribute
+// find conflicting utilities in a class attribute
 function findConflicts(
   text: string,
   lineNumber: number,
@@ -32,7 +32,7 @@ function findConflicts(
 ): Conflict[] {
   const conflicts: Conflict[] = [];
 
-  // Match class="..." or class='...'
+  // match class="..." or class='...'
   const classRegex = /class\s*=\s*["']([^"']+)["']/g;
   let classMatch: RegExpExecArray | null;
 
@@ -43,7 +43,26 @@ function findConflicts(
 
     const utilities = classContent.split(/\s+/).filter((u) => u.trim() !== "");
 
-    // Track which properties are set by which utilities
+    // build a map of utility positions within the class content
+    const utilityPositions = new Map<
+      string,
+      { start: number; end: number }[]
+    >();
+    let searchStart = 0;
+    for (const utility of utilities) {
+      const idx = classContent.indexOf(utility, searchStart);
+      if (idx !== -1) {
+        const positions = utilityPositions.get(utility) || [];
+        positions.push({
+          start: classStartIndex + idx + 1, // +1 for 1-indexed columns
+          end: classStartIndex + idx + utility.length + 1,
+        });
+        utilityPositions.set(utility, positions);
+        searchStart = idx + utility.length;
+      }
+    }
+
+    // track which properties are set by which utilities
     const propertyToUtilities = new Map<string, string[]>();
 
     utilities.forEach((utility) => {
@@ -57,22 +76,26 @@ function findConflicts(
       });
     });
 
-    // Find properties with multiple utilities (conflicts)
+    // find properties with multiple utilities (conflicts)
     propertyToUtilities.forEach((utils, property) => {
       if (utils.length > 1) {
-        // Find the range of the class attribute
-        const startColumn = classStartIndex + 1;
-        const endColumn = classStartIndex + classContent.length + 1;
+        // calculate range that covers just the conflicting utilities
+        let minStart = Number.MAX_SAFE_INTEGER;
+        let maxEnd = 0;
+
+        for (const util of utils) {
+          const positions = utilityPositions.get(util);
+          if (positions && positions.length > 0) {
+            // use the first occurrence of each utility
+            minStart = Math.min(minStart, positions[0].start);
+            maxEnd = Math.max(maxEnd, positions[0].end);
+          }
+        }
 
         conflicts.push({
           utilities: utils,
           property,
-          range: new monaco.Range(
-            lineNumber,
-            startColumn,
-            lineNumber,
-            endColumn,
-          ),
+          range: new monaco.Range(lineNumber, minStart, lineNumber, maxEnd),
         });
       }
     });
@@ -87,7 +110,7 @@ export function registerCodeActionsProvider(monaco: any) {
       const actions: any[] = [];
       const markers = context.markers || [];
 
-      // Only provide actions for our conflict markers
+      // only provide actions for our conflict markers
       const conflictMarkers = markers.filter(
         (m: any) => m.source === "yummacss",
       );
@@ -95,7 +118,7 @@ export function registerCodeActionsProvider(monaco: any) {
       for (const marker of conflictMarkers) {
         const lineContent = model.getLineContent(marker.startLineNumber);
 
-        // Parse the utilities from the marker message
+        // parse the utilities from the marker message
         const match = marker.message.match(
           /Conflicting utilities: (.+) \(all set/,
         );
@@ -103,7 +126,7 @@ export function registerCodeActionsProvider(monaco: any) {
 
         const utilities = match[1].split(", ");
 
-        // Create a quick fix for each utility (remove the others)
+        // create a quick fix for each utility (remove the others)
         utilities.forEach((keepUtil: string) => {
           const othersToRemove = utilities.filter(
             (u: string) => u !== keepUtil,
@@ -143,7 +166,7 @@ export function registerCodeActionsProvider(monaco: any) {
   });
 }
 
-// Set markers for conflicts
+// set markers for conflicts
 export function updateConflictMarkers(editor: any, monaco: any) {
   const model = editor.getModel();
   if (!model) return;
@@ -171,13 +194,10 @@ export function updateConflictMarkers(editor: any, monaco: any) {
 }
 
 export function setupCodeActions(editor: any, monaco: any) {
-  // Register the code actions provider
-  registerCodeActionsProvider(monaco);
-
-  // Set initial markers
+  // set initial markers
   updateConflictMarkers(editor, monaco);
 
-  // Update markers on content change
+  // update markers on content change
   editor.onDidChangeModelContent(() => {
     updateConflictMarkers(editor, monaco);
   });

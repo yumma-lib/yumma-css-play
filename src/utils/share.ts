@@ -1,52 +1,29 @@
-import ky from "ky";
+import {
+  compressToEncodedURIComponent,
+  decompressFromEncodedURIComponent,
+} from "lz-string";
 
-const idLength = 10;
-const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-function generateShareId(): string {
-  let result = "";
-  for (let i = 0; i < idLength; i++) {
-    result += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  return result;
+export function createShareUrl(code: string): string {
+  const compressed = compressToEncodedURIComponent(code);
+  const url = new URL(window.location.origin);
+  url.hash = `share/${compressed}`;
+  return url.toString();
 }
 
-export async function createShareUrl(code: string): Promise<string | null> {
-  try {
-    const shareId = generateShareId();
-
-    await ky.post("/api/share", {
-      json: { id: shareId, code },
-    });
-
-    const url = new URL(window.location.href);
-    url.searchParams.set("share", shareId);
-
-    return url.toString();
-  } catch (error) {
-    console.error("Error creating share URL:", error);
-    return null;
-  }
-}
-
-export async function getCodeFromUrl(): Promise<string | null> {
+export function getCodeFromUrl(): string | null {
   if (typeof window === "undefined") return null;
 
-  const params = new URLSearchParams(window.location.search);
-  const shareId = params.get("share");
+  const hash = window.location.hash.slice(1);
+  if (!hash.startsWith("share/")) return null;
 
-  if (!shareId) return null;
+  const compressed = hash.slice(6);
+  if (!compressed) return null;
 
   try {
-    const data = await ky
-      .get("/api/share", {
-        searchParams: { id: shareId },
-      })
-      .json<{ code: string }>();
-
-    return data.code;
-  } catch (error) {
-    console.error("Error fetching shared code:", error);
+    const decompressed = decompressFromEncodedURIComponent(compressed);
+    return decompressed || null;
+  } catch {
+    console.error("Failed to decompress code from URL");
     return null;
   }
 }

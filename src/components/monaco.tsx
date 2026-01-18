@@ -7,9 +7,15 @@ import Editor from "@monaco-editor/react";
 import { emmetHTML } from "emmet-monaco-es";
 import { useRef } from "react";
 import { handleMount } from "@/themes/midnight";
-import { setupCodeActions } from "@/utils/codeActions";
+import {
+  registerCodeActionsProvider,
+  setupCodeActions,
+} from "@/utils/codeActions";
 import { setupKeybindings } from "@/utils/keybindings";
 import { registerProviders } from "@/utils/providers";
+
+// track if providers have been registered globally (Monaco providers are singleton)
+let providersRegistered = false;
 
 function MonacoEditor() {
   const { code, updateCode } = useActiveCode();
@@ -21,8 +27,15 @@ function MonacoEditor() {
     editorRef.current = editor;
     monacoRef.current = monaco;
 
-    emmetHTML(monaco);
-    registerProviders(monaco);
+    // only register global providers once to prevent duplicates
+    if (!providersRegistered) {
+      emmetHTML(monaco);
+      registerProviders(monaco);
+      registerCodeActionsProvider(monaco);
+      providersRegistered = true;
+    }
+
+    // per-editor setup (keybindings, markers, content change listeners)
     setupKeybindings(editor, monaco);
     setupCodeActions(editor, monaco);
 

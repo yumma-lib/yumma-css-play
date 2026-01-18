@@ -5,13 +5,13 @@ export function getUtils(monaco: any): any[] {
     const allUtils = coreUtils();
     const suggestions: any[] = [];
 
-    // Iterate through each utility category
+    // iterate through each utility category
     Object.values(allUtils).forEach((util: any) => {
-      // Iterate through each value in the utility
+      // iterate through each value in the utility
       Object.entries(util.values).forEach(([suffix, cssValue]) => {
         const fullPrefix =
           suffix === "" ? util.prefix : `${util.prefix}-${suffix}`;
-        const cssProperty = util.properties[0]; // Take the first property for display
+        const cssProperty = util.properties[0]; // take the first property for display
 
         suggestions.push({
           label: fullPrefix,

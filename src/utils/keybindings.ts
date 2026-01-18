@@ -1,6 +1,5 @@
 export const setupKeybindings = (editor: any, monaco: any) => {
   try {
-    // disable default
     editor.addCommand(
       monaco.KeyMod.Shift | monaco.KeyMod.Alt | monaco.KeyCode.KeyF,
       () => {},

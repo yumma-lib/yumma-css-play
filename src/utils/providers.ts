@@ -2,42 +2,51 @@ import { getUtils } from "./api";
 import { registerHoverProvider } from "./hoverProvider";
 
 export function registerProviders(monaco: any) {
-  // Register completion provider
-  monaco.languages.registerCompletionItemProvider("html", {
-    provideCompletionItems: (model: any, position: any) => {
-      const textUntilPosition = model.getValueInRange({
-        startLineNumber: 1,
-        startColumn: 1,
-        endLineNumber: position.lineNumber,
-        endColumn: position.column,
-      });
+  const disposables: any[] = [];
 
-      const match = textUntilPosition.match(/class\s*=\s*"([^"]*)$/);
-      if (!match) return { suggestions: [] };
+  // register completion provider
+  const completionDisposable = monaco.languages.registerCompletionItemProvider(
+    "html",
+    {
+      provideCompletionItems: (model: any, position: any) => {
+        const textUntilPosition = model.getValueInRange({
+          startLineNumber: 1,
+          startColumn: 1,
+          endLineNumber: position.lineNumber,
+          endColumn: position.column,
+        });
 
-      const word = model.getWordUntilPosition(position);
-      const range = {
-        startLineNumber: position.lineNumber,
-        endLineNumber: position.lineNumber,
-        startColumn: word.startColumn,
-        endColumn: word.endColumn,
-      };
+        const match = textUntilPosition.match(/class\s*=\s*"([^"]*)$/);
+        if (!match) return { suggestions: [] };
 
-      try {
-        const suggestions = getUtils(monaco);
-        const suggestionsWithRange = suggestions.map((suggestion) => ({
-          ...suggestion,
-          range: range,
-        }));
+        const word = model.getWordUntilPosition(position);
+        const range = {
+          startLineNumber: position.lineNumber,
+          endLineNumber: position.lineNumber,
+          startColumn: word.startColumn,
+          endColumn: word.endColumn,
+        };
 
-        return { suggestions: suggestionsWithRange };
-      } catch (error) {
-        console.error("Error getting suggestions:", error);
-        return { suggestions: [] };
-      }
+        try {
+          const suggestions = getUtils(monaco);
+          const suggestionsWithRange = suggestions.map((suggestion) => ({
+            ...suggestion,
+            range: range,
+          }));
+
+          return { suggestions: suggestionsWithRange };
+        } catch (error) {
+          console.error("Error getting suggestions:", error);
+          return { suggestions: [] };
+        }
+      },
     },
-  });
+  );
+  disposables.push(completionDisposable);
 
-  // Register hover provider
-  registerHoverProvider(monaco);
+  // register hover provider
+  const hoverDisposable = registerHoverProvider(monaco);
+  disposables.push(hoverDisposable);
+
+  return disposables;
 }

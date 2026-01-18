@@ -56,13 +56,13 @@ const Navbar = ({ activePanel, onTogglePanel }: NavbarProps) => {
 
   return (
     <div
-      className="d-f ai-c jc-sb mx-4 py-2"
+      className="d-f ai-c jc-sb px-8 py-2"
       style={{ backgroundColor: "#1e2039" }}
     >
       <Image
         className="h-auto"
-        height={160}
-        width={80}
+        height={200}
+        width={120}
         src="/logotype.png"
         alt="Yumma CSS Play Logo"
       />

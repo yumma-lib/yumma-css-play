@@ -278,21 +278,12 @@ summary {
   margin-top: 2rem;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .o-20 {
   opacity: .2;
 }
 
 .o-h {
   overflow: hidden;
-}
-
-.p-2 {
-  padding: .5rem;
 }
 
 .p-a {
@@ -321,6 +312,11 @@ summary {
   padding-right: 1rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .py-1 {
   padding-top: .25rem;
   padding-bottom: .25rem;
@@ -329,11 +325,6 @@ summary {
 .py-2 {
   padding-top: .5rem;
   padding-bottom: .5rem;
-}
-
-.py-3 {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
 }
 
 .ta-c {

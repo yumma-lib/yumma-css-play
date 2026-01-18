@@ -6,7 +6,7 @@ interface UtilityInfo {
   properties: string[];
 }
 
-// Build a lookup map for all utilities
+// build a lookup map for all utilities
 function buildUtilityMap(): Map<string, UtilityInfo> {
   const map = new Map<string, UtilityInfo>();
   const allUtils = coreUtils();
@@ -32,7 +32,7 @@ function buildUtilityMap(): Map<string, UtilityInfo> {
 
 const utilityMap = buildUtilityMap();
 
-// Variant prefixes
+// variant prefixes
 const mediaVariants: Record<string, string> = {
   sm: "@media (min-width: 40rem)",
   md: "@media (min-width: 48rem)",
@@ -47,7 +47,7 @@ const pseudoVariants: Record<string, string> = {
   active: ":active",
 };
 
-// Parse a utility class and extract variant and base utility
+// parse a utility class and extract variant and base utility
 function parseUtility(className: string): {
   variants: string[];
   baseUtility: string;
@@ -57,7 +57,7 @@ function parseUtility(className: string): {
   return { variants: parts, baseUtility };
 }
 
-// Get hover content for a utility
+// get hover content for a utility
 function getHoverContent(className: string): string | null {
   const { variants, baseUtility } = parseUtility(className);
   const info = utilityMap.get(baseUtility);
@@ -66,12 +66,12 @@ function getHoverContent(className: string): string | null {
 
   let content = "";
 
-  // Build the CSS representation
+  // build the CSS representation
   const cssDeclaration = info.properties
     .map((prop) => `${prop}: ${info.cssValue};`)
     .join("\n");
 
-  // Add variant context
+  // add variant context
   if (variants.length > 0) {
     const variantDescriptions: string[] = [];
 
@@ -88,10 +88,10 @@ function getHoverContent(className: string): string | null {
     content += `${variantDescriptions.join("\n\n")}\n\n---\n\n`;
   }
 
-  // Add CSS
+  // add CSS
   content += `\`\`\`css\n${cssDeclaration}\n\`\`\``;
 
-  // Add doc link
+  // add doc link
   if (info.slug) {
     content += `\n\n[View docs](https://yummacss.com/docs/${info.slug})`;
   }
@@ -99,7 +99,7 @@ function getHoverContent(className: string): string | null {
   return content;
 }
 
-// Find utilities in text
+// find utilities in text
 function findUtilities(
   text: string,
   lineNumber: number,
@@ -146,13 +146,13 @@ function findUtilities(
 }
 
 export function registerHoverProvider(monaco: any) {
-  monaco.languages.registerHoverProvider("html", {
+  return monaco.languages.registerHoverProvider("html", {
     provideHover: (model: any, position: any) => {
       const lineContent = model.getLineContent(position.lineNumber);
       const utilities = findUtilities(lineContent, position.lineNumber);
 
       for (const { utility, startColumn, endColumn } of utilities) {
-        // Check if cursor is within this utility
+        // check if cursor is within this utility
         if (position.column >= startColumn && position.column <= endColumn) {
           const content = getHoverContent(utility);
           if (content) {
