@@ -399,12 +399,12 @@ summary {
   gap: .75rem;
 }
 
-.gtc-16 {
-  grid-template-columns: repeat(16, minmax(0, 1fr));
+.gtc-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.gtc-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.gtc-16 {
+  grid-template-columns: repeat(16, minmax(0, 1fr));
 }
 
 .gtr-12 {
@@ -417,6 +417,10 @@ summary {
 
 .h-3 {
   height: .75rem;
+}
+
+.h-48 {
+  height: 12rem;
 }
 
 .h-6 {
@@ -722,5 +726,9 @@ summary {
 
   .md\:d-none {
     display: none;
+  }
+
+  .md\:gtc-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

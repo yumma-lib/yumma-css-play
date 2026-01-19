@@ -4,7 +4,7 @@ export const initialCode: string = `<!--
   Write classes, preview instantly, and explore the framework.
 -->
 
-<div class="bg-white h-vh ff-s p-r o-h">
+<div class="bg-white h-vh ff-s p-r o-a">
 
   <div class="p-a i-0 zi-0 o-20 d-g gtc-16 gtr-12">
     <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
@@ -47,7 +47,7 @@ export const initialCode: string = `<!--
       <span class="c-gray-3 fs-xs ff-m ml-4 tt-u">Main Features</span>
     </div>
 
-    <div class="d-g gtc-2 f-1">
+    <div class="d-g gtc-1 md:gtc-2 f-1">
 
       <section class="btw-1 blw-1 brw-1 bc-silver-4 bg-white p-4 d-f fd-c">
         <div class="d-f ai-c g-2 mb-2 c-gray-4 us-none">
@@ -77,17 +77,17 @@ export const initialCode: string = `<!--
         </div>
         <h3 class="fs-md fw-600 c-gray-12">Color System</h3>
         <p class="fs-sm c-gray mt-1 mb-3">The complete Yumma CSS color system.</p>
-        <div class="d-f g-2 jc-c ai-c f-1 o-h">
-          <div class="w-8 h-full br-pill bw-4 bc-white bg-red-5 bs-sm"></div>
-          <div class="w-8 h-full br-pill bw-4 bc-white bg-orange-5 bs-sm d-none md:d-b"></div>
-          <div class="w-8 h-full br-pill bw-4 bc-white bg-yellow-5 bs-sm"></div>
-          <div class="w-8 h-full br-pill bw-4 bc-white bg-green-5 bs-sm"></div>
-          <div class="w-8 h-full br-pill bw-4 bc-white bg-teal-5 bs-sm d-none md:d-b"></div>
-          <div class="w-8 h-full br-pill bw-4 bc-white bg-cyan-5 bs-sm d-none md:d-b"></div>
-          <div class="w-8 h-full br-pill bw-4 bc-white bg-blue-5 bs-sm"></div>
-          <div class="w-8 h-full br-pill bw-4 bc-white bg-indigo-5 bs-sm"></div>
-          <div class="w-8 h-full br-pill bw-4 bc-white bg-violet-5 bs-sm d-none md:d-b"></div>
-          <div class="w-8 h-full br-pill bw-4 bc-white bg-pink-5 bs-sm"></div>
+        <div class="d-f g-2 jc-c ai-c f-1">
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-red-5 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-orange-5 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-yellow-5 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-green-5 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-teal-5 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-cyan-5 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-blue-5 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-indigo-5 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-violet-5 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-pink-5 bs-sm"></div>
         </div>
       </section>
 
