@@ -156,7 +156,7 @@ export const initialCode: string = `<!--
               <div class="d-3 br-half bw-1 bc-silver-4"></div>
               <div class="d-3 br-half bw-1 bc-silver-4"></div>
             </div>
-            <span class="fs-xs c-gray-3 ff-m us-none">[ .CSS ]</span>
+            <span class="fs-xs c-gray-3 ff-m us-none">[ .HTML ]</span>
           </div>
           <div class="d-f fs-xs ff-m lh-5 p-3">
             <div class="c-gray-3 ta-r pr-3 us-none">
