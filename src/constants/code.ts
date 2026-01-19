@@ -8,19 +8,19 @@ export const initialCode: string = `<!--
 
   <!-- Subtle Grid Background -->
   <div class="p-a i-0 zi-0 o-20 d-g gtc-16 gtr-12">
-    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
-    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
-    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
-    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
-    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
-    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
-    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
-    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
   </div>
 
   <!-- Decorative Markers -->
   <span class="p-a t-4 l-4 c-indigo fs-lg us-none">+</span>
-  <span class="p-a t-4 r-4 c-gray-3 fs-xs ff-m us-none">PLAYGROUND</span>
+  <span class="p-a t-4 r-4 c-gray-3 fs-xs ff-m us-none tt-u">Yumma CSS</span>
   <span class="p-a t-20 l-16 c-gray-3 fs-md us-none">+</span>
   <span class="p-a t-12 r-20 c-indigo fs-sm us-none">✦</span>
   <span class="p-a b-20 l-12 c-indigo fs-xs us-none">◆</span>
@@ -34,7 +34,7 @@ export const initialCode: string = `<!--
       Documentation
     </a>
     <span class="fs-sm c-gray-12 fw-500 d-f ai-c g-1 c-p">
-      Try now <span class="c-gray-12">→</span>
+      Try now <span class="c-gray-12"></span>
     </span>
   </div>
 
@@ -58,7 +58,7 @@ export const initialCode: string = `<!--
       <span class="c-indigo fs-xs ff-m">01</span>
       <span class="c-gray-3 fs-xs ff-m">/</span>
       <span class="c-gray-3 fs-xs ff-m">04</span>
-      <span class="c-gray-3 fs-xs ff-m ml-4">MAIN FEATURES</span>
+      <span class="c-gray-3 fs-xs ff-m ml-4 tt-u">Main Features</span>
     </div>
 
     <!-- Features Grid - 2x2 -->
@@ -74,14 +74,14 @@ export const initialCode: string = `<!--
         <p class="fs-sm c-gray mt-1 mb-3">Smart suggestions as you type.</p>
         <div class="bw-1 bc-gray-1 p-2 bg-gray-1/50 f-1">
           <div class="d-f fd-c g-1 fs-xs ff-m">
-            <div class="d-f jc-sb"><span class="c-gray-6">d-f</span><span class="c-gray-3">display: flex;</span></div>
-            <div class="d-f jc-sb bg-indigo/10 px-1"><span class="c-indigo fw-500">d-g</span><span class="c-gray-3">display: grid;</span></div>
-            <div class="d-f jc-sb"><span class="c-gray-6">d-b</span><span class="c-gray-3">display: block;</span></div>
-            <div class="d-f jc-sb"><span class="c-gray-6">d-none</span><span class="c-gray-3">display: none;</span></div>
-            <div class="d-f jc-sb"><span class="c-gray-6">d-i</span><span class="c-gray-3">display: inline;</span></div>
-            <div class="d-f jc-sb"><span class="c-gray-6">d-if</span><span class="c-gray-3">display: inline-flex;</span></div>
-            <div class="d-f jc-sb"><span class="c-gray-6">d-ib</span><span class="c-gray-3">display: inline-block;</span></div>
-            <div class="d-f jc-sb"><span class="c-gray-6">d-t</span><span class="c-gray-3">display: table;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-f</span><span class="c-gray-3">display: flex;</span></div>
+            <div class="d-f jc-sb bg-silver/40 px-1"><span class="c-black fw-500">d-g</span><span class="c-gray-3">display: grid;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-b</span><span class="c-gray-3">display: block;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-none</span><span class="c-gray-3">display: none;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-i</span><span class="c-gray-3">display: inline;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-if</span><span class="c-gray-3">display: inline-flex;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-ib</span><span class="c-gray-3">display: inline-block;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-t</span><span class="c-gray-3">display: table;</span></div>
           </div>
         </div>
       </section>
@@ -116,9 +116,9 @@ export const initialCode: string = `<!--
         </div>
         <h3 class="fs-md fw-600 c-gray-12">Responsive Panels</h3>
         <p class="fs-sm c-gray mt-1 mb-3">Drag to resize. Press R to reset.</p>
-        <div class="d-f g-1 f-1">
+        <div class="d-f g- f-1">
           <!-- Editor Panel Skeleton -->
-          <div class="f-1 bw-1 bc-gray-2 bg-gray-1 p-2 d-f fd-c g-1">
+          <div class="f-1 bw-1 bc-silver-4 bg-gray-1 p-2 d-f fd-c g-1">
             <div class="h-2 w-full bg-gray-3 o-50"></div>
             <div class="h-2 w-full bg-gray-3 o-30"></div>
             <div class="h-2 w-full bg-gray-3 o-50"></div>
@@ -129,9 +129,9 @@ export const initialCode: string = `<!--
             <div class="h-2 w-full bg-gray-3 o-30"></div>
             <div class="h-2 w-half bg-gray-3 o-40"></div>
           </div>
-          <div class="w-1 bg-indigo"></div>
+          <div class="w-px bg-silver-7 c-cr"></div>
           <!-- Preview Panel Skeleton -->
-          <div class="f-1 bw-1 bc-gray-2 p-2 d-f fd-c g-2">
+          <div class="f-1 bw-1 bc-silver-4 p-2 d-f fd-c g-2">
             <div class="h-3 w-half bg-gray-2"></div>
             <div class="d-f g-1">
               <div class="h-8 w-10 bg-gray-1"></div>
@@ -180,7 +180,7 @@ export const initialCode: string = `<!--
             </div>
             <div>
               <div class="c-gray-6">&lt;div class="</div>
-              <div class="pl-4"><span class="c-red-5 td-u tds-w">d-f d-g</span> <span class="c-gray-8">gtc-4</span></div>
+              <div class="pl-4"><span class="c-yellow-5 td-u tds-w">d-f d-g</span> <span class="c-gray-8">gtc-4</span></div>
               <div class="pl-4 c-gray-8">sm:gtc-2 ai-c jc-sb</div>
               <div class="pl-4 c-gray-8">p-4 bg-indigo-12</div>
               <div class="c-gray-6">"&gt;</div>
