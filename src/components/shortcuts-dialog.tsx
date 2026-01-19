@@ -54,30 +54,55 @@ const ShortcutsDialog = ({
     }, 100);
   };
 
-  // Handle keyboard shortcuts when dialog is open
+  // handle keyboard shortcuts when dialog is closed and editor is not focused
   useEffect(() => {
-    if (!open) return;
+    // only listen when dialog is closed
+    if (open) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
+      // don't trigger shortcuts if user is typing in the editor or any input
+      const activeElement = document.activeElement;
+      const isEditorFocused = activeElement?.closest(".monaco-editor") !== null;
+      const isInputFocused =
+        activeElement?.tagName === "INPUT" ||
+        activeElement?.tagName === "TEXTAREA";
+
+      if (isEditorFocused || isInputFocused) return;
+
       const key = e.key.toUpperCase();
 
       if (key === "F1") {
         e.preventDefault();
-        executeAction("palette");
+        onCommandPalette();
         return;
       }
 
       const matchingShortcut = SHORTCUTS.find((s) => s.key === key);
       if (matchingShortcut) {
         e.preventDefault();
-        executeAction(matchingShortcut.action);
+        switch (matchingShortcut.action) {
+          case "share":
+            onShare();
+            break;
+          case "reset":
+            onResetLayout();
+            break;
+          case "preview":
+            onFullPreview();
+            break;
+          case "format":
+            onFormat();
+            break;
+          case "palette":
+            onCommandPalette();
+            break;
+        }
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [open]);
+  }, [open, onShare, onResetLayout, onFullPreview, onFormat, onCommandPalette]);
 
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>

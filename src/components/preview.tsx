@@ -29,15 +29,31 @@ export function Preview({ code }: PreviewProps) {
 </html>
   `.trim();
 
+  const handleContainerClick = () => {
+    // Blur any focused element to allow global shortcuts to work
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  };
+
   return (
-    <Frame
-      initialContent={initialContent}
-      mountTarget="#root"
-      className="w-full h-full b-0"
-      style={{ border: 0 }}
+    <button
+      className="w-full h-full"
+      onClick={handleContainerClick}
+      onKeyDown={() => {}}
+      tabIndex={0}
+      type="button"
     >
-      <div dangerouslySetInnerHTML={{ __html: code }} />
-    </Frame>
+      <Frame
+        initialContent={initialContent}
+        mountTarget="#root"
+        className="w-full h-full b-0"
+        style={{ border: 0, pointerEvents: "auto" }}
+      >
+        {/* biome-ignore lint/security/noDangerouslySetInnerHtml: playground requires rendering user HTML */}
+        <div dangerouslySetInnerHTML={{ __html: code }} />
+      </Frame>
+    </button>
   );
 }
 
