@@ -36,7 +36,11 @@ function findConflicts(
   const classRegex = /class\s*=\s*["']([^"']+)["']/g;
   let classMatch: RegExpExecArray | null;
 
-  while ((classMatch = classRegex.exec(text)) !== null) {
+  for (
+    classMatch = classRegex.exec(text);
+    classMatch !== null;
+    classMatch = classRegex.exec(text)
+  ) {
     const classContent = classMatch[1];
     const classStartIndex =
       classMatch.index + classMatch[0].indexOf(classContent);

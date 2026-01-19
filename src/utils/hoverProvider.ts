@@ -93,7 +93,7 @@ function getHoverContent(className: string): string | null {
 
   // add doc link
   if (info.slug) {
-    content += `\n\n[View docs](https://yummacss.com/docs/${info.slug})`;
+    content += `\n\n[Yumma CSS Reference](https://yummacss.com/docs/${info.slug})`;
   }
 
   return content;

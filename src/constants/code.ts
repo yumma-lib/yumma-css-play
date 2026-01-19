@@ -1,18 +1,199 @@
-export const initialCode: string = `<div class="o-h bg-indigo-12 ff-c min-h-vh p-r c-white w-full">
-  <div class="p-a i-0 zi-0 o-20"></div>
+export const initialCode: string = `<!--
+  Yumma CSS Playground
+  A zero-config environment to experiment with Yumma CSS utilities.
+  Write classes, preview instantly, and explore the framework.
+-->
 
-  <section class="ai-c d-f fd-c ff-c jc-c min-h-vh p-r ta-c c-white zi-1">
-    <h1 class="fs-6xl fw-700 mb-4">Yumma CSS Play</h1>
-    <p class="ff-s fs-lg lh-6 c-silver-4">
-      Zero-config, fully responsive playground powered by the Monaco editor.<br>
-      Built-in utility completions, and much more!
-    </p>
+<div class="bg-white h-vh ff-s p-r o-h">
 
-    <div class="d-g ff-s fs-sm fw-500 g-4 gtc-2 mt-8 px-4 sm:gtc-4 sm:w-auto w-full">
-      <div class="bw-1 bc-indigo-10 bg-indigo-11 px-3 py-1 c-silver-2">Zero-Config</div>
-      <div class="bw-1 bc-indigo-10 bg-indigo-11 px-3 py-1 c-silver-2">Responsive Panels</div>
-      <div class="bw-1 bc-indigo-10 bg-indigo-11 px-3 py-1 c-silver-2">Utility Completions</div>
-      <div class="bw-1 bc-indigo-10 bg-indigo-11 px-3 py-1 c-silver-2">Monaco Support</div>
+  <!-- Subtle Grid Background -->
+  <div class="p-a i-0 zi-0 o-20 d-g gtc-16 gtr-12">
+    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
+    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
+    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
+    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
+    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
+    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
+    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
+    <div class="bbw-1 brw-1 bc-gray-2"></div><div class="bbw-1 brw-1 bc-gray-2"></div>
+  </div>
+
+  <!-- Decorative Markers -->
+  <span class="p-a t-4 l-4 c-indigo fs-lg us-none">+</span>
+  <span class="p-a t-4 r-4 c-gray-3 fs-xs ff-m us-none">PLAYGROUND</span>
+  <span class="p-a t-20 l-16 c-gray-3 fs-md us-none">+</span>
+  <span class="p-a t-12 r-20 c-indigo fs-sm us-none">✦</span>
+  <span class="p-a b-20 l-12 c-indigo fs-xs us-none">◆</span>
+
+  <!-- CTA - Bottom Left & Right -->
+  <div class="p-a b-4 l-4 d-f ai-c g-2 us-none">
+    <span class="c-gray-3 fs-xs ff-m">200 x</span>
+  </div>
+  <div class="p-a b-4 r-4 d-f ai-c g-4">
+    <a href="https://yummacss.com/docs" target="_blank" class="fs-sm c-gray td-none h:td-u">
+      Documentation
+    </a>
+    <span class="fs-sm c-gray-12 fw-500 d-f ai-c g-1 c-p">
+      Try now <span class="c-gray-12">→</span>
+    </span>
+  </div>
+
+  <!-- Main Content -->
+  <div class="p-r zi-1 max-w-xl mx-auto px-6 pt-12 pb-12 h-full d-f fd-c">
+
+    <!-- Hero Section -->
+    <header class="ta-l mb-6">
+      <h1 class="ff-c fw-100 fs-5xl c-gray-12 lh-2 mb-2">
+        Write utilities,<br>preview instantly
+      </h1>
+      <p class="fs-sm c-gray lh-5 max-w-sm">
+        Style your interfaces with intuitive class names.
+        Real-time preview. Intelligent completions.
+      </p>
+    </header>
+
+    <!-- MAIN FEATURES Marker -->
+    <div class="d-f ai-c g-2 mb-3 us-none">
+      <span class="c-indigo fs-lg fw-500">|</span>
+      <span class="c-indigo fs-xs ff-m">01</span>
+      <span class="c-gray-3 fs-xs ff-m">/</span>
+      <span class="c-gray-3 fs-xs ff-m">04</span>
+      <span class="c-gray-3 fs-xs ff-m ml-4">MAIN FEATURES</span>
     </div>
-  </section>
-</div>`;
+
+    <!-- Features Grid - 2x2 -->
+    <div class="d-g gtc-2 f-1">
+
+      <!-- Completions -->
+      <section class="btw-1 blw-1 brw-1 bc-silver-4 bg-white p-4 d-f fd-c">
+        <div class="d-f ai-c g-2 mb-2 c-gray-4 us-none">
+          <i class="ph ph-article"></i>
+          <span class="fs-xs">Intelligent</span>
+        </div>
+        <h3 class="fs-md fw-600 c-gray-12">Completions</h3>
+        <p class="fs-sm c-gray mt-1 mb-3">Smart suggestions as you type.</p>
+        <div class="bw-1 bc-gray-1 p-2 bg-gray-1/50 f-1">
+          <div class="d-f fd-c g-1 fs-xs ff-m">
+            <div class="d-f jc-sb"><span class="c-gray-6">d-f</span><span class="c-gray-3">display: flex;</span></div>
+            <div class="d-f jc-sb bg-indigo/10 px-1"><span class="c-indigo fw-500">d-g</span><span class="c-gray-3">display: grid;</span></div>
+            <div class="d-f jc-sb"><span class="c-gray-6">d-b</span><span class="c-gray-3">display: block;</span></div>
+            <div class="d-f jc-sb"><span class="c-gray-6">d-none</span><span class="c-gray-3">display: none;</span></div>
+            <div class="d-f jc-sb"><span class="c-gray-6">d-i</span><span class="c-gray-3">display: inline;</span></div>
+            <div class="d-f jc-sb"><span class="c-gray-6">d-if</span><span class="c-gray-3">display: inline-flex;</span></div>
+            <div class="d-f jc-sb"><span class="c-gray-6">d-ib</span><span class="c-gray-3">display: inline-block;</span></div>
+            <div class="d-f jc-sb"><span class="c-gray-6">d-t</span><span class="c-gray-3">display: table;</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Colors -->
+      <section class="btw-1 brw-1 bc-silver-4 bg-white p-4 d-f fd-c">
+        <div class="d-f ai-c g-2 mb-2 c-gray-4 us-none">
+          <i class="ph ph-swatches"></i>
+          <span class="fs-xs">Expressive</span>
+        </div>
+        <h3 class="fs-md fw-600 c-gray-12">Color System</h3>
+        <p class="fs-sm c-gray mt-1 mb-3">13 palettes with 12 shades each.</p>
+        <div class="d-f g-2 jc-c ai-c f-1">
+          <div class="w-8 h-full br-pill bw-4 bc-white bg-red-5 bs-sm"></div>
+          <div class="w-8 h-full br-pill bw-4 bc-white bg-orange-5 bs-sm"></div>
+          <div class="w-8 h-full br-pill bw-4 bc-white bg-yellow-5 bs-sm"></div>
+          <div class="w-8 h-full br-pill bw-4 bc-white bg-green-5 bs-sm"></div>
+          <div class="w-8 h-full br-pill bw-4 bc-white bg-teal-5 bs-sm"></div>
+          <div class="w-8 h-full br-pill bw-4 bc-white bg-cyan-5 bs-sm"></div>
+          <div class="w-8 h-full br-pill bw-4 bc-white bg-blue-5 bs-sm"></div>
+          <div class="w-8 h-full br-pill bw-4 bc-white bg-indigo-5 bs-sm"></div>
+          <div class="w-8 h-full br-pill bw-4 bc-white bg-violet-5 bs-sm"></div>
+          <div class="w-8 h-full br-pill bw-4 bc-white bg-pink-5 bs-sm"></div>
+        </div>
+      </section>
+
+      <!-- Responsive Panels -->
+      <section class="bw-1 bc-silver-4 bg-white p-4 d-f fd-c">
+        <div class="d-f ai-c g-2 mb-2 c-gray-4 us-none">
+          <i class="ph ph-devices"></i>
+          <span class="fs-xs">Adaptive</span>
+        </div>
+        <h3 class="fs-md fw-600 c-gray-12">Responsive Panels</h3>
+        <p class="fs-sm c-gray mt-1 mb-3">Drag to resize. Press R to reset.</p>
+        <div class="d-f g-1 f-1">
+          <!-- Editor Panel Skeleton -->
+          <div class="f-1 bw-1 bc-gray-2 bg-gray-1 p-2 d-f fd-c g-1">
+            <div class="h-2 w-full bg-gray-3 o-50"></div>
+            <div class="h-2 w-full bg-gray-3 o-30"></div>
+            <div class="h-2 w-full bg-gray-3 o-50"></div>
+            <div class="h-2 w-half bg-gray-3 o-30"></div>
+            <div class="h-2 w-full bg-gray-3 o-40"></div>
+            <div class="h-2 w-full bg-gray-3 o-30"></div>
+            <div class="h-2 w-full bg-gray-3 o-50"></div>
+            <div class="h-2 w-full bg-gray-3 o-30"></div>
+            <div class="h-2 w-half bg-gray-3 o-40"></div>
+          </div>
+          <div class="w-1 bg-indigo"></div>
+          <!-- Preview Panel Skeleton -->
+          <div class="f-1 bw-1 bc-gray-2 p-2 d-f fd-c g-2">
+            <div class="h-3 w-half bg-gray-2"></div>
+            <div class="d-f g-1">
+              <div class="h-8 w-10 bg-gray-1"></div>
+              <div class="d-f fd-c g-1 f-1">
+                <div class="h-2 w-full bg-gray-2"></div>
+                <div class="h-2 w-full bg-gray-1"></div>
+                <div class="h-2 w-half bg-gray-2"></div>
+              </div>
+            </div>
+            <div class="d-f g-2 mt-2">
+              <div class="h-4 w-12 bg-gray-2"></div>
+              <div class="h-4 w-12 bg-gray-1"></div>
+            </div>
+            <div class="d-f fd-c g-1 f-1">
+              <div class="h-2 w-full bg-gray-1"></div>
+              <div class="h-2 w-full bg-gray-2"></div>
+              <div class="h-2 w-half bg-gray-1"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Atomic Utilities - Code Block -->
+      <section class="btw-1 brw-1 bbw-1 bc-silver-4 bg-white p-4 d-f fd-c">
+        <div class="d-f ai-c g-2 mb-2 c-gray-4 us-none">
+          <i class="ph ph-fire"></i>
+          <span class="fs-xs">Intuitive</span>
+        </div>
+        <h3 class="fs-md fw-600 c-gray-12">Atomic Utilities</h3>
+        <p class="fs-sm c-gray mt-1 mb-3">Less typing, more styling.</p>
+        <!-- Code Block -->
+        <div class="bw-1 bc-silver-4 bg-white o-h f-1">
+          <!-- Window Bar -->
+          <div class="d-f ai-c jc-sb px-3 py-2 bbw-1 bc-silver-4">
+            <div class="d-f g-2">
+              <div class="d-3 br-half bw-1 bc-silver-4"></div>
+              <div class="d-3 br-half bw-1 bc-silver-4"></div>
+              <div class="d-3 br-half bw-1 bc-silver-4"></div>
+            </div>
+            <span class="fs-xs c-gray-3 ff-m us-none">[ .CSS ]</span>
+          </div>
+          <!-- Code Content with Line Numbers -->
+          <div class="d-f fs-xs ff-m lh-5 p-3">
+            <div class="c-gray-3 ta-r pr-3 us-none">
+              <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+            </div>
+            <div>
+              <div class="c-gray-6">&lt;div class="</div>
+              <div class="pl-4"><span class="c-red-5 td-u tds-w">d-f d-g</span> <span class="c-gray-8">gtc-4</span></div>
+              <div class="pl-4 c-gray-8">sm:gtc-2 ai-c jc-sb</div>
+              <div class="pl-4 c-gray-8">p-4 bg-indigo-12</div>
+              <div class="c-gray-6">"&gt;</div>
+              <div class="c-gray-6">&lt;/div&gt;</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- Iconography: Phosphor Icons -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">`;

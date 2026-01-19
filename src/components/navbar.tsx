@@ -96,9 +96,11 @@ const Navbar = ({
       <Image
         className="h-auto"
         height={200}
-        width={120}
+        width={140}
         src="/logotype.png"
         alt="Yumma CSS Play Logo"
+        style={{ imageRendering: "crisp-edges" }}
+        priority
       />
 
       <div className="d-f ai-c g-2">
