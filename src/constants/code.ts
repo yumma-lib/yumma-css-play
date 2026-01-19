@@ -77,16 +77,16 @@ export const initialCode: string = `<!--
         </div>
         <h3 class="fs-md fw-600 c-gray-12">Color System</h3>
         <p class="fs-sm c-gray mt-1 mb-3">The complete Yumma CSS color system.</p>
-        <div class="d-f g-2 jc-c ai-c f-1">
+        <div class="d-f g-2 jc-c ai-c f-1 o-h">
           <div class="w-8 h-full br-pill bw-4 bc-white bg-red-5 bs-sm"></div>
-          <div class="w-8 h-full br-pill bw-4 bc-white bg-orange-5 bs-sm"></div>
+          <div class="w-8 h-full br-pill bw-4 bc-white bg-orange-5 bs-sm d-none md:d-b"></div>
           <div class="w-8 h-full br-pill bw-4 bc-white bg-yellow-5 bs-sm"></div>
           <div class="w-8 h-full br-pill bw-4 bc-white bg-green-5 bs-sm"></div>
-          <div class="w-8 h-full br-pill bw-4 bc-white bg-teal-5 bs-sm"></div>
-          <div class="w-8 h-full br-pill bw-4 bc-white bg-cyan-5 bs-sm"></div>
+          <div class="w-8 h-full br-pill bw-4 bc-white bg-teal-5 bs-sm d-none md:d-b"></div>
+          <div class="w-8 h-full br-pill bw-4 bc-white bg-cyan-5 bs-sm d-none md:d-b"></div>
           <div class="w-8 h-full br-pill bw-4 bc-white bg-blue-5 bs-sm"></div>
           <div class="w-8 h-full br-pill bw-4 bc-white bg-indigo-5 bs-sm"></div>
-          <div class="w-8 h-full br-pill bw-4 bc-white bg-violet-5 bs-sm"></div>
+          <div class="w-8 h-full br-pill bw-4 bc-white bg-violet-5 bs-sm d-none md:d-b"></div>
           <div class="w-8 h-full br-pill bw-4 bc-white bg-pink-5 bs-sm"></div>
         </div>
       </section>
@@ -98,8 +98,9 @@ export const initialCode: string = `<!--
         </div>
         <h3 class="fs-md fw-600 c-gray-12">Responsive Panels</h3>
         <p class="fs-sm c-gray mt-1 mb-3">Drag to resize. Press R to reset.</p>
-        <div class="d-f g- f-1">
-          <div class="f-1 bw-1 bc-silver-4 bg-gray-1 p-2 d-f fd-c g-1">
+        <div class="f-1 d-f fd-c">
+          <!-- Small screens: Code skeleton only (mimics mobile message) -->
+          <div class="d-b md:d-none f-1 bw-1 bc-silver-4 bg-gray-1 p-2 d-f fd-c g-1">
             <div class="h-2 w-full bg-gray-3 o-50"></div>
             <div class="h-2 w-full bg-gray-3 o-30"></div>
             <div class="h-2 w-full bg-gray-3 o-50"></div>
@@ -107,28 +108,33 @@ export const initialCode: string = `<!--
             <div class="h-2 w-full bg-gray-3 o-40"></div>
             <div class="h-2 w-full bg-gray-3 o-30"></div>
             <div class="h-2 w-full bg-gray-3 o-50"></div>
-            <div class="h-2 w-full bg-gray-3 o-30"></div>
-            <div class="h-2 w-half bg-gray-3 o-40"></div>
           </div>
-          <div class="w-px bg-silver-7 c-cr"></div>
-          <div class="f-1 bw-1 bc-silver-4 p-2 d-f fd-c g-2">
-            <div class="h-3 w-half bg-gray-2"></div>
-            <div class="d-f g-1">
-              <div class="h-8 w-10 bg-gray-1"></div>
-              <div class="d-f fd-c g-1 f-1">
-                <div class="h-2 w-full bg-gray-2"></div>
-                <div class="h-2 w-full bg-gray-1"></div>
-                <div class="h-2 w-half bg-gray-2"></div>
+          <!-- Large screens: Both panels side by side -->
+          <div class="d-none md:d-f f-1 g-1">
+            <!-- Editor skeleton -->
+            <div class="f-1 bw-1 bc-silver-4 bg-gray-1 p-2 d-f fd-c g-1">
+              <div class="h-2 w-full bg-gray-3 o-50"></div>
+              <div class="h-2 w-full bg-gray-3 o-30"></div>
+              <div class="h-2 w-full bg-gray-3 o-50"></div>
+              <div class="h-2 w-half bg-gray-3 o-30"></div>
+              <div class="h-2 w-full bg-gray-3 o-40"></div>
+            </div>
+            <!-- Divider -->
+            <div class="w-1 bg-indigo"></div>
+            <!-- Preview skeleton -->
+            <div class="f-1 bw-1 bc-silver-4 p-2 d-f fd-c g-2">
+              <div class="h-3 w-half bg-gray-2"></div>
+              <div class="d-f g-1">
+                <div class="h-6 w-8 bg-gray-1"></div>
+                <div class="d-f fd-c g-1 f-1">
+                  <div class="h-2 w-full bg-gray-2"></div>
+                  <div class="h-2 w-full bg-gray-1"></div>
+                </div>
               </div>
-            </div>
-            <div class="d-f g-2 mt-2">
-              <div class="h-4 w-12 bg-gray-2"></div>
-              <div class="h-4 w-12 bg-gray-1"></div>
-            </div>
-            <div class="d-f fd-c g-1 f-1">
-              <div class="h-2 w-full bg-gray-1"></div>
-              <div class="h-2 w-full bg-gray-2"></div>
-              <div class="h-2 w-half bg-gray-1"></div>
+              <div class="d-f g-2">
+                <div class="h-3 w-10 bg-gray-2"></div>
+                <div class="h-3 w-10 bg-gray-1"></div>
+              </div>
             </div>
           </div>
         </div>

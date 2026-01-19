@@ -173,6 +173,10 @@ summary {
   background-color: #5ec785;
 }
 
+.bg-indigo {
+  background-color: #595cd9;
+}
+
 .bg-indigo-5 {
   background-color: #878ae4;
 }
@@ -187,10 +191,6 @@ summary {
 
 .bg-red-5 {
   background-color: #e27373;
-}
-
-.bg-silver-7 {
-  background-color: #a4a7ab;
 }
 
 .bg-silver\/40 {
@@ -255,10 +255,6 @@ summary {
 
 .c-black {
   color: #000;
-}
-
-.c-cr {
-  cursor: col-resize;
 }
 
 .c-gray {
@@ -423,12 +419,8 @@ summary {
   height: .75rem;
 }
 
-.h-4 {
-  height: 1rem;
-}
-
-.h-8 {
-  height: 2rem;
+.h-6 {
+  height: 1.5rem;
 }
 
 .h-auto {
@@ -529,10 +521,6 @@ summary {
 
 .mt-1 {
   margin-top: .25rem;
-}
-
-.mt-2 {
-  margin-top: .5rem;
 }
 
 .mt-6 {
@@ -699,12 +687,12 @@ summary {
   user-select: none;
 }
 
-.w-10 {
-  width: 2.5rem;
+.w-1 {
+  width: .25rem;
 }
 
-.w-12 {
-  width: 3rem;
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-8 {
@@ -719,10 +707,6 @@ summary {
   width: 50%;
 }
 
-.w-px {
-  width: 1px;
-}
-
 .zi-0 {
   z-index: 0;
 }
@@ -730,6 +714,10 @@ summary {
 @media (width >= 48rem) {
   .md\:d-b {
     display: block;
+  }
+
+  .md\:d-f {
+    display: flex;
   }
 
   .md\:d-none {
