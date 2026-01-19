@@ -403,10 +403,6 @@ summary {
   gap: .75rem;
 }
 
-.g-4 {
-  gap: 1rem;
-}
-
 .gtc-16 {
   grid-template-columns: repeat(16, minmax(0, 1fr));
 }
@@ -453,10 +449,6 @@ summary {
 
 .h\:bg-silver\/25:hover {
   background-color: #bfc2c740;
-}
-
-.h\:td-u:hover {
-  text-decoration: underline;
 }
 
 .i-0 {
@@ -685,10 +677,6 @@ summary {
 
 .ta-r {
   text-align: right;
-}
-
-.td-none {
-  text-decoration: none;
 }
 
 .td-u {
