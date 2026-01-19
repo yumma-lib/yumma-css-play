@@ -1,8 +1,5 @@
-import {
-  SandpackStack,
-  useActiveCode,
-  useSandpack,
-} from "@codesandbox/sandpack-react";
+"use client";
+
 import Editor from "@monaco-editor/react";
 import { emmetHTML } from "emmet-monaco-es";
 import { useRef } from "react";
@@ -17,9 +14,13 @@ import { registerProviders } from "@/utils/providers";
 // track if providers have been registered globally (Monaco providers are singleton)
 let providersRegistered = false;
 
-function MonacoEditor() {
-  const { code, updateCode } = useActiveCode();
-  const { sandpack } = useSandpack();
+interface MonacoEditorProps {
+  code: string;
+  onChange: (code: string) => void;
+  onMount?: (editor: any) => void;
+}
+
+function MonacoEditor({ code, onChange, onMount }: MonacoEditorProps) {
   const editorRef = useRef<any>(null);
   const monacoRef = useRef<any>(null);
 
@@ -42,34 +43,29 @@ function MonacoEditor() {
     if (handleMount) {
       handleMount(editor, monaco);
     }
-  };
 
-  const getLanguage = (filename: string) => {
-    if (filename.endsWith(".css")) return "css";
-    if (filename.endsWith(".html")) return "html";
-
-    return "html";
+    // expose editor to parent
+    if (onMount) {
+      onMount(editor);
+    }
   };
 
   return (
-    <SandpackStack className="h-full m-0">
-      <div className="f-1" style={{ borderTop: "1px solid #31365e" }}>
-        <Editor
-          defaultValue={code}
-          key={sandpack.activeFile}
-          language={getLanguage(sandpack.activeFile)}
-          onChange={(value) => updateCode(value || "")}
-          onMount={handleEditorDidMount}
-          options={{
-            minimap: { enabled: false },
-            padding: { top: 8 },
-            scrollBeyondLastLine: false,
-            wordWrap: "on",
-          }}
-          theme="midnight"
-        />
-      </div>
-    </SandpackStack>
+    <div className="h-full" style={{ borderTop: "1px solid #31365e" }}>
+      <Editor
+        value={code}
+        language="html"
+        onChange={(value) => onChange(value || "")}
+        onMount={handleEditorDidMount}
+        options={{
+          minimap: { enabled: false },
+          padding: { top: 8 },
+          scrollBeyondLastLine: false,
+          wordWrap: "on",
+        }}
+        theme="midnight"
+      />
+    </div>
   );
 }
 

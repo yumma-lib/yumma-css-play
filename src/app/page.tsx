@@ -1,29 +1,30 @@
 "use client";
 
-import {
-  SandpackLayout,
-  SandpackPreview,
-  SandpackProvider,
-} from "@codesandbox/sandpack-react";
 import type React from "react";
-import { useEffect, useState } from "react";
-import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
+import { useEffect, useRef, useState } from "react";
+import {
+  type ImperativePanelHandle,
+  Panel,
+  PanelGroup,
+  PanelResizeHandle,
+} from "react-resizable-panels";
+import MobileNavbar from "@/components/mobile-navbar";
 import MonacoEditor from "@/components/monaco";
 import Navbar from "@/components/navbar";
+import Preview from "@/components/preview";
 import { initialCode } from "@/constants/code";
-import customSpTheme from "@/themes/spMidnight";
 import { getCodeFromUrl } from "@/utils/share";
 
 const Home: React.FC = () => {
   const [code, setCode] = useState<string>(initialCode);
   const [isLoading, setIsLoading] = useState(true);
-  const [activePanel, setActivePanel] = useState<"editor" | "preview">(
-    "editor",
-  );
+
+  const editorPanelRef = useRef<ImperativePanelHandle>(null);
+  const editorRef = useRef<any>(null);
 
   useEffect(() => {
-    const loadSharedCode = async () => {
-      const sharedCode = await getCodeFromUrl();
+    const loadSharedCode = () => {
+      const sharedCode = getCodeFromUrl();
       if (sharedCode) {
         setCode(sharedCode);
       }
@@ -33,14 +34,20 @@ const Home: React.FC = () => {
     loadSharedCode();
   }, []);
 
-  const togglePanel = () => {
-    setActivePanel((prev) => (prev === "editor" ? "preview" : "editor"));
+  const handleResetLayout = () => {
+    editorPanelRef.current?.resize(50);
   };
 
-  // don't render Sandpack until we've checked for shared code
+  const handleFullPreview = () => {
+    editorPanelRef.current?.collapse();
+  };
+
   if (isLoading) {
     return (
-      <div className="d-f ai-c jc-c h-dvh c-white">
+      <div
+        className="d-f ai-c jc-c h-dvh c-white"
+        style={{ backgroundColor: "#1e2039" }}
+      >
         <div className="ta-c">
           <div className="fs-lg">Loading...</div>
         </div>
@@ -49,81 +56,62 @@ const Home: React.FC = () => {
   }
 
   return (
-    <SandpackProvider
-      files={{
-        "index.html": code,
-      }}
-      template="static"
-      theme={customSpTheme}
-      options={{
-        externalResources: [
-          "https://cdn.jsdelivr.net/npm/@yummacss/runtime@latest/dist/index.iife.js",
-        ],
-        minimap: { enabled: false },
-        ...({
-          emmet: {
-            enabled: true,
-            triggerExpansionOnTab: true,
-            showAbbreviationSuggestions: true,
-            showExpandedAbbreviation: "always",
-            showSuggestionsAsSnippets: true,
-            preferences: {},
-            showExcluded: true,
-            syntaxProfiles: {},
-            variables: {},
-          },
-        } as any),
-      }}
-    >
-      <div className="d-f h-dvh">
-        <SandpackLayout style={{ border: 0, flex: 1 }}>
-          {/* Desktop */}
-          <div className="d-none md:d-f h-full w-full">
-            <PanelGroup direction="horizontal" className="h-full">
-              <Panel collapsible maxSize={80} minSize={20} defaultSize={50}>
-                <div className="d-f fd-c h-full">
-                  <Navbar
-                    activePanel={activePanel}
-                    onTogglePanel={togglePanel}
-                  />
-                  <div className="f-1 o-h">
-                    <MonacoEditor />
-                  </div>
-                </div>
-              </Panel>
-              <PanelResizeHandle className="p-px" onDoubleClick={() => {}} />
-              <Panel collapsible defaultSize={50}>
-                <SandpackPreview
-                  className="h-full"
-                  showOpenInCodeSandbox={false}
-                  showRefreshButton={false}
-                />
-              </Panel>
-            </PanelGroup>
+    <>
+      {/* Small screen - mobile navbar only */}
+      <div className="d-b md:d-none">
+        <MobileNavbar />
+        <div
+          className="d-f ai-c jc-c c-white p-6"
+          style={{ backgroundColor: "#1e2039", height: "calc(100dvh - 52px)" }}
+        >
+          <div className="ta-c">
+            <div className="fs-xl fw-600 mb-2">Desktop Only</div>
+            <p
+              className="fs-sm"
+              style={{ color: "#bec6f2", maxWidth: "280px" }}
+            >
+              Yumma CSS Play is designed for desktop browsers. Please visit on a
+              larger screen.
+            </p>
           </div>
-
-          {/* Mobile */}
-          <div className="d-f md:d-none h-full w-full">
-            {activePanel === "editor" ? (
-              <div className="w-full h-full d-f fd-c">
-                <Navbar activePanel={activePanel} onTogglePanel={togglePanel} />
-                <div className="f-1 o-h">
-                  <MonacoEditor />
-                </div>
-              </div>
-            ) : (
-              <div className="w-full h-full">
-                <SandpackPreview
-                  className="h-full"
-                  showOpenInCodeSandbox={false}
-                  showRefreshButton={false}
-                />
-              </div>
-            )}
-          </div>
-        </SandpackLayout>
+        </div>
       </div>
-    </SandpackProvider>
+
+      {/* Desktop playground */}
+      <div className="d-none md:d-b h-dvh">
+        <PanelGroup direction="horizontal" className="h-full">
+          <Panel
+            ref={editorPanelRef}
+            collapsible
+            maxSize={80}
+            minSize={20}
+            defaultSize={50}
+          >
+            <div className="d-f fd-c h-full">
+              <Navbar
+                code={code}
+                editorRef={editorRef}
+                onResetLayout={handleResetLayout}
+                onFullPreview={handleFullPreview}
+              />
+              <div className="f-1 o-h">
+                <MonacoEditor
+                  code={code}
+                  onChange={setCode}
+                  onMount={(editor) => {
+                    editorRef.current = editor;
+                  }}
+                />
+              </div>
+            </div>
+          </Panel>
+          <PanelResizeHandle className="p-px" onDoubleClick={() => {}} />
+          <Panel collapsible defaultSize={50}>
+            <Preview code={code} />
+          </Panel>
+        </PanelGroup>
+      </div>
+    </>
   );
 };
 
