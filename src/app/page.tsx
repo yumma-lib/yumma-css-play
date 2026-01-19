@@ -105,8 +105,15 @@ const Home: React.FC = () => {
               </div>
             </div>
           </Panel>
-          <PanelResizeHandle className="p-px" onDoubleClick={() => {}} />
-          <Panel collapsible defaultSize={50}>
+          <PanelResizeHandle
+            className="p-px"
+            style={{
+              backgroundColor: "#31365e",
+              cursor: "col-resize",
+              width: "2px",
+            }}
+          />
+          <Panel collapsible defaultSize={50} minSize={20} maxSize={80}>
             <Preview code={code} />
           </Panel>
         </PanelGroup>
