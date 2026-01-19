@@ -6,6 +6,27 @@ export const initialCode: string = `<!--
 
 <div class="bg-white h-vh ff-s p-r o-h">
 
+  <div class="p-a i-0 zi-0 o-20 d-g gtc-16 gtr-12">
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
+  </div>
+
+  <span class="p-a t-4 l-4 c-indigo fs-lg us-none">+</span>
+  <span class="p-a t-4 r-4 c-gray-3 fs-xs ff-m us-none tt-u">Yumma CSS</span>
+  <span class="p-a t-20 l-16 c-gray-3 fs-md us-none">+</span>
+  <span class="p-a t-12 r-20 c-indigo fs-sm us-none">✦</span>
+  <span class="p-a b-20 l-12 c-indigo fs-xs us-none">◆</span>
+
+  <div class="p-a b-4 l-4 d-f ai-c g-2 us-none">
+    <span class="c-gray-3 fs-xs ff-m">200 x</span>
+  </div>
+
   <div class="p-r zi-1 max-w-xl mx-auto px-6 pt-12 pb-12 h-full d-f fd-c">
 
     <header class="ta-l mb-6">
@@ -148,25 +169,5 @@ export const initialCode: string = `<!--
     </div>
 
   </div>
-
-  <div class="p-a i-0 zi-0 o-20 d-g gtc-16 gtr-12">
-    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
-    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
-    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
-    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
-    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
-    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
-    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
-    <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
-  </div>
-  <span class="p-a t-4 l-4 c-indigo fs-lg us-none">+</span>
-  <span class="p-a t-4 r-4 c-gray-3 fs-xs ff-m us-none tt-u">Yumma CSS</span>
-  <span class="p-a t-20 l-16 c-gray-3 fs-md us-none">+</span>
-  <span class="p-a t-12 r-20 c-indigo fs-sm us-none">✦</span>
-  <span class="p-a b-20 l-12 c-indigo fs-xs us-none">◆</span>
-  <span class="p-a b-4 l-4 c-gray-3 fs-xs ff-m us-none">200 x</span>
-
 </div>
-
-<!-- Icons by Phosphor Icons -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">`;
