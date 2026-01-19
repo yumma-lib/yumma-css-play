@@ -99,7 +99,7 @@ export const initialCode: string = `<!--
         <h3 class="fs-md fw-600 c-gray-12">Responsive Panels</h3>
         <p class="fs-sm c-gray mt-1 mb-3">Drag to resize. Press R to reset.</p>
         <div class="f-1 d-f fd-c">
-          <!-- Small screens: Code skeleton only (mimics mobile message) -->
+        
           <div class="d-b md:d-none f-1 bw-1 bc-silver-4 bg-gray-1 p-2 d-f fd-c g-1">
             <div class="h-2 w-full bg-gray-3 o-50"></div>
             <div class="h-2 w-full bg-gray-3 o-30"></div>
@@ -109,9 +109,9 @@ export const initialCode: string = `<!--
             <div class="h-2 w-full bg-gray-3 o-30"></div>
             <div class="h-2 w-full bg-gray-3 o-50"></div>
           </div>
-          <!-- Large screens: Both panels side by side -->
+          
           <div class="d-none md:d-f f-1 g-1">
-            <!-- Editor skeleton -->
+          
             <div class="f-1 bw-1 bc-silver-4 bg-gray-1 p-2 d-f fd-c g-1">
               <div class="h-2 w-full bg-gray-3 o-50"></div>
               <div class="h-2 w-full bg-gray-3 o-30"></div>
@@ -119,9 +119,9 @@ export const initialCode: string = `<!--
               <div class="h-2 w-half bg-gray-3 o-30"></div>
               <div class="h-2 w-full bg-gray-3 o-40"></div>
             </div>
-            <!-- Divider -->
+            
             <div class="w-1 bg-indigo"></div>
-            <!-- Preview skeleton -->
+            
             <div class="f-1 bw-1 bc-silver-4 p-2 d-f fd-c g-2">
               <div class="h-3 w-half bg-gray-2"></div>
               <div class="d-f g-1">
