@@ -3,7 +3,7 @@
 import Editor from "@monaco-editor/react";
 import { emmetHTML } from "emmet-monaco-es";
 import { useRef } from "react";
-import { handleMount } from "@/themes/midnight";
+import { handleMount } from "@/themes/eclipsa";
 import {
   registerCodeActionsProvider,
   setupCodeActions,
@@ -63,7 +63,7 @@ function MonacoEditor({ code, onChange, onMount }: MonacoEditorProps) {
           scrollBeyondLastLine: false,
           wordWrap: "on",
         }}
-        theme="midnight"
+        theme="eclipsa"
       />
     </div>
   );

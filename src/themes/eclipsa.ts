@@ -1,4 +1,4 @@
-export const midnightTheme = {
+export const eclipsaTheme = {
   base: "vs-dark",
   inherit: true,
   rules: [
@@ -284,6 +284,6 @@ export const midnightTheme = {
 };
 
 export const handleMount = (_editor: any, monaco: any) => {
-  monaco.editor.defineTheme("midnight", midnightTheme);
-  monaco.editor.setTheme("midnight");
+  monaco.editor.defineTheme("eclipsa", eclipsaTheme);
+  monaco.editor.setTheme("eclipsa");
 };
