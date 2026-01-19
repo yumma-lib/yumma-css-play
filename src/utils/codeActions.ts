@@ -106,7 +106,7 @@ function findConflicts(
 
 export function registerCodeActionsProvider(monaco: any) {
   monaco.languages.registerCodeActionProvider("html", {
-    provideCodeActions: (model: any, range: any, context: any) => {
+    provideCodeActions: (model: any, _range: any, context: any) => {
       const actions: any[] = [];
       const markers = context.markers || [];
 
@@ -116,7 +116,7 @@ export function registerCodeActionsProvider(monaco: any) {
       );
 
       for (const marker of conflictMarkers) {
-        const lineContent = model.getLineContent(marker.startLineNumber);
+        const _lineContent = model.getLineContent(marker.startLineNumber);
 
         // parse the utilities from the marker message
         const match = marker.message.match(

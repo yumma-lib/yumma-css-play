@@ -283,7 +283,7 @@ export const midnightTheme = {
   },
 };
 
-export const handleMount = (editor: any, monaco: any) => {
+export const handleMount = (_editor: any, monaco: any) => {
   monaco.editor.defineTheme("midnight", midnightTheme);
   monaco.editor.setTheme("midnight");
 };

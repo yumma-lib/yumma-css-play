@@ -102,7 +102,7 @@ function getHoverContent(className: string): string | null {
 // find utilities in text
 function findUtilities(
   text: string,
-  lineNumber: number,
+  _lineNumber: number,
 ): Array<{ utility: string; startColumn: number; endColumn: number }> {
   const results: Array<{
     utility: string;
