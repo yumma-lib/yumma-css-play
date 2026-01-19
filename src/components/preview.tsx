@@ -16,10 +16,7 @@ export function Preview({ code }: PreviewProps) {
     <script src="https://cdn.jsdelivr.net/npm/@yummacss/runtime@latest/dist/index.iife.js"></script>
     <style>
       html, body {
-        margin: 0;
-        padding: 0;
         background: white;
-        height: 100%;
       }
     </style>
   </head>
