@@ -6,7 +6,6 @@ export const initialCode: string = `<!--
 
 <div class="bg-white h-vh ff-s p-r o-h">
 
-  <!-- Subtle Grid Background -->
   <div class="p-a i-0 zi-0 o-20 d-g gtc-16 gtr-12">
     <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
     <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
@@ -18,14 +17,12 @@ export const initialCode: string = `<!--
     <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
   </div>
 
-  <!-- Decorative Markers -->
   <span class="p-a t-4 l-4 c-indigo fs-lg us-none">+</span>
   <span class="p-a t-4 r-4 c-gray-3 fs-xs ff-m us-none tt-u">Yumma CSS</span>
   <span class="p-a t-20 l-16 c-gray-3 fs-md us-none">+</span>
   <span class="p-a t-12 r-20 c-indigo fs-sm us-none">✦</span>
   <span class="p-a b-20 l-12 c-indigo fs-xs us-none">◆</span>
 
-  <!-- CTA - Bottom Left & Right -->
   <div class="p-a b-4 l-4 d-f ai-c g-2 us-none">
     <span class="c-gray-3 fs-xs ff-m">200 x</span>
   </div>
@@ -38,10 +35,8 @@ export const initialCode: string = `<!--
     </span>
   </div>
 
-  <!-- Main Content -->
   <div class="p-r zi-1 max-w-xl mx-auto px-6 pt-12 pb-12 h-full d-f fd-c">
 
-    <!-- Hero Section -->
     <header class="ta-l mb-6">
       <h1 class="ff-c fw-100 fs-5xl c-gray-12 lh-2 mb-2">
         Write utilities,<br>preview instantly
@@ -52,7 +47,6 @@ export const initialCode: string = `<!--
       </p>
     </header>
 
-    <!-- MAIN FEATURES Marker -->
     <div class="d-f ai-c g-2 mb-3 us-none">
       <span class="c-indigo fs-lg fw-500">|</span>
       <span class="c-indigo fs-xs ff-m">01</span>
@@ -61,10 +55,8 @@ export const initialCode: string = `<!--
       <span class="c-gray-3 fs-xs ff-m ml-4 tt-u">Main Features</span>
     </div>
 
-    <!-- Features Grid - 2x2 -->
     <div class="d-g gtc-2 f-1">
 
-      <!-- Completions -->
       <section class="btw-1 blw-1 brw-1 bc-silver-4 bg-white p-4 d-f fd-c">
         <div class="d-f ai-c g-2 mb-2 c-gray-4 us-none">
           <i class="ph ph-article"></i>
@@ -86,14 +78,13 @@ export const initialCode: string = `<!--
         </div>
       </section>
 
-      <!-- Colors -->
       <section class="btw-1 brw-1 bc-silver-4 bg-white p-4 d-f fd-c">
         <div class="d-f ai-c g-2 mb-2 c-gray-4 us-none">
           <i class="ph ph-swatches"></i>
           <span class="fs-xs">Expressive</span>
         </div>
         <h3 class="fs-md fw-600 c-gray-12">Color System</h3>
-        <p class="fs-sm c-gray mt-1 mb-3">13 palettes with 12 shades each.</p>
+        <p class="fs-sm c-gray mt-1 mb-3">The complete Yumma CSS color system.</p>
         <div class="d-f g-2 jc-c ai-c f-1">
           <div class="w-8 h-full br-pill bw-4 bc-white bg-red-5 bs-sm"></div>
           <div class="w-8 h-full br-pill bw-4 bc-white bg-orange-5 bs-sm"></div>
@@ -108,7 +99,6 @@ export const initialCode: string = `<!--
         </div>
       </section>
 
-      <!-- Responsive Panels -->
       <section class="bw-1 bc-silver-4 bg-white p-4 d-f fd-c">
         <div class="d-f ai-c g-2 mb-2 c-gray-4 us-none">
           <i class="ph ph-devices"></i>
@@ -117,7 +107,6 @@ export const initialCode: string = `<!--
         <h3 class="fs-md fw-600 c-gray-12">Responsive Panels</h3>
         <p class="fs-sm c-gray mt-1 mb-3">Drag to resize. Press R to reset.</p>
         <div class="d-f g- f-1">
-          <!-- Editor Panel Skeleton -->
           <div class="f-1 bw-1 bc-silver-4 bg-gray-1 p-2 d-f fd-c g-1">
             <div class="h-2 w-full bg-gray-3 o-50"></div>
             <div class="h-2 w-full bg-gray-3 o-30"></div>
@@ -130,7 +119,6 @@ export const initialCode: string = `<!--
             <div class="h-2 w-half bg-gray-3 o-40"></div>
           </div>
           <div class="w-px bg-silver-7 c-cr"></div>
-          <!-- Preview Panel Skeleton -->
           <div class="f-1 bw-1 bc-silver-4 p-2 d-f fd-c g-2">
             <div class="h-3 w-half bg-gray-2"></div>
             <div class="d-f g-1">
@@ -154,17 +142,14 @@ export const initialCode: string = `<!--
         </div>
       </section>
 
-      <!-- Atomic Utilities - Code Block -->
       <section class="btw-1 brw-1 bbw-1 bc-silver-4 bg-white p-4 d-f fd-c">
         <div class="d-f ai-c g-2 mb-2 c-gray-4 us-none">
-          <i class="ph ph-fire"></i>
-          <span class="fs-xs">Intuitive</span>
+          <i class="ph ph-warning"></i>
+          <span class="fs-xs">Protective</span>
         </div>
-        <h3 class="fs-md fw-600 c-gray-12">Atomic Utilities</h3>
-        <p class="fs-sm c-gray mt-1 mb-3">Less typing, more styling.</p>
-        <!-- Code Block -->
+        <h3 class="fs-md fw-600 c-gray-12">Smart Linting</h3>
+        <p class="fs-sm c-gray mt-1 mb-3">Catch class conflicts as you type.</p>
         <div class="bw-1 bc-silver-4 bg-white o-h f-1">
-          <!-- Window Bar -->
           <div class="d-f ai-c jc-sb px-3 py-2 bbw-1 bc-silver-4">
             <div class="d-f g-2">
               <div class="d-3 br-half bw-1 bc-silver-4"></div>
@@ -173,7 +158,6 @@ export const initialCode: string = `<!--
             </div>
             <span class="fs-xs c-gray-3 ff-m us-none">[ .CSS ]</span>
           </div>
-          <!-- Code Content with Line Numbers -->
           <div class="d-f fs-xs ff-m lh-5 p-3">
             <div class="c-gray-3 ta-r pr-3 us-none">
               <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
@@ -194,6 +178,4 @@ export const initialCode: string = `<!--
 
   </div>
 </div>
-
-<!-- Iconography: Phosphor Icons -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">`;
