@@ -76,7 +76,7 @@ export const initialCode: string = `<!--
           <span class="fs-xs">Expressive</span>
         </div>
         <h3 class="fs-md fw-600 c-gray-12">Color System</h3>
-        <p class="fs-sm c-gray mt-1 mb-3">The complete Yumma CSS color system.</p>
+        <p class="fs-sm c-gray mt-1 mb-3">13 palettes with 12 shades each.</p>
         <div class="d-f g-2 jc-c ai-c f-1">
           <div class="w-8 h-48 br-pill bw-4 bc-white bg-red-5 bs-sm"></div>
           <div class="w-8 h-48 br-pill bw-4 bc-white bg-orange-5 bs-sm"></div>
@@ -100,7 +100,7 @@ export const initialCode: string = `<!--
         <p class="fs-sm c-gray mt-1 mb-3">Drag to resize. Press R to reset.</p>
         <div class="f-1 d-f fd-c">
         
-          <div class="d-b md:d-none f-1 bw-1 bc-silver-4 bg-gray-1 p-2 d-f fd-c g-1">
+          <div class="d-b md:d-none f-1 bw-1 bc-silver-4 bg-gray-1 p-2 fd-c g-1">
             <div class="h-2 w-full bg-gray-3 o-50"></div>
             <div class="h-2 w-full bg-gray-3 o-30"></div>
             <div class="h-2 w-full bg-gray-3 o-50"></div>
