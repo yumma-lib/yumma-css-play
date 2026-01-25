@@ -1,4 +1,4 @@
-import { coreUtils } from "@yummacss/api";
+import { coreUtils } from "@yummacss/core";
 
 interface UtilityInfo {
   cssValue: string;

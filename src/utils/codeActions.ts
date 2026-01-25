@@ -1,4 +1,4 @@
-import { coreUtils } from "@yummacss/api";
+import { coreUtils } from "@yummacss/core";
 
 // build a map of utilities to their CSS properties (for conflict detection)
 function buildPropertyMap(): Map<string, string[]> {
