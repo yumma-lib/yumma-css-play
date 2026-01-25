@@ -76,7 +76,7 @@ export const initialCode: string = `<!--
           <span class="fs-xs">Expressive</span>
         </div>
         <h3 class="fs-md fw-600 c-gray-12">Color System</h3>
-        <p class="fs-sm c-gray mt-1 mb-3">13 palettes with 12 shades each.</p>
+        <p class="fs-sm c-gray mt-1 mb-3">13 colors with 12 shades each.</p>
         <div class="d-f g-2 jc-c ai-c f-1">
           <div class="w-8 h-48 br-pill bw-4 bc-white bg-red-5 bs-sm"></div>
           <div class="w-8 h-48 br-pill bw-4 bc-white bg-orange-5 bs-sm"></div>
