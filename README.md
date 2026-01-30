@@ -1,29 +1,33 @@
-# [@yummacss](www.yummacss.com)
+# Yumma CSS Play
 
-A CLI-first CSS framework for the web with abbreviated styles.
+Official playground website for Yumma CSS.
 
-[![NPM Version](https://img.shields.io/npm/v/yummacss?style=flat&label=yummacss&labelColor=f7f7f7&color=cb3837)](https://www.npmjs.com/package/yummacss)
-[![NPM Downloads](https://img.shields.io/npm/d18m/yummacss?style=flat&label=downloads&labelColor=f7f7f7&color=cb3837)](https://www.npmjs.com/package/yummacss)
+---
 
-## Installing
+## Playground
 
-Install `yummacss` as a dev dependency and initialize configuration
+To get started, check out the [Yumma CSS playground](https://play/yummacss.com).
 
+## Development
+
+To start the playground site in development mode, from the project root, run:
 ```bash
-npm install yummacss -D
-npx yummacss init
+pnpm install
+pnpm dev
 ```
 
-Build styles
+This runs both Next.js dev server and Yumma CSS in watch mode.
 
+## Build
 ```bash
-npx yummacss build
+pnpm build
 ```
 
-## Documentation
+## Community
 
-Learn more at [yummacss.com](https://yummacss.com)
+- **GitHub** For issues and contributions, visit our [repository](https://github.com/yummacss/yummacss).
+- **X** Follow [@yummacss](https://x.com/yummacss) for updates and announcements.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT license](LICENSE).
