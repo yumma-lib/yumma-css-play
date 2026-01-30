@@ -1,6 +1,6 @@
 # Yumma CSS Play
 
-Official playground website for Yumma CSS.
+Official playground for Yumma CSS.
 
 ---
 
