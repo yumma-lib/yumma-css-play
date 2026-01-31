@@ -2,6 +2,8 @@ export const initialCode: string = `<!--
   Yumma CSS Playground
   A zero-config environment to experiment with Yumma CSS utilities.
   Write classes, preview instantly, and explore the framework.
+
+  This playground is being powered by <script src="https://unpkg.com/@yummacss/runtime"></script>
 -->
 
 <div class="bg-white h-vh ff-s p-r o-a">
@@ -52,20 +54,20 @@ export const initialCode: string = `<!--
       <section class="btw-1 blw-1 brw-1 bc-silver-4 bg-white p-4 d-f fd-c">
         <div class="d-f ai-c g-2 mb-2 c-gray-4 us-none">
           <i class="ph ph-article"></i>
-          <span class="fs-xs">Intelligent</span>
+          <span class="fs-xs">Contextual</span>
         </div>
         <h3 class="fs-md fw-600 c-gray-12">Completions</h3>
         <p class="fs-sm c-gray mt-1 mb-3">Smart suggestions as you type.</p>
         <div class="bw-1 bc-gray-1 p-2 bg-gray-1/50 f-1">
           <div class="d-f fd-c g-1 fs-xs ff-m">
-            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-f</span><span class="c-gray-3">display: flex;</span></div>
-            <div class="d-f jc-sb bg-silver/40 px-1"><span class="c-black fw-500">d-g</span><span class="c-gray-3">display: grid;</span></div>
-            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-b</span><span class="c-gray-3">display: block;</span></div>
-            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-none</span><span class="c-gray-3">display: none;</span></div>
-            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-i</span><span class="c-gray-3">display: inline;</span></div>
-            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-if</span><span class="c-gray-3">display: inline-flex;</span></div>
-            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-ib</span><span class="c-gray-3">display: inline-block;</span></div>
-            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-t</span><span class="c-gray-3">display: table;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-f</span><span class="c-gray-6">display: flex;</span></div>
+            <div class="d-f jc-sb bg-silver/40 px-1"><span class="c-black fw-500">d-g</span><span class="c-black">display: grid;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-b</span><span class="c-gray-6">display: block;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-none</span><span class="c-gray-6">display: none;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-i</span><span class="c-gray-6">display: inline;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-if</span><span class="c-gray-6">display: inline-flex;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-ib</span><span class="c-gray-6">display: inline-block;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-t</span><span class="c-gray-6">display: table;</span></div>
           </div>
         </div>
       </section>
@@ -78,16 +80,16 @@ export const initialCode: string = `<!--
         <h3 class="fs-md fw-600 c-gray-12">Color System</h3>
         <p class="fs-sm c-gray mt-1 mb-3">13 colors with 12 shades each.</p>
         <div class="d-f g-2 jc-c ai-c f-1">
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-red-5 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-orange-5 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-yellow-5 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-green-5 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-teal-5 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-cyan-5 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-blue-5 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-indigo-5 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-violet-5 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-pink-5 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-red-6 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-orange-6 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-yellow-6 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-lime-6 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-mint-6 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-green-6 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-cyan-6 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-sky-6 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-blue-6 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-indigo-6 bs-sm"></div>
         </div>
       </section>
 

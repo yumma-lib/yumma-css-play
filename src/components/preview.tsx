@@ -13,7 +13,7 @@ export function Preview({ code }: PreviewProps) {
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@yummacss/runtime@latest/dist/index.iife.js"></script>
+    <script src="https://unpkg.com/@yummacss/runtime"></script>
     <style>
       html, body {
         background: white;
