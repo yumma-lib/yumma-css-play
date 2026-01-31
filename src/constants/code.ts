@@ -80,16 +80,16 @@ export const initialCode: string = `<!--
         <h3 class="fs-md fw-600 c-gray-12">Color System</h3>
         <p class="fs-sm c-gray mt-1 mb-3">13 colors with 12 shades each.</p>
         <div class="d-f g-2 jc-c ai-c f-1">
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-red-6 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-orange-6 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-yellow-6 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-lime-6 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-mint-6 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-green-6 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-cyan-6 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-sky-6 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-blue-6 bs-sm"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-indigo-6 bs-sm"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-red-6 bsh-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-orange-6 bsh-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-yellow-6 bsh-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-lime-6 bsh-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-mint-6 bsh-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-green-6 bsh-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-cyan-6 bsh-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-sky-6 bsh-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-blue-6 bsh-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-indigo-6 bsh-md"></div>
         </div>
       </section>
 
