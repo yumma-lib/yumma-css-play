@@ -6,7 +6,7 @@ export const initialCode: string = `<!--
   This playground is being powered by <script src="https://unpkg.com/@yummacss/runtime"></script>
 -->
 
-<div class="bg-white h-vh ff-s p-r o-a">
+<div class="bg-white h-vh ff-s p-r o-auto">
 
   <div class="p-a i-0 zi-0 o-20 d-g gtc-16 gtr-12">
     <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
@@ -78,7 +78,7 @@ export const initialCode: string = `<!--
           <span class="fs-xs">Expressive</span>
         </div>
         <h3 class="fs-md fw-600 c-gray-12">Color System</h3>
-        <p class="fs-sm c-gray mt-1 mb-3">13 colors with 12 shades each.</p>
+        <p class="fs-sm c-gray mt-1 mb-3">21 colors with 12 shades each.</p>
         <div class="d-f g-2 jc-c ai-c f-1">
           <div class="w-8 h-48 br-pill bw-4 bc-white bg-red-6 bsh-md"></div>
           <div class="w-8 h-48 br-pill bw-4 bc-white bg-orange-6 bsh-md"></div>
@@ -156,14 +156,14 @@ export const initialCode: string = `<!--
               <div class="d-3 br-half bw-1 bc-silver-4"></div>
               <div class="d-3 br-half bw-1 bc-silver-4"></div>
             </div>
-            <span class="fs-xs c-gray-3 ff-m us-none">[ .HTML ]</span>
+            <span class="fs-xs c-gray-3 ff-m us-none">[ .TSX ]</span>
           </div>
           <div class="d-f fs-xs ff-m lh-5 p-3">
             <div class="c-gray-3 ta-r pr-3 us-none">
-              <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+              <div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div>
             </div>
             <div>
-              <div class="c-gray-6">&lt;div class="</div>
+              <div class="c-gray-6">&lt;div className="</div>
               <div class="pl-4"><span class="c-yellow-5 td-u tds-w">d-f d-g</span> <span class="c-gray-8">gtc-4</span></div>
               <div class="pl-4 c-gray-8">sm:gtc-2 ai-c jc-sb</div>
               <div class="pl-4 c-gray-8">p-4 bg-indigo-12</div>
