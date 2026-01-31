@@ -30,8 +30,8 @@ importers:
         specifier: ^1.3.1
         version: 1.3.1(next@16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.92.1))(react@19.2.3)
       '@yummacss/core':
-        specifier: ^3.9.0
-        version: 3.9.0
+        specifier: ^3.10.1
+        version: 3.10.1
       emmet-monaco-es:
         specifier: ^5.6.1
         version: 5.6.1(monaco-editor@0.52.2)
@@ -79,8 +79,8 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       yummacss:
-        specifier: ^3.9.0
-        version: 3.9.0
+        specifier: ^3.10.0
+        version: 3.10.0
 
 packages:
 
@@ -574,11 +574,14 @@ packages:
       vue-router:
         optional: true
 
-  '@yummacss/core@3.9.0':
-    resolution: {integrity: sha512-YkhpYaRFKd+O4MMQUHClt3pSDpW+1UmF4R1iLIGi9LYFOcUDmJwU8vask+AtzqqDhewRF2zKYoNGq0yZkYpx6A==}
+  '@yummacss/core@3.10.0':
+    resolution: {integrity: sha512-g8geUCQvfFjkswbTVRWBEV+G7TyT9vtt2RNlmPzYHhF9Vpn2FfOBX8oeb8i3b3AAI1ktyykwX5mdMl123dd98A==}
 
-  '@yummacss/nitro@3.9.0':
-    resolution: {integrity: sha512-mu6I+1t0JnuEllR36cYGCiuaqmsNa41BieadTpBFN/YrbyhCOXAS7tW/FSDxmq2CLG6HewffsH3hWwtwUkcmkw==}
+  '@yummacss/core@3.10.1':
+    resolution: {integrity: sha512-SY5m+VdSBBjggadJqpnwAguB78DqeznOVsWPxXW4zb4wyISZxft2sM0k/ciVtZC1WPTThcQ5o88m3IYpsJOz3g==}
+
+  '@yummacss/nitro@3.10.0':
+    resolution: {integrity: sha512-gnZcvDD7MMaSaGiiLZJn68o+HcDpyY8iMhC53/luLyzgKP0o6Jvp5/+3NNuvUgOFUKHduHJxO9mvCkm08Dk2GA==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -641,8 +644,8 @@ packages:
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
-  commander@14.0.2:
-    resolution: {integrity: sha512-TywoWNNRbhoD0BXs1P3ZEScW8W5iKrnbithIl0YH+uCmBd0QpPOA8yc82DS3BIE5Ma6FnBVUsJ7wVUDz4dvOWQ==}
+  commander@14.0.3:
+    resolution: {integrity: sha512-H+y0Jo/T1RZ9qPP4Eh1pkcQcLRglraJaSLoyOtHxu6AapkjWVCy2Sit1QQ4x3Dng8qDlSsZEet7g5Pq06MvTgw==}
     engines: {node: '>=20'}
 
   concurrently@9.2.1:
@@ -883,14 +886,14 @@ packages:
     engines: {node: '>=20.9.0'}
     hasBin: true
     peerDependencies:
-      '@opentelemetry/core': ^1.1.0
+      '@opentelemetry/api': ^1.1.0
       '@playwright/test': ^1.51.1
       babel-plugin-react-compiler: '*'
       react: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
       react-dom: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
       sass: ^1.3.0
     peerDependenciesMeta:
-      '@opentelemetry/core':
+      '@opentelemetry/api':
         optional: true
       '@playwright/test':
         optional: true
@@ -1050,8 +1053,8 @@ packages:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
     engines: {node: '>=8'}
 
-  string-width@8.1.0:
-    resolution: {integrity: sha512-Kxl3KJGb/gxkaUMOjRsQ8IrXiGW75O4E3RPjFIINOVH8AMl2SQ/yWdTzWwF3FevIX9LcMAjJW+GRwAlAbTSXdg==}
+  string-width@8.1.1:
+    resolution: {integrity: sha512-KpqHIdDL9KwYk22wEOg/VIqYbrnLeSApsKT/bSj6Ez7pn3CftUiLAv2Lccpq1ALcpLV9UX1Ppn92npZWu2w/aw==}
     engines: {node: '>=20'}
 
   stringify-object@6.0.0:
@@ -1162,8 +1165,8 @@ packages:
     resolution: {integrity: sha512-CzhO+pFNo8ajLM2d2IW/R93ipy99LWjtwblvC1RsoSUMZgyLbYFr221TnSNT7GjGdYui6P459mw9JH/g/zW2ug==}
     engines: {node: '>=18'}
 
-  yummacss@3.9.0:
-    resolution: {integrity: sha512-lhqQqF4pO1Eq0oeQFjkph9opMAO/ZHCi4ZMVBpxqodT1/ThK/6rO/s9nP3fkryEmn0hlXVZoq8tndNIKsfxeFQ==}
+  yummacss@3.10.0:
+    resolution: {integrity: sha512-0wjBvcAtbVCGTO2rIsPXjscPiLiEBK7RsJWQs+nHmlyTJWxz4B9H8h47QZ57CJ5qLTcUZ34YrAnvq4nbmfr2zw==}
     hasBin: true
 
   zod@4.3.6:
@@ -1527,13 +1530,17 @@ snapshots:
       next: 16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.92.1)
       react: 19.2.3
 
-  '@yummacss/core@3.9.0':
+  '@yummacss/core@3.10.0':
     dependencies:
       tinycolor2: 1.6.0
 
-  '@yummacss/nitro@3.9.0':
+  '@yummacss/core@3.10.1':
     dependencies:
-      '@yummacss/core': 3.9.0
+      tinycolor2: 1.6.0
+
+  '@yummacss/nitro@3.10.0':
+    dependencies:
+      '@yummacss/core': 3.10.0
       globby: 16.1.0
       zod: 4.3.6
 
@@ -1589,7 +1596,7 @@ snapshots:
 
   color-name@1.1.4: {}
 
-  commander@14.0.2: {}
+  commander@14.0.3: {}
 
   concurrently@9.2.1:
     dependencies:
@@ -1819,7 +1826,7 @@ snapshots:
       is-unicode-supported: 2.1.0
       log-symbols: 7.0.1
       stdin-discarder: 0.2.2
-      string-width: 8.1.0
+      string-width: 8.1.1
 
   p-event@6.0.1:
     dependencies:
@@ -1962,7 +1969,7 @@ snapshots:
       is-fullwidth-code-point: 3.0.0
       strip-ansi: 6.0.1
 
-  string-width@8.1.0:
+  string-width@8.1.1:
     dependencies:
       get-east-asian-width: 1.4.0
       strip-ansi: 7.1.2
@@ -2057,11 +2064,11 @@ snapshots:
 
   yoctocolors@2.1.2: {}
 
-  yummacss@3.9.0:
+  yummacss@3.10.0:
     dependencies:
-      '@yummacss/nitro': 3.9.0
+      '@yummacss/nitro': 3.10.0
       chokidar: 5.0.0
-      commander: 14.0.2
+      commander: 14.0.3
       globby: 16.1.0
       lightningcss: 1.31.1
       ora: 9.1.0
