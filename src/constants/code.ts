@@ -3,7 +3,7 @@ export const initialCode: string = `<!--
   A zero-config environment to experiment with Yumma CSS utilities.
   Write classes, preview instantly, and explore the framework.
 
-  This playground is being powered by <script src="https://unpkg.com/@yummacss/runtime"></script>
+  This playground is being powered by @yummacss/runtime.
 -->
 
 <div class="bg-white h-vh ff-s p-r o-auto">
