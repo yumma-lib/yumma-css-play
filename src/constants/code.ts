@@ -53,7 +53,7 @@ export const initialCode: string = `<!--
 
       <section class="btw-1 blw-1 brw-1 bc-silver-4 bg-white p-4 d-f fd-c">
         <div class="d-f ai-c g-2 mb-2 c-gray-4 us-none">
-          <i class="ph ph-article"></i>
+          <i class="ph ph-package"></i>
           <span class="fs-xs">Contextual</span>
         </div>
         <h3 class="fs-md fw-600 c-gray-12">Completions</h3>
@@ -144,8 +144,8 @@ export const initialCode: string = `<!--
 
       <section class="btw-1 brw-1 bbw-1 bc-silver-4 bg-white p-4 d-f fd-c">
         <div class="d-f ai-c g-2 mb-2 c-gray-4 us-none">
-          <i class="ph ph-warning"></i>
-          <span class="fs-xs">Protective</span>
+          <i class="ph ph-brain"></i>
+          <span class="fs-xs">Intelligent</span>
         </div>
         <h3 class="fs-md fw-600 c-gray-12">Smart Linting</h3>
         <p class="fs-sm c-gray mt-1 mb-3">Catch class conflicts as you type.</p>
