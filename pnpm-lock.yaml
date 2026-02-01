@@ -30,8 +30,8 @@ importers:
         specifier: ^1.3.1
         version: 1.3.1(next@16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.92.1))(react@19.2.3)
       '@yummacss/core':
-        specifier: ^3.10.1
-        version: 3.10.1
+        specifier: ^3.10.2
+        version: 3.10.2
       emmet-monaco-es:
         specifier: ^5.6.1
         version: 5.6.1(monaco-editor@0.52.2)
@@ -79,8 +79,8 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       yummacss:
-        specifier: ^3.10.0
-        version: 3.10.0
+        specifier: ^3.10.2
+        version: 3.10.2
 
 packages:
 
@@ -574,14 +574,11 @@ packages:
       vue-router:
         optional: true
 
-  '@yummacss/core@3.10.0':
-    resolution: {integrity: sha512-g8geUCQvfFjkswbTVRWBEV+G7TyT9vtt2RNlmPzYHhF9Vpn2FfOBX8oeb8i3b3AAI1ktyykwX5mdMl123dd98A==}
+  '@yummacss/core@3.10.2':
+    resolution: {integrity: sha512-E+Y0iEbWPrB9E9BJ26hmxj0i60loPxSzQiBgA27Wl0R/QPWfD8nko0bSmgZmkXMXI58tEDkvucxAJr2Cbf96gQ==}
 
-  '@yummacss/core@3.10.1':
-    resolution: {integrity: sha512-SY5m+VdSBBjggadJqpnwAguB78DqeznOVsWPxXW4zb4wyISZxft2sM0k/ciVtZC1WPTThcQ5o88m3IYpsJOz3g==}
-
-  '@yummacss/nitro@3.10.0':
-    resolution: {integrity: sha512-gnZcvDD7MMaSaGiiLZJn68o+HcDpyY8iMhC53/luLyzgKP0o6Jvp5/+3NNuvUgOFUKHduHJxO9mvCkm08Dk2GA==}
+  '@yummacss/nitro@3.10.2':
+    resolution: {integrity: sha512-+AtyYNQDaqdsCx7LElVZMpcmhE/VpuyZdzImtC5ESZF+CV2vsXdNB5Stzp+4lMd2AZBb9RO0+b9vyrrzLT7r8A==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -1165,8 +1162,8 @@ packages:
     resolution: {integrity: sha512-CzhO+pFNo8ajLM2d2IW/R93ipy99LWjtwblvC1RsoSUMZgyLbYFr221TnSNT7GjGdYui6P459mw9JH/g/zW2ug==}
     engines: {node: '>=18'}
 
-  yummacss@3.10.0:
-    resolution: {integrity: sha512-0wjBvcAtbVCGTO2rIsPXjscPiLiEBK7RsJWQs+nHmlyTJWxz4B9H8h47QZ57CJ5qLTcUZ34YrAnvq4nbmfr2zw==}
+  yummacss@3.10.2:
+    resolution: {integrity: sha512-UuTm1KmVat5s3LcXRBT7ivR0RkhXBR02uPZImtzZQ6C8Z+209Ky9sODc97LCIa6Zi3t1xTiM1tu8uIxZHeJ06A==}
     hasBin: true
 
   zod@4.3.6:
@@ -1530,17 +1527,13 @@ snapshots:
       next: 16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.92.1)
       react: 19.2.3
 
-  '@yummacss/core@3.10.0':
+  '@yummacss/core@3.10.2':
     dependencies:
       tinycolor2: 1.6.0
 
-  '@yummacss/core@3.10.1':
+  '@yummacss/nitro@3.10.2':
     dependencies:
-      tinycolor2: 1.6.0
-
-  '@yummacss/nitro@3.10.0':
-    dependencies:
-      '@yummacss/core': 3.10.0
+      '@yummacss/core': 3.10.2
       globby: 16.1.0
       zod: 4.3.6
 
@@ -2064,9 +2057,9 @@ snapshots:
 
   yoctocolors@2.1.2: {}
 
-  yummacss@3.10.0:
+  yummacss@3.10.2:
     dependencies:
-      '@yummacss/nitro': 3.10.0
+      '@yummacss/nitro': 3.10.2
       chokidar: 5.0.0
       commander: 14.0.3
       globby: 16.1.0
