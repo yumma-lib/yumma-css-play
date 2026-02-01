@@ -1,20 +1,20 @@
 {
   "name": "yumma-css-playground",
   "version": "3.10.2",
-  "description": "A playground for Yumma CSS.",
+  "private": true,
+  "description": "Official playground for Yumma CSS.",
   "homepage": "https://yummacss.com",
   "license": "MIT",
   "author": "Renildo Pereira",
-  "private": true,
   "type": "module",
   "scripts": {
     "build": "next build && yummacss build",
     "dev": "concurrently \"next dev --turbopack\" \"yummacss watch\"",
     "lint": "biome check --write .",
-    "update-yummacss": "pnpm up yummacss @yummacss/core --latest",
-    "start": "next start"
+    "sort": "sort-package-json",
+    "start": "next start",
+    "update-yummacss": "pnpm up yummacss @yummacss/core --latest"
   },
-  "packageManager": "pnpm@10.27.0",
   "dependencies": {
     "@base-ui/react": "^1.1.0",
     "@codemirror/view": "^6.39.8",
@@ -40,7 +40,9 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "concurrently": "^9.2.1",
+    "sort-package-json": "^3.6.1",
     "typescript": "^5.9.3",
     "yummacss": "^3.10.2"
-  }
+  },
+  "packageManager": "pnpm@10.27.0"
 }
