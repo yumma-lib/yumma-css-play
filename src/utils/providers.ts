@@ -1,4 +1,4 @@
-import { getUtils } from "./api";
+import { getUtils } from "./core";
 import { registerHoverProvider } from "./hoverProvider";
 
 export function registerProviders(monaco: any) {
