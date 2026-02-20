@@ -6,7 +6,7 @@ export const initialCode: string = `<!--
   This playground is being powered by @yummacss/runtime.
 -->
 
-<div class="bg-white h-vh ff-s p-r o-auto">
+<div class="bg-white h-vh p-r o-auto">
 
   <div class="p-a i-0 zi-0 o-20 d-g gtc-16 gtr-12">
     <div class="bbw-1 brw-1 bc-silver-4"></div><div class="bbw-1 brw-1 bc-silver-4"></div>
