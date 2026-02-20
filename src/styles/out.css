@@ -237,8 +237,8 @@ summary {
   border-right-width: 1px;
 }
 
-.bsh-md {
-  box-shadow: 1px 3px 5px -1px #0000001a;
+.bs-o-md {
+  box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
 }
 
 .btw-1 {
@@ -295,16 +295,6 @@ summary {
 
 .c-yellow-5 {
   color: #ffcc5c;
-}
-
-.d-3 {
-  width: .75rem;
-  height: .75rem;
-}
-
-.d-4 {
-  width: 1rem;
-  height: 1rem;
 }
 
 .d-b {
@@ -413,6 +403,10 @@ summary {
 
 .h-3 {
   height: .75rem;
+}
+
+.h-4 {
+  height: 1rem;
 }
 
 .h-48 {
@@ -689,6 +683,14 @@ summary {
 
 .w-10 {
   width: 2.5rem;
+}
+
+.w-3 {
+  width: .75rem;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .w-8 {

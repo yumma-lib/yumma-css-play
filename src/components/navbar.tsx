@@ -69,11 +69,11 @@ const Navbar = ({
   const renderShareIcon = () => {
     switch (shareState) {
       case "success":
-        return <CheckIcon className="d-4" weight="bold" />;
+        return <CheckIcon className="w-4 h-4" weight="bold" />;
       case "error":
-        return <LinkBreakIcon className="d-4" weight="bold" />;
+        return <LinkBreakIcon className="w-4 h-4" weight="bold" />;
       default:
-        return <ShareIcon className="d-4" weight="bold" />;
+        return <ShareIcon className="w-4 h-4" weight="bold" />;
     }
   };
 

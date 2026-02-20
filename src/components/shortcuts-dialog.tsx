@@ -115,7 +115,7 @@ const ShortcutsDialog = ({
           cursor: "pointer",
         }}
       >
-        <InfoIcon className="d-4" weight="bold" />
+        <InfoIcon className="w-4 h-4" weight="bold" />
         <span>About</span>
       </Dialog.Trigger>
       <Dialog.Portal>
@@ -164,7 +164,7 @@ const ShortcutsDialog = ({
               zIndex: 10,
             }}
           >
-            <XIcon className="d-4" weight="bold" />
+            <XIcon className="w-4 h-4" weight="bold" />
           </Dialog.Close>
 
           {/* Two column layout */}

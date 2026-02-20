@@ -80,16 +80,16 @@ export const initialCode: string = `<!--
         <h3 class="fs-md fw-600 c-gray-12">Color System</h3>
         <p class="fs-sm c-gray mt-1 mb-3">21 colors with 12 shades each.</p>
         <div class="d-f g-2 jc-c ai-c f-1">
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-red-6 bsh-md"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-orange-6 bsh-md"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-yellow-6 bsh-md"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-lime-6 bsh-md"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-mint-6 bsh-md"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-green-6 bsh-md"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-cyan-6 bsh-md"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-sky-6 bsh-md"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-blue-6 bsh-md"></div>
-          <div class="w-8 h-48 br-pill bw-4 bc-white bg-indigo-6 bsh-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-red-6 bs-o-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-orange-6 bs-o-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-yellow-6 bs-o-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-lime-6 bs-o-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-mint-6 bs-o-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-green-6 bs-o-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-cyan-6 bs-o-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-sky-6 bs-o-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-blue-6 bs-o-md"></div>
+          <div class="w-8 h-48 br-pill bw-4 bc-white bg-indigo-6 bs-o-md"></div>
         </div>
       </section>
 
@@ -152,9 +152,9 @@ export const initialCode: string = `<!--
         <div class="bw-1 bc-silver-4 bg-white o-h f-1">
           <div class="d-f ai-c jc-sb px-3 py-2 bbw-1 bc-silver-4">
             <div class="d-f g-2">
-              <div class="d-3 br-half bw-1 bc-silver-4"></div>
-              <div class="d-3 br-half bw-1 bc-silver-4"></div>
-              <div class="d-3 br-half bw-1 bc-silver-4"></div>
+              <div class="w-3 h-3 br-half bw-1 bc-silver-4"></div>
+              <div class="w-3 h-3 br-half bw-1 bc-silver-4"></div>
+              <div class="w-3 h-3 br-half bw-1 bc-silver-4"></div>
             </div>
             <span class="fs-xs c-gray-3 ff-m us-none">[ .TSX ]</span>
           </div>
