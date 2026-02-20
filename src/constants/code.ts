@@ -60,14 +60,14 @@ export const initialCode: string = `<!--
         <p class="fs-sm c-gray mt-1 mb-3">Smart suggestions as you type.</p>
         <div class="bw-1 bc-gray-1 p-2 bg-gray-1/50 f-1">
           <div class="d-f fd-c g-1 fs-xs ff-m">
-            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-f</span><span class="c-gray-6">display: flex;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25 px-1"><span class="c-gray-6">d-f</span><span class="c-gray-6">display: flex;</span></div>
             <div class="d-f jc-sb bg-silver/40 px-1"><span class="c-black fw-500">d-g</span><span class="c-black">display: grid;</span></div>
-            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-b</span><span class="c-gray-6">display: block;</span></div>
-            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-none</span><span class="c-gray-6">display: none;</span></div>
-            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-i</span><span class="c-gray-6">display: inline;</span></div>
-            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-if</span><span class="c-gray-6">display: inline-flex;</span></div>
-            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-ib</span><span class="c-gray-6">display: inline-block;</span></div>
-            <div class="d-f jc-sb h:bg-silver/25"><span class="c-gray-6">d-t</span><span class="c-gray-6">display: table;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25 px-1"><span class="c-gray-6">d-b</span><span class="c-gray-6">display: block;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25 px-1"><span class="c-gray-6">d-none</span><span class="c-gray-6">display: none;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25 px-1"><span class="c-gray-6">d-i</span><span class="c-gray-6">display: inline;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25 px-1"><span class="c-gray-6">d-if</span><span class="c-gray-6">display: inline-flex;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25 px-1"><span class="c-gray-6">d-ib</span><span class="c-gray-6">display: inline-block;</span></div>
+            <div class="d-f jc-sb h:bg-silver/25 px-1"><span class="c-gray-6">d-t</span><span class="c-gray-6">display: table;</span></div>
           </div>
         </div>
       </section>
@@ -164,7 +164,8 @@ export const initialCode: string = `<!--
             </div>
             <div>
               <div class="c-gray-6">&lt;div className="</div>
-              <div class="pl-4"><span class="c-yellow-5 td-u tds-w">d-f d-g</span> <span class="c-gray-8">gtc-4</span></div>
+              <div class="pl-4"><span class="c-yellow-5 td-u tds-w">d-f d-g</span>
+              <span class="c-gray-8">gtc-4</span></div>
               <div class="pl-4 c-gray-8">sm:gtc-2 ai-c jc-sb</div>
               <div class="pl-4 c-gray-8">p-4 bg-indigo-12</div>
               <div class="c-gray-6">"&gt;</div>
