@@ -30,7 +30,7 @@ export function Preview({ code }: PreviewProps) {
     <Frame
       initialContent={initialContent}
       mountTarget="#root"
-      className="w-full h-full b-0"
+      className="b-0 w-full h-full"
       style={{ border: 0 }}
     >
       {/* biome-ignore lint/security/noDangerouslySetInnerHtml: playground requires rendering user HTML */}

@@ -174,20 +174,20 @@ const ShortcutsDialog = ({
               className="f-1 p-6"
               style={{ borderRight: "1px solid #31365e" }}
             >
-              <h2 className="fs-lg fw-600 mb-4" style={{ color: "#fff" }}>
+              <h2 className="mb-4 fs-lg fw-600" style={{ color: "#fff" }}>
                 About
               </h2>
-              <p className="fs-sm mb-4 lh-5" style={{ color: "#bec6f2" }}>
+              <p className="mb-4 fs-sm lh-5" style={{ color: "#bec6f2" }}>
                 Yumma CSS Play is an advanced playground for experimenting with
                 Yumma CSS utility classes in real-time.
               </p>
-              <p className="fs-sm mb-4 lh-5" style={{ color: "#bec6f2" }}>
+              <p className="mb-4 fs-sm lh-5" style={{ color: "#bec6f2" }}>
                 It catches utility conflicts, shows hover information when
                 hovering a utility class, and provides intelligent completions
                 as you type.
               </p>
 
-              <h3 className="fs-md fw-600 mb-3 mt-6" style={{ color: "#fff" }}>
+              <h3 className="mb-3 mt-6 fs-md fw-600" style={{ color: "#fff" }}>
                 Documentation
               </h3>
               <p className="fs-sm lh-5" style={{ color: "#bec6f2" }}>
@@ -206,14 +206,14 @@ const ShortcutsDialog = ({
 
             {/* Right column - Shortcuts */}
             <div className="f-1 p-6">
-              <h2 className="fs-lg fw-600 mb-4 c-white">Shortcuts</h2>
+              <h2 className="mb-4 c-white fs-lg fw-600">Shortcuts</h2>
               <div className="d-f fd-c g-1">
                 {SHORTCUTS.map((shortcut) => (
                   <button
                     key={shortcut.key}
                     type="button"
                     onClick={() => executeAction(shortcut.action)}
-                    className="d-f ai-c jc-sb px-3 py-2 br-2 ta-l c-p bg-transparent"
+                    className="d-f ai-c jc-sb px-3 py-2 bg-transparent br-2 ta-l c-p"
                     style={{
                       border: "none",
                       color: "#bec6f2",
@@ -228,7 +228,7 @@ const ShortcutsDialog = ({
                   >
                     <span className="fs-sm">{shortcut.label}</span>
                     <kbd
-                      className="px-2 py-1 fs-xs br-2 ff-m min-w-6 ta-c"
+                      className="px-2 py-1 min-w-6 br-2 fs-xs ff-m ta-c"
                       style={{
                         backgroundColor: "#21243f",
                         border: "1px solid #31365e",

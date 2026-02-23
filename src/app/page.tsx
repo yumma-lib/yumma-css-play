@@ -61,11 +61,11 @@ const Home: React.FC = () => {
       <div className="d-b md:d-none">
         <MobileNavbar />
         <div
-          className="d-f ai-c jc-c c-white p-6"
+          className="d-f ai-c jc-c p-6 c-white"
           style={{ backgroundColor: "#1e2039", height: "calc(100dvh - 52px)" }}
         >
           <div className="ta-c">
-            <div className="fs-xl fw-600 mb-2">Desktop Only</div>
+            <div className="mb-2 fs-xl fw-600">Desktop Only</div>
             <p
               className="fs-sm"
               style={{ color: "#bec6f2", maxWidth: "280px" }}
@@ -78,7 +78,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Desktop playground */}
-      <div className="d-none md:d-b h-dvh">
+      <div className="d-none h-dvh md:d-b">
         <PanelGroup direction="horizontal" className="h-full">
           <Panel
             ref={editorPanelRef}
@@ -94,7 +94,7 @@ const Home: React.FC = () => {
                 onResetLayout={handleResetLayout}
                 onFullPreview={handleFullPreview}
               />
-              <div className="f-1 o-h">
+              <div className="o-h f-1">
                 <MonacoEditor
                   code={code}
                   onChange={setCode}
