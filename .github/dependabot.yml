@@ -1,11 +1,14 @@
 version: 2
 updates:
-  - package-ecosystem: npm
-    directory: /
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: daily
+      interval: "daily"
     allow:
       - dependency-name: "@yummacss/core"
-    labels:
-      - dependencies
-      - yummacss-core
+      - dependency-name: "yummacss"
+    groups:
+      yummacss-updates:
+        patterns:
+          - "@yummacss/core"
+          - "yummacss"
