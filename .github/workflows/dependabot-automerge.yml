@@ -26,9 +26,3 @@ jobs:
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: Create Release
-        if: github.event.pull_request.merged == true
-        run: |
-          npm install -g vsce
-          vsce package
-          vsce publish --pat ${{ secrets.GITHUB_TOKEN }}

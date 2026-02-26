@@ -6,7 +6,9 @@ updates:
       interval: "daily"
     allow:
       - dependency-name: "@yummacss/core"
+      - dependency-name: "yummacss"
     groups:
-      yummacss-core:
+      yummacss-updates:
         patterns:
           - "@yummacss/core"
+          - "yummacss"
