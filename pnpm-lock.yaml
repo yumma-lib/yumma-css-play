@@ -30,8 +30,8 @@ importers:
         specifier: ^1.3.1
         version: 1.3.1(next@16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.92.1))(react@19.2.3)
       '@yummacss/core':
-        specifier: ^3.15.0
-        version: 3.15.0
+        specifier: ^3.16.0
+        version: 3.16.0
       emmet-monaco-es:
         specifier: ^5.6.1
         version: 5.6.1(monaco-editor@0.52.2)
@@ -563,6 +563,9 @@ packages:
 
   '@yummacss/core@3.15.0':
     resolution: {integrity: sha512-mKCXqrLIb07FYLqIqxU9mpao5ygtZJITwudCFyC797gHMcgnPmCafhUNpWkVo4fliBaFXCzRfqmdjXdFiw3+cA==}
+
+  '@yummacss/core@3.16.0':
+    resolution: {integrity: sha512-Z27FGkO5cdjmWkn9+nZphkV1wWhUUFXz4kbrxk5OqwxYN8k00wWwxxckaZNRU0wyLAFNUbNi75ZyA86QDYy+Ng==}
 
   '@yummacss/nitro@3.15.0':
     resolution: {integrity: sha512-j3/bJPJrL34qCYHOTa0Pzl3FU/SngPxlTttYIa0CJrp90J4b/AnUl7nCeUF56N3Es4XRtsCQ7b5M9yHyxc7xJQ==}
@@ -1400,6 +1403,8 @@ snapshots:
       react: 19.2.3
 
   '@yummacss/core@3.15.0': {}
+
+  '@yummacss/core@3.16.0': {}
 
   '@yummacss/nitro@3.15.0':
     dependencies:
