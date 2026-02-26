@@ -30,8 +30,8 @@ importers:
         specifier: ^1.3.1
         version: 1.3.1(next@16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.92.1))(react@19.2.3)
       '@yummacss/core':
-        specifier: ^3.15.0
-        version: 3.15.0
+        specifier: ^3.16.0
+        version: 3.16.0
       emmet-monaco-es:
         specifier: ^5.6.1
         version: 5.6.1(monaco-editor@0.52.2)
@@ -82,8 +82,8 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       yummacss:
-        specifier: ^3.15.0
-        version: 3.15.0
+        specifier: ^3.16.0
+        version: 3.16.0
 
 packages:
 
@@ -561,11 +561,11 @@ packages:
       vue-router:
         optional: true
 
-  '@yummacss/core@3.15.0':
-    resolution: {integrity: sha512-mKCXqrLIb07FYLqIqxU9mpao5ygtZJITwudCFyC797gHMcgnPmCafhUNpWkVo4fliBaFXCzRfqmdjXdFiw3+cA==}
+  '@yummacss/core@3.16.0':
+    resolution: {integrity: sha512-Z27FGkO5cdjmWkn9+nZphkV1wWhUUFXz4kbrxk5OqwxYN8k00wWwxxckaZNRU0wyLAFNUbNi75ZyA86QDYy+Ng==}
 
-  '@yummacss/nitro@3.15.0':
-    resolution: {integrity: sha512-j3/bJPJrL34qCYHOTa0Pzl3FU/SngPxlTttYIa0CJrp90J4b/AnUl7nCeUF56N3Es4XRtsCQ7b5M9yHyxc7xJQ==}
+  '@yummacss/nitro@3.16.0':
+    resolution: {integrity: sha512-TwgAO9LgQUui5lArY3M9SRLCs5kr/gLs9ScKoNVgbZakp5zL2TwHWSV9E3Pe3SMNBhWvAYwlFtFQ+u/9bXbEXQ==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -798,8 +798,8 @@ packages:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
     hasBin: true
 
-  make-asynchronous@1.0.1:
-    resolution: {integrity: sha512-T9BPOmEOhp6SmV25SwLVcHK4E6JyG/coH3C6F1NjNXSziv/fd4GmsqMk8YR6qpPOswfaOCApSNkZv6fxoaYFcQ==}
+  make-asynchronous@1.1.0:
+    resolution: {integrity: sha512-ayF7iT+44LXdxJLTrTd3TLQpFDDvPCBxXxbv+pMUSuHA5Q8zyAfwkRP6aHHwNVFBUFWtxAHqwNJxF8vMZLAbVg==}
     engines: {node: '>=18'}
 
   monaco-editor@0.52.2:
@@ -1029,8 +1029,8 @@ packages:
   w3c-keyname@2.2.8:
     resolution: {integrity: sha512-dpojBhNsCNN7T82Tm7k26A6G9ML3NkhDsnw9n/eoxSRlVBB4CEtIQ/KTCLI2Fwf3ataSXRhYFkQi3SlnFwPvPQ==}
 
-  web-worker@1.2.0:
-    resolution: {integrity: sha512-PgF341avzqyx60neE9DD+XS26MMNMoUQRz9NOZwW32nPQrF6p77f1htcnjBSEV8BGMKZ16choqUG4hyI0Hx7mA==}
+  web-worker@1.5.0:
+    resolution: {integrity: sha512-RiMReJrTAiA+mBjGONMnjVDP2u3p9R1vkcGz6gDIrOMT3oGuYwX2WRMYI9ipkphSuE5XKEhydbhNEJh4NY9mlw==}
 
   wrap-ansi@7.0.0:
     resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==}
@@ -1048,8 +1048,8 @@ packages:
     resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
     engines: {node: '>=12'}
 
-  yummacss@3.15.0:
-    resolution: {integrity: sha512-bwGw+rlosMVbeDcefeE+PPNT49D1EiSb5mzcJp7iHuv5aQYi/RcywzL2nMgC+jSd3Rh+bE6p2QWhcnYx2Msx2g==}
+  yummacss@3.16.0:
+    resolution: {integrity: sha512-AktQtVqYbiWPoeYdvbjGsyKe5zmg60wl8rN5FFOdyJVn6eA3MGwH5CslezsoYMedRcb4j2VxTs4QLqV+6OGpDA==}
     hasBin: true
 
   zod@4.3.6:
@@ -1399,11 +1399,11 @@ snapshots:
       next: 16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.92.1)
       react: 19.2.3
 
-  '@yummacss/core@3.15.0': {}
+  '@yummacss/core@3.16.0': {}
 
-  '@yummacss/nitro@3.15.0':
+  '@yummacss/nitro@3.16.0':
     dependencies:
-      '@yummacss/core': 3.15.0
+      '@yummacss/core': 3.16.0
       tinyglobby: 0.2.15
       zod: 4.3.6
 
@@ -1581,11 +1581,11 @@ snapshots:
 
   lz-string@1.5.0: {}
 
-  make-asynchronous@1.0.1:
+  make-asynchronous@1.1.0:
     dependencies:
       p-event: 6.0.1
       type-fest: 4.41.0
-      web-worker: 1.2.0
+      web-worker: 1.5.0
 
   monaco-editor@0.52.2: {}
 
@@ -1776,7 +1776,7 @@ snapshots:
   super-regex@1.1.0:
     dependencies:
       function-timeout: 1.0.2
-      make-asynchronous: 1.0.1
+      make-asynchronous: 1.1.0
       time-span: 5.1.0
 
   supports-color@7.2.0:
@@ -1814,7 +1814,7 @@ snapshots:
 
   w3c-keyname@2.2.8: {}
 
-  web-worker@1.2.0: {}
+  web-worker@1.5.0: {}
 
   wrap-ansi@7.0.0:
     dependencies:
@@ -1836,9 +1836,9 @@ snapshots:
       y18n: 5.0.8
       yargs-parser: 21.1.1
 
-  yummacss@3.15.0:
+  yummacss@3.16.0:
     dependencies:
-      '@yummacss/nitro': 3.15.0
+      '@yummacss/nitro': 3.16.0
       chokidar: 5.0.0
       commander: 14.0.3
       lightningcss: 1.31.1
