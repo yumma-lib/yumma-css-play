@@ -1,0 +1,49 @@
+name: Update core dependencies
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Update @yummacss/core and yummacss
+        id: update
+        run: |
+          pnpm up @yummacss/core yummacss --latest
+          if git diff --quiet package.json pnpm-lock.yaml; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            NEW_VERSION=$(node -e "
+              const pkg = JSON.parse(require('fs').readFileSync('package.json', 'utf8'));
+              console.log(pkg.dependencies['@yummacss/core'].replace(/[\^~>=]/g, ''));
+            ")
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.update.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add package.json pnpm-lock.yaml
+          git commit -m "chore: update @yummacss/core to ${{ steps.update.outputs.version }}"
+          git push
