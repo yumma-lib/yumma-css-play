@@ -1,4 +1,4 @@
-name: Dependabot Auto Merge
+name: Dependabot Auto Merge IntelliSense
 on: pull_request
 permissions:
   contents: write
@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
+      - uses: actions/checkout@v4
       - name: Fetch metadata
         id: metadata
         uses: dependabot/fetch-metadata@v2
@@ -17,11 +18,17 @@ jobs:
       - name: Approve PR
         run: gh pr review --approve "$PR_URL"
         env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: Enable auto-merge
         if: steps.metadata.outputs.update-type == 'version-update:semver-patch' || steps.metadata.outputs.update-type == 'version-update:semver-minor'
         run: gh pr merge --auto --squash "$PR_URL"
         env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Create Release
+        if: github.event.pull_request.merged == true
+        run: |
+          npm install -g vsce
+          vsce package
+          vsce publish --pat ${{ secrets.GITHUB_TOKEN }}
