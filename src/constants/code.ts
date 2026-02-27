@@ -4,7 +4,7 @@ export const initialCode: string = `<div class="d-f fd-c ai-c jc-c min-h-vh px-6
 
     <div class="d-f ai-c g-2 px-3 py-1 bg-indigo-1 bc-indigo-2 br-pill bw-1">
       <div class="w-2 h-2 bg-indigo-5 br-half"></div>
-      <span class="c-indigo-7 fs-xs ff-m tt-u ls-4">Running v3.17</span>
+      <span class="c-indigo-7 fs-xs ff-m tt-u ls-4">Running the latest</span>
     </div>
 
     <div class="d-f fd-c g-3">
