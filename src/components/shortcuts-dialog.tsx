@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@base-ui/react";
 import { Dialog } from "@base-ui/react/dialog";
 import { InfoIcon, XIcon } from "@phosphor-icons/react";
 import { YummaCSS } from "@react-symbols/icons";
@@ -209,7 +210,7 @@ const ShortcutsDialog = ({
               <h2 className="mb-4 c-white fs-lg fw-600">Shortcuts</h2>
               <div className="d-f fd-c g-1">
                 {SHORTCUTS.map((shortcut) => (
-                  <button
+                  <Button
                     key={shortcut.key}
                     type="button"
                     onClick={() => executeAction(shortcut.action)}
@@ -237,7 +238,7 @@ const ShortcutsDialog = ({
                     >
                       {shortcut.key}
                     </kbd>
-                  </button>
+                  </Button>
                 ))}
               </div>
             </div>

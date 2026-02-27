@@ -2,9 +2,9 @@ export const initialCode: string = `<div class="d-f fd-c ai-c jc-c min-h-vh px-6
 
   <div class="d-f fd-c ai-c g-5 max-w-lg ta-c">
 
-    <div class="d-f ai-c g-2 px-3 py-1 bg-indigo-1 bc-indigo-2 br-pill bw-1">
-      <div class="w-2 h-2 bg-indigo-5 br-half"></div>
-      <span class="c-indigo-7 fs-xs ff-m tt-u ls-4">Running the latest</span>
+    <div class="d-f ai-c g-2 px-3 py-1 bg-gray-1 bc-gray-2 br-pill bw-1">
+      <div class="w-2 h-2 bg-gray-5 br-half"></div>
+      <span class="c-gray-7 fs-xs ff-m tt-u ls-4">Running the latest</span>
     </div>
 
     <div class="d-f fd-c g-3">
@@ -17,7 +17,7 @@ export const initialCode: string = `<div class="d-f fd-c ai-c jc-c min-h-vh px-6
     </div>
 
     <div class="d-f ai-c jc-c g-3 fw-w">
-      <a class="px-5 py-2 bg-indigo-5 c-white br-2 fs-sm fw-500 td-none us-none c-p h:bg-indigo-6">
+      <a class="px-5 py-2 bg-gray-5 c-white br-2 fs-sm fw-500 td-none us-none c-p h:bg-gray-6">
         Get started
       </a>
       <a class="d-f ai-c g-1 c-gray-8 fs-sm fw-500 td-none us-none c-p h:c-gray-12">
@@ -28,15 +28,15 @@ export const initialCode: string = `<div class="d-f fd-c ai-c jc-c min-h-vh px-6
 
     <div class="d-f ai-c jc-c g-6 fw-w pt-5 bc-silver-4 btw-1">
       <div class="d-f ai-c g-2 c-gray">
-        <i class="c-indigo-5 fs-md ph ph-lightning"></i>
+        <i class="c-gray-5 fs-md ph ph-lightning"></i>
         <span class="fs-xs">Compact by design</span>
       </div>
       <div class="d-f ai-c g-2 c-gray">
-        <i class="c-indigo-5 fs-md ph ph-swatches"></i>
+        <i class="c-gray-5 fs-md ph ph-swatches"></i>
         <span class="fs-xs">21 colors × 13 shades</span>
       </div>
       <div class="d-f ai-c g-2 c-gray">
-        <i class="c-indigo-5 fs-md ph ph-devices"></i>
+        <i class="c-gray-5 fs-md ph ph-devices"></i>
         <span class="fs-xs">Mobile-first approach</span>
       </div>
     </div>

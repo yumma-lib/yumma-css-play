@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import ShortcutsDialog from "@/components/shortcuts-dialog";
 import { initialCode } from "@/constants/code";
 import { copyToClipboard, createShareUrl } from "@/utils/share";
+import { Button } from "@base-ui/react";
 
 type ShareState = "idle" | "success" | "error";
 
@@ -105,7 +106,7 @@ const Navbar = ({
 
       <div className="d-f ai-c g-2">
         {/* Share Button */}
-        <button
+        <Button
           type="button"
           onClick={handleShare}
           className="d-f ai-c g-2 px-3 py-1 c-white fs-sm"
@@ -118,7 +119,7 @@ const Navbar = ({
         >
           {renderShareIcon()}
           <span>{getShareLabel()}</span>
-        </button>
+        </Button>
 
         {/* Shortcuts Dialog */}
         <ShortcutsDialog
