@@ -134,8 +134,8 @@ export const initialCode: string = `<!--
                 </div>
               </div>
               <div class="d-f g-2">
-                <div class="h-3 w-10 bg-gray-2"></div>
-                <div class="h-3 w-10 bg-gray-1"></div>
+                <div class="w-10 h-3 bg-gray-2"></div>
+                <div class="w-10 h-3 bg-gray-1"></div>
               </div>
             </div>
           </div>
