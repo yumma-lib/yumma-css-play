@@ -1,12 +1,4 @@
-export const initialCode: string = `<!--
-  Yumma CSS Playground
-  A zero-config environment to experiment with Yumma CSS utilities.
-  Write classes, preview instantly, and explore the framework.
-
-  This playground is being powered by @yummacss/runtime.
--->
-
-<div class="p-r o-auto h-vh bg-white">
+export const initialCode: string = `<div class="p-r o-auto h-vh bg-white">
 
   <div class="d-g p-a i-0 zi-0 gtc-16 gtr-12 o-20">
     <div class="bc-silver-4 bbw-1 brw-1"></div><div class="bc-silver-4 bbw-1 brw-1"></div>
