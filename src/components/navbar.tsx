@@ -1,12 +1,12 @@
 "use client";
 
+import { Button } from "@base-ui/react";
 import { CheckIcon, LinkBreakIcon, ShareIcon } from "@phosphor-icons/react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import ShortcutsDialog from "@/components/shortcuts-dialog";
 import { initialCode } from "@/constants/code";
 import { copyToClipboard, createShareUrl } from "@/utils/share";
-import { Button } from "@base-ui/react";
 
 type ShareState = "idle" | "success" | "error";
 
@@ -96,9 +96,9 @@ const Navbar = ({
     >
       <Image
         className="h-auto"
-        height={200}
-        width={140}
-        src="/logotype.png"
+        height={30}
+        width={30}
+        src="/logo-dark.svg"
         alt="Yumma CSS Play Logo"
         style={{ imageRendering: "crisp-edges" }}
         priority
