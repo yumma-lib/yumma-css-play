@@ -4,14 +4,8 @@ import Editor from "@monaco-editor/react";
 import { emmetHTML } from "emmet-monaco-es";
 import { useRef } from "react";
 import { handleMount } from "@/themes/eclipsa";
-import {
-  registerCodeActionsProvider,
-  setupCodeActions,
-} from "@/utils/codeActions";
-import { setupKeybindings } from "@/utils/keybindings";
 import { registerProviders } from "@/utils/providers";
 
-// track if providers have been registered globally (Monaco providers are singleton)
 let providersRegistered = false;
 
 interface MonacoEditorProps {
@@ -28,23 +22,16 @@ function MonacoEditor({ code, onChange, onMount }: MonacoEditorProps) {
     editorRef.current = editor;
     monacoRef.current = monaco;
 
-    // only register global providers once to prevent duplicates
     if (!providersRegistered) {
       emmetHTML(monaco);
-      registerProviders(monaco);
-      registerCodeActionsProvider(monaco);
+      registerProviders(monaco, editor);
       providersRegistered = true;
     }
-
-    // per-editor setup (keybindings, markers, content change listeners)
-    setupKeybindings(editor, monaco);
-    setupCodeActions(editor, monaco);
 
     if (handleMount) {
       handleMount(editor, monaco);
     }
 
-    // expose editor to parent
     if (onMount) {
       onMount(editor);
     }
