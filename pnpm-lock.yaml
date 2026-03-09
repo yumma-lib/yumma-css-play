@@ -30,8 +30,8 @@ importers:
         specifier: ^1.3.1
         version: 1.3.1(next@16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.92.1))(react@19.2.3)
       '@yummacss/intellisense':
-        specifier: ^3.18.0
-        version: 3.18.0
+        specifier: ^3.20.0
+        version: 3.20.0
       emmet-monaco-es:
         specifier: ^5.6.1
         version: 5.6.1(monaco-editor@0.52.2)
@@ -588,14 +588,11 @@ packages:
       vue-router:
         optional: true
 
-  '@yummacss/core@3.18.0':
-    resolution: {integrity: sha512-jerePqYYNJMrLJV0f4+44mYC5dfvsbXcTii+DVx0k4kLPMn3pEzOeuLR8CDCJ7YMloSzL34YUXjBEg9/aifiHA==}
-
   '@yummacss/core@3.20.0':
     resolution: {integrity: sha512-vIf3UZfvMatDENOPJwBDpGOe45HIZ495zeHN4Nae1Qb6B455UnK6Z5BEUf4YClgoiEqCukwBS5DY1HzXpBSIpQ==}
 
-  '@yummacss/intellisense@3.18.0':
-    resolution: {integrity: sha512-YwCT335ur21jp4a1K+KUfErIsI9/UudSTYJX7k8QfLusq7nE6JFVpYoXgJWqWvn2W+26SFOjgj7oWU0+Ji6hnQ==}
+  '@yummacss/intellisense@3.20.0':
+    resolution: {integrity: sha512-r3N1jZvjNdFxulhjSULQS4Tx9tBbBOpxGAdR0SgVGSWAL3y4I+fL/M56bWzIfcM58ozmQyUJC6wf8iQk9D0lpA==}
 
   '@yummacss/nitro@3.20.0':
     resolution: {integrity: sha512-3eqkSUcDK8oljog2y5IPUTvivwNGM/U6KE6PHSmreVoFj3TjqMEqWhEzDcjR9LrV2cFnLV+XB9FyRcUw15Fb/Q==}
@@ -865,9 +862,6 @@ packages:
 
   tabbable@6.4.0:
     resolution: {integrity: sha512-05PUHKSNE8ou2dwIxTngl4EzcnsCDZGJ/iCLtDflR/SHB/ny14rXc+qU5P4mG9JkusiV7EivzY9Mhm55AzAvCg==}
-
-  tinycolor2@1.6.0:
-    resolution: {integrity: sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==}
 
   tinyglobby@0.2.15:
     resolution: {integrity: sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==}
@@ -1259,14 +1253,11 @@ snapshots:
       next: 16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.92.1)
       react: 19.2.3
 
-  '@yummacss/core@3.18.0': {}
-
   '@yummacss/core@3.20.0': {}
 
-  '@yummacss/intellisense@3.18.0':
+  '@yummacss/intellisense@3.20.0':
     dependencies:
-      '@yummacss/core': 3.18.0
-      tinycolor2: 1.6.0
+      '@yummacss/core': 3.20.0
 
   '@yummacss/nitro@3.20.0':
     dependencies:
@@ -1525,8 +1516,6 @@ snapshots:
       has-flag: 4.0.0
 
   tabbable@6.4.0: {}
-
-  tinycolor2@1.6.0: {}
 
   tinyglobby@0.2.15:
     dependencies:
