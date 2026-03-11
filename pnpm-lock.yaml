@@ -79,8 +79,8 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       yummacss:
-        specifier: ^3.20.1
-        version: 3.20.1
+        specifier: ^3.20.3
+        version: 3.20.3
 
 packages:
 
@@ -591,11 +591,14 @@ packages:
   '@yummacss/core@3.20.1':
     resolution: {integrity: sha512-5o72UOiDTHBrh9tYyB9M6uvNl7xXutPgJ0oEKeQP2dmHb9Ykdqxg++lu2V53BLo7wnquPsA6srl7P7jQcPycag==}
 
+  '@yummacss/core@3.20.3':
+    resolution: {integrity: sha512-tl2pRHIKozLIwqY43KiRfEqlI1tbpqRSw1qFVeqZcum77BCIe5c8Rwdb5giYCnev7+IrNUt50WjlV1O2JbzJDA==}
+
   '@yummacss/intellisense@3.20.1':
     resolution: {integrity: sha512-J44oi45kQ2ddSN/Ku48BoYg4RSdJpFopgh6+/ty/i1vOefo7lYcOwpij/UIwJnKcw05zrl4ZT35XAQfqf+eX7w==}
 
-  '@yummacss/nitro@3.20.1':
-    resolution: {integrity: sha512-UwlcIHA2y8/8uVekv1Fb3DIyWBkSx2lRgFmN3FFEb6oPRvTZMo7lEYoRwZHKB9prEBqzHXEssHNHA5APAWN/FQ==}
+  '@yummacss/nitro@3.20.3':
+    resolution: {integrity: sha512-Vpig/OUNxs2/croaQVw0A4Z85CFmsSlv85payawd6RzERG0uRkeYjykVY9FH1CHKEaTzaORzqHzR8ti1qwm2aA==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -906,8 +909,8 @@ packages:
     resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
     engines: {node: '>=12'}
 
-  yummacss@3.20.1:
-    resolution: {integrity: sha512-ioupbYlUS+Hp5zCxmY1aKHoUB21d5UyBcUG/GThO8d4LSpVUZrixaEbceJBbIPBBELDEjzPK1n75Z39dzmINJQ==}
+  yummacss@3.20.3:
+    resolution: {integrity: sha512-iF9mlOvnSA4FybdYaBXhscDTPtibVBoUMokozvJ0/J2x6AlocDxwxgePr1zllqpJm6bg1oagOS7BMVEadYwlAA==}
     hasBin: true
 
 snapshots:
@@ -1255,13 +1258,15 @@ snapshots:
 
   '@yummacss/core@3.20.1': {}
 
+  '@yummacss/core@3.20.3': {}
+
   '@yummacss/intellisense@3.20.1':
     dependencies:
       '@yummacss/core': 3.20.1
 
-  '@yummacss/nitro@3.20.1':
+  '@yummacss/nitro@3.20.3':
     dependencies:
-      '@yummacss/core': 3.20.1
+      '@yummacss/core': 3.20.3
 
   ansi-regex@5.0.1: {}
 
@@ -1556,6 +1561,6 @@ snapshots:
       y18n: 5.0.8
       yargs-parser: 21.1.1
 
-  yummacss@3.20.1:
+  yummacss@3.20.3:
     dependencies:
-      '@yummacss/nitro': 3.20.1
+      '@yummacss/nitro': 3.20.3
