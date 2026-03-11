@@ -26,7 +26,7 @@ jobs:
         run: pnpm install
 
       - name: Update yummacss packages
-        run: pnpm up yummacss @yummacss/core --latest
+        run: pnpm up yummacss @yummacss/intellisense --latest
 
       - name: Open PR
         uses: peter-evans/create-pull-request@v7
@@ -35,5 +35,8 @@ jobs:
           commit-message: "chore: update yummacss to ${{ github.event.client_payload.version }}"
           branch: update/yummacss-${{ github.event.client_payload.version }}
           title: "chore: update yummacss to ${{ github.event.client_payload.version }}"
-          body: "Automated update triggered by release ${{ github.event.client_payload.version }} in the monorepo."
+          body: |
+            ### Changed
+
+            - Update `yummacss` & `@yummacss/intellisense` to ${{ github.event.client_payload.version }}.
           auto-merge: squash
