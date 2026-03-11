@@ -1,0 +1,39 @@
+name: Update Yumma CSS
+
+on:
+  repository_dispatch:
+    types: [yummacss-released]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Update yummacss packages
+        run: pnpm up yummacss @yummacss/core --latest
+
+      - name: Open PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update yummacss to ${{ github.event.client_payload.version }}"
+          branch: update/yummacss-${{ github.event.client_payload.version }}
+          title: "chore: update yummacss to ${{ github.event.client_payload.version }}"
+          body: "Automated update triggered by release ${{ github.event.client_payload.version }} in the monorepo."
+          auto-merge: squash
