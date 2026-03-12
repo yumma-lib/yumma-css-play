@@ -1,4 +1,6 @@
-*, :before, :after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   border: 0 solid;
 }
@@ -9,7 +11,7 @@
 }
 
 html {
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 body {
@@ -18,25 +20,40 @@ body {
   line-height: 1.5;
 }
 
-canvas, img, picture, svg, video {
-  max-width: 100%;
+canvas,
+img,
+picture,
+svg,
+video {
   display: block;
+  max-width: 100%;
 }
 
-button, input, optgroup, select, textarea {
-  background-color: #0000;
-  padding: .5rem;
+button,
+input,
+optgroup,
+select,
+textarea {
+  background-color: transparent;
   font-family: inherit;
+  padding: .5rem;
 }
 
-button:not([class]), input:not([class]), optgroup:not([class]), select:not([class]), textarea:not([class]) {
+button:not([class]),
+input:not([class]),
+optgroup:not([class]),
+select:not([class]),
+textarea:not([class]) {
   border: 1px solid #bfc2c7;
 }
 
-a, button, input, select, summary, textarea {
-  &:focus {
-    outline: 2px solid #0000;
-  }
+:is(a,
+button,
+input,
+select,
+summary,
+textarea):focus {
+  outline: 2px solid transparent;
 }
 
 textarea:not([rows]) {
@@ -47,26 +64,41 @@ button {
   cursor: pointer;
 }
 
-button:disabled, input:disabled, select:disabled, textarea:disabled {
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
   cursor: not-allowed;
   opacity: .5;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   overflow-wrap: break-word;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 1rem;
   font-weight: 600;
+  text-wrap: balance;
 }
 
 p {
   text-wrap: pretty;
 }
 
-b, strong {
+b,
+strong {
   font-weight: 700;
 }
 
@@ -75,7 +107,10 @@ small {
   line-height: 1.4;
 }
 
-pre, code, kbd, samp {
+pre,
+code,
+kbd,
+samp {
   font-family: monospace;
   font-size: 1em;
 }
@@ -85,9 +120,10 @@ a {
   text-decoration: none;
 }
 
-ol, ul {
-  padding: 0;
+ol,
+ul {
   list-style: none;
+  padding: 0;
 }
 
 th {
@@ -126,7 +162,7 @@ summary {
 }
 
 .bc-white\/20 {
-  border-color: #fff3;
+  border-color: #ffffff33;
 }
 
 .bg-indigo-1 {
@@ -138,11 +174,11 @@ summary {
 }
 
 .bg-transparent {
-  background-color: #0000;
+  background-color: transparent;
 }
 
 .bg-white {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .br-2 {
@@ -190,7 +226,7 @@ summary {
 }
 
 .c-white {
-  color: #fff;
+  color: #ffffff;
 }
 
 .d-b {
@@ -214,7 +250,7 @@ summary {
 }
 
 .ff-m {
-  font-family: ui-monospace, Cascadia Code, Source Code Pro, Menlo, Roboto Mono, Ubuntu Mono, Consolas, Liberation Mono, Courier New, monospace;
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, 'Roboto Mono', 'Ubuntu Mono', Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
 .fs-4xl {
@@ -234,7 +270,7 @@ summary {
 }
 
 .fs-sm {
-  font-size: .875rem;
+  font-size: 0.875rem;
 }
 
 .fs-xl {
@@ -242,7 +278,7 @@ summary {
 }
 
 .fs-xs {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .fw-100 {
