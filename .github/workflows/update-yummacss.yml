@@ -39,7 +39,7 @@ jobs:
           body: |
             ### Changed
 
-            - Update `yummacss` & `@yummacss/core` to ${{ github.event.client_payload.version }}.
+            - Update `yummacss` & `@yummacss/intellisense` to ${{ github.event.client_payload.version }}.
 
       - name: Auto-merge PR
         if: steps.pr.outputs.pull-request-number
