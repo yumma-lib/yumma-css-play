@@ -214,7 +214,7 @@ const ShortcutsDialog = ({
                     key={shortcut.key}
                     type="button"
                     onClick={() => executeAction(shortcut.action)}
-                    className="d-f ai-c jc-sb px-3 py-2 bg-transparent br-2 ta-l c-p"
+                    className="d-f ai-c jc-sb px-3 py-2 br-sm bg-transparent ta-l c-p"
                     style={{
                       border: "none",
                       color: "#bec6f2",
@@ -229,7 +229,7 @@ const ShortcutsDialog = ({
                   >
                     <span className="fs-sm">{shortcut.label}</span>
                     <kbd
-                      className="px-2 py-1 min-w-6 br-2 fs-xs ff-m ta-c"
+                      className="px-2 py-1 min-w-6 br-sm fs-xs ff-m ta-c"
                       style={{
                         backgroundColor: "#21243f",
                         border: "1px solid #31365e",

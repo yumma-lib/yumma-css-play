@@ -17,7 +17,7 @@ export const initialCode: string = `<div class="d-f fd-c ai-c jc-c min-h-vh px-6
     </div>
 
     <div class="d-f ai-c jc-c g-3 fw-w">
-      <a class="px-5 py-2 bg-indigo-5 c-white br-2 fs-sm fw-500 td-none us-none c-p h:bg-indigo-6">
+      <a class="px-5 py-2 br-sm bg-indigo-5 c-white fs-sm fw-500 td-none us-none c-p h:bg-indigo-6">
         Get started
       </a>
       <a class="d-f ai-c g-1 c-indigo-5 fs-sm fw-500 td-none us-none c-p h:c-indigo-8">
