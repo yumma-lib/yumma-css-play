@@ -1,6 +1,4 @@
-*,
-*:before,
-*:after {
+*, :before, :after {
   box-sizing: border-box;
   border: 0 solid;
 }
@@ -11,20 +9,7 @@
 }
 
 html {
-  font-family:
-    system-ui,
-    -apple-system,
-    Segoe UI,
-    Roboto,
-    Helvetica Neue,
-    Noto Sans,
-    Liberation Sans,
-    Arial,
-    sans-serif,
-    Apple Color Emoji,
-    Segoe UI Emoji,
-    Segoe UI Symbol,
-    Noto Color Emoji;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Noto Sans, Liberation Sans, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 body {
@@ -33,30 +18,18 @@ body {
   line-height: 1.5;
 }
 
-canvas,
-img,
-picture,
-svg,
-video {
-  display: block;
+canvas, img, picture, svg, video {
   max-width: 100%;
+  display: block;
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
+button, input, optgroup, select, textarea {
   background-color: transparent;
+  padding: .5rem;
   font-family: inherit;
-  padding: 0.5rem;
 }
 
-button:not([class]),
-input:not([class]),
-optgroup:not([class]),
-select:not([class]),
-textarea:not([class]) {
+button:not([class]), input:not([class]), optgroup:not([class]), select:not([class]), textarea:not([class]) {
   border: 1px solid #bfc2c7;
 }
 
@@ -72,41 +45,26 @@ button {
   cursor: pointer;
 }
 
-button:disabled,
-input:disabled,
-select:disabled,
-textarea:disabled {
+button:disabled, input:disabled, select:disabled, textarea:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: .5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1, h2, h3, h4, h5, h6, p {
   overflow-wrap: break-word;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
   font-size: 1rem;
   font-weight: 600;
-  text-wrap: balance;
 }
 
 p {
   text-wrap: pretty;
 }
 
-b,
-strong {
+b, strong {
   font-weight: 700;
 }
 
@@ -115,10 +73,7 @@ small {
   line-height: 1.4;
 }
 
-pre,
-code,
-kbd,
-samp {
+pre, code, kbd, samp {
   font-family: monospace;
   font-size: 1em;
 }
@@ -128,10 +83,9 @@ a {
   text-decoration: none;
 }
 
-ol,
-ul {
-  list-style: none;
+ol, ul {
   padding: 0;
+  list-style: none;
 }
 
 th {
@@ -152,6 +106,7 @@ details {
 summary {
   display: list-item;
 }
+
 
 .ai-c {
   align-items: center;
@@ -187,10 +142,6 @@ summary {
 
 .bg-white {
   background-color: #ffffff;
-}
-
-.br-sm {
-  border-radius: 0.5rem;
 }
 
 .br-half {
@@ -258,9 +209,7 @@ summary {
 }
 
 .ff-m {
-  font-family:
-    ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, "Roboto Mono",
-    "Ubuntu Mono", Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, Cascadia Code, Source Code Pro, Menlo, Roboto Mono, Ubuntu Mono, Consolas, Liberation Mono, Courier New, monospace;
 }
 
 .fs-4xl {
@@ -312,15 +261,15 @@ summary {
 }
 
 .g-1 {
-  gap: 0.25rem;
+  gap: .25rem;
 }
 
 .g-2 {
-  gap: 0.5rem;
+  gap: .5rem;
 }
 
 .g-3 {
-  gap: 0.75rem;
+  gap: .75rem;
 }
 
 .g-5 {
@@ -332,7 +281,7 @@ summary {
 }
 
 .h-2 {
-  height: 0.5rem;
+  height: .5rem;
 }
 
 .h-4 {
@@ -376,7 +325,7 @@ summary {
 }
 
 .ls-4 {
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
 }
 
 .m-0 {
@@ -392,11 +341,11 @@ summary {
 }
 
 .mb-2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 .mb-3 {
-  margin-bottom: 0.75rem;
+  margin-bottom: .75rem;
 }
 
 .mb-4 {
@@ -436,11 +385,11 @@ summary {
 }
 
 .px-2 {
-  padding-inline: 0.5rem;
+  padding-inline: .5rem;
 }
 
 .px-3 {
-  padding-inline: 0.75rem;
+  padding-inline: .75rem;
 }
 
 .px-5 {
@@ -452,11 +401,11 @@ summary {
 }
 
 .py-1 {
-  padding-block: 0.25rem;
+  padding-block: .25rem;
 }
 
 .py-2 {
-  padding-block: 0.5rem;
+  padding-block: .5rem;
 }
 
 .py-20 {
@@ -464,7 +413,7 @@ summary {
 }
 
 .py-3 {
-  padding-block: 0.75rem;
+  padding-block: .75rem;
 }
 
 .ta-c {
@@ -492,7 +441,7 @@ summary {
 }
 
 .w-2 {
-  width: 0.5rem;
+  width: .5rem;
 }
 
 .w-4 {
@@ -507,7 +456,7 @@ summary {
   width: 1px;
 }
 
-@media (width >= 48rem) {
+@media (min-width: 48rem) {
   .md\:d-b {
     display: block;
   }
