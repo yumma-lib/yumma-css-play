@@ -12,7 +12,7 @@ export const initialCode: string = `<div class="d-f fd-c ai-c jc-c min-h-vh px-6
         Type less.<br>Style more.
       </h1>
       <p class="max-w-sm c-gray fs-sm lh-5">
-        Yumma CSS is an atomic CSS framework with abbreviated utility classes.
+        Yumma CSS is an ergonomic CSS framework with abbreviated utility classes.
       </p>
     </div>
 
