@@ -36,7 +36,7 @@ const Navbar = ({
     } else if (code === lastSharedCode.current && lastSharedUrl.current) {
       shareUrl = lastSharedUrl.current;
     } else {
-      shareUrl = createShareUrl(code);
+      shareUrl = await createShareUrl(code);
       lastSharedCode.current = code;
       lastSharedUrl.current = shareUrl;
     }

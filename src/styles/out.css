@@ -152,6 +152,10 @@ summary {
   border-radius: 9999px;
 }
 
+.br-sm {
+  border-radius: 0.25rem;
+}
+
 .brw-1 {
   border-right-width: 1px;
 }

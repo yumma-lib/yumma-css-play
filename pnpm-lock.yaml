@@ -26,6 +26,9 @@ importers:
       '@vercel/analytics':
         specifier: ^1.6.1
         version: 1.6.1(next@16.1.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.92.1))(react@19.2.3)
+      '@vercel/kv':
+        specifier: ^3.0.0
+        version: 3.0.0
       '@vercel/speed-insights':
         specifier: ^1.3.1
         version: 1.3.1(next@16.1.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.92.1))(react@19.2.3)
@@ -79,8 +82,8 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       yummacss:
-        specifier: ^3.23.0
-        version: 3.23.0
+        specifier: ^3.24.0
+        version: 3.24.0
 
 packages:
 
@@ -539,6 +542,9 @@ packages:
   '@types/react@19.2.7':
     resolution: {integrity: sha512-MWtvHrGZLFttgeEj28VXHxpmwYbor/ATPYbBfSFZEIRK0ecCFLl2Qo55z52Hss+UV9CRN7trSeq1zbgx7YDWWg==}
 
+  '@upstash/redis@1.37.0':
+    resolution: {integrity: sha512-LqOJ3+XWPLSZ2rGSed5DYG3ixybxb8EhZu3yQqF7MdZX1wLBG/FRcI6xcUZXHy/SS7mmXWyadrud0HJHkOc+uw==}
+
   '@vercel/analytics@1.6.1':
     resolution: {integrity: sha512-oH9He/bEM+6oKlv3chWuOOcp8Y6fo6/PSro8hEkgCW3pu9/OiCXiUpRUogDh3Fs3LH2sosDrx8CxeOLBEE+afg==}
     peerDependencies:
@@ -564,6 +570,11 @@ packages:
         optional: true
       vue-router:
         optional: true
+
+  '@vercel/kv@3.0.0':
+    resolution: {integrity: sha512-pKT8fRnfyYk2MgvyB6fn6ipJPCdfZwiKDdw7vB+HL50rjboEBHDVBEcnwfkEpVSp2AjNtoaOUH7zG+bVC/rvSg==}
+    engines: {node: '>=14.6'}
+    deprecated: 'Vercel KV is deprecated. If you had an existing KV store, it should have moved to Upstash Redis which you will see under Vercel Integrations. For new projects, install a Redis integration from Vercel Marketplace: https://vercel.com/marketplace?category=storage&search=redis'
 
   '@vercel/speed-insights@1.3.1':
     resolution: {integrity: sha512-PbEr7FrMkUrGYvlcLHGkXdCkxnylCWePx7lPxxq36DNdfo9mcUjLOmqOyPDHAOgnfqgGGdmE3XI9L/4+5fr+vQ==}
@@ -591,11 +602,14 @@ packages:
   '@yummacss/core@3.23.0':
     resolution: {integrity: sha512-yQqqr8c6qiTV8IWzLOKug1L1iz6bQqhwwX9jlzzVf5e2W3UisicBV27NERkODmqGaOtwUfQrI8lxzLguds52WA==}
 
+  '@yummacss/core@3.24.0':
+    resolution: {integrity: sha512-7bVDy4KckByMwWHrW8gVmPM0TH/S2hEYk8OdOmZDUvxds7YqXZNoR4bSONHR6siX7n+GklE9dwgDCwzVGt5cPA==}
+
   '@yummacss/intellisense@3.23.0':
     resolution: {integrity: sha512-wcO8mMz+0IMozTmoh/yiASV5i/CrcUYr3kjewHWsDq9l8SCiHgNqEWpPCSPiAC0jXYzfWGdX8zs7KkIhA8ha4A==}
 
-  '@yummacss/nitro@3.23.0':
-    resolution: {integrity: sha512-NyDrwIHgNyvXaOpc2LYVVGg/7Tj+QtLl1BshnYe2KW+9IshFAThL3MQhsxC47GeCumNTiiZgip4Z+W3iGcVYnA==}
+  '@yummacss/nitro@3.24.0':
+    resolution: {integrity: sha512-9FhVs1Nd1i8smkzgk8AXRzbtipwrxOas5IYVsPi34oaSUGn4MEyVxVwv93XslNkCSZad1nZTNyoKI+OXo0MVbQ==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -889,6 +903,9 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  uncrypto@0.1.3:
+    resolution: {integrity: sha512-Ql87qFHB3s/De2ClA9e0gsnS6zXG27SkTiSJwjCc9MebbfapQfuPzumMIUMi38ezPZVNFcHI9sUIepeQfw8J8Q==}
+
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
@@ -916,8 +933,8 @@ packages:
     resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
     engines: {node: '>=12'}
 
-  yummacss@3.23.0:
-    resolution: {integrity: sha512-x/L058clEo9SE2K3vbBNOuxOKnOZcKE/F8WFY9990DEeiovJ7goI9lBmFGMYrGelNA8Pah0MhCRnHgmdXcTfJQ==}
+  yummacss@3.24.0:
+    resolution: {integrity: sha512-2oDd9uReN9qI464Q25vTOdeIQlzLva3o6/oqoeApwdWEfFDvbQLlBqOXs/XwLiH/jNV631aRTzZxToZplYvdpg==}
     hasBin: true
 
 snapshots:
@@ -1253,10 +1270,18 @@ snapshots:
     dependencies:
       csstype: 3.2.3
 
+  '@upstash/redis@1.37.0':
+    dependencies:
+      uncrypto: 0.1.3
+
   '@vercel/analytics@1.6.1(next@16.1.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.92.1))(react@19.2.3)':
     optionalDependencies:
       next: 16.1.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.92.1)
       react: 19.2.3
+
+  '@vercel/kv@3.0.0':
+    dependencies:
+      '@upstash/redis': 1.37.0
 
   '@vercel/speed-insights@1.3.1(next@16.1.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.92.1))(react@19.2.3)':
     optionalDependencies:
@@ -1265,13 +1290,15 @@ snapshots:
 
   '@yummacss/core@3.23.0': {}
 
+  '@yummacss/core@3.24.0': {}
+
   '@yummacss/intellisense@3.23.0':
     dependencies:
       '@yummacss/core': 3.23.0
 
-  '@yummacss/nitro@3.23.0':
+  '@yummacss/nitro@3.24.0':
     dependencies:
-      '@yummacss/core': 3.23.0
+      '@yummacss/core': 3.24.0
 
   ansi-regex@5.0.1: {}
 
@@ -1544,6 +1571,8 @@ snapshots:
 
   typescript@5.9.3: {}
 
+  uncrypto@0.1.3: {}
+
   undici-types@7.16.0: {}
 
   use-sync-external-store@1.6.0(react@19.2.3):
@@ -1572,6 +1601,6 @@ snapshots:
       y18n: 5.0.8
       yargs-parser: 21.1.1
 
-  yummacss@3.23.0:
+  yummacss@3.24.0:
     dependencies:
-      '@yummacss/nitro': 3.23.0
+      '@yummacss/nitro': 3.24.0

@@ -3,11 +3,23 @@ import {
   decompressFromEncodedURIComponent,
 } from "lz-string";
 
-export function createShareUrl(code: string): string {
-  const compressed = compressToEncodedURIComponent(code);
-  const url = new URL(window.location.origin);
-  url.hash = `share/${compressed}`;
-  return url.toString();
+export async function createShareUrl(code: string): Promise<string> {
+  try {
+    const res = await fetch("/api/shorten", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ code }),
+    });
+
+    if (!res.ok) throw new Error("Shorten failed");
+
+    const { id } = await res.json();
+    return `${window.location.origin}/share/${id}`;
+  } catch {
+    // Fallback to hash-based URL if KV is unavailable
+    const compressed = compressToEncodedURIComponent(code);
+    return `${window.location.origin}/#share/${compressed}`;
+  }
 }
 
 export function getCodeFromUrl(): string | null {
@@ -20,8 +32,7 @@ export function getCodeFromUrl(): string | null {
   if (!compressed) return null;
 
   try {
-    const decompressed = decompressFromEncodedURIComponent(compressed);
-    return decompressed || null;
+    return decompressFromEncodedURIComponent(compressed) || null;
   } catch {
     console.error("Failed to decompress code from URL");
     return null;
