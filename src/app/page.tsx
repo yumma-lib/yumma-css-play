@@ -80,7 +80,7 @@ const Home: React.FC = () => {
       </div>
 
       <div className="d-none h-dvh md:d-b">
-        <PanelGroup direction="horizontal" className="h-full">
+        <PanelGroup direction="horizontal" className="h-100%">
           {/* Left column */}
           <Panel
             ref={editorPanelRef}
@@ -92,7 +92,7 @@ const Home: React.FC = () => {
              * Navbar sits OUTSIDE the vertical PanelGroup so the CSS panel
              * can expand all the way up to the navbar's bottom edge.
              */}
-            <div className="d-f fd-c h-full">
+            <div className="d-f fd-c h-100%">
               <Navbar
                 code={code}
                 editorRef={editorRef}
@@ -102,7 +102,7 @@ const Home: React.FC = () => {
 
               {/* Vertical split: editor on top, CSS panel on bottom */}
               <div className="o-h f-1">
-                <PanelGroup direction="vertical" className="h-full">
+                <PanelGroup direction="vertical" className="h-100%">
                   {/* Editor */}
                   <Panel minSize={0} defaultSize={78}>
                     <MonacoEditor
@@ -147,7 +147,7 @@ const Home: React.FC = () => {
                 <button
                   type="button"
                   onClick={handleToggleCSSPanel}
-                  className="d-f ai-c g-2 px-3 w-full c-p"
+                  className="d-f ai-c g-2 px-3 w-100% c-p"
                   style={{
                     borderTop: "1px solid #31365e",
                     backgroundColor: "#151724",

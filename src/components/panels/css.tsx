@@ -85,12 +85,12 @@ export function GeneratedCSSPanel({
   const byteSize = new TextEncoder().encode(css).length;
 
   return (
-    <div className="d-f fd-c h-full">
+    <div className="d-f fd-c h-100%">
       {/* Header — entire row is the toggle button */}
       <button
         type="button"
         onClick={onToggle}
-        className="d-f ai-c g-2 px-3 w-full c-p"
+        className="d-f ai-c g-2 px-3 w-100% c-p"
         style={{
           backgroundColor: "#151724",
           borderTop: "1px solid #31365e",
@@ -142,7 +142,7 @@ export function GeneratedCSSPanel({
           />
         ) : (
           <div
-            className="d-f ai-c jc-c h-full ff-m"
+            className="d-f ai-c jc-c h-100% ff-m"
             style={{ color: "#464a6e" }}
           >
             No CSS generated yet.

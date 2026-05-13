@@ -30,7 +30,7 @@ const Preview = forwardRef<HTMLIFrameElement, PreviewProps>(({ code }, ref) => {
       ref={ref}
       srcDoc={srcdoc}
       title="Preview"
-      className="b-0 w-full h-full"
+      className="b-0 w-100% h-100%"
     />
   );
 });

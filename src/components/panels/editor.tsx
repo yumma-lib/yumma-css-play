@@ -38,7 +38,7 @@ function MonacoEditor({ code, onChange, onMount }: MonacoEditorProps) {
   };
 
   return (
-    <div className="h-full" style={{ borderTop: "1px solid #31365e" }}>
+    <div className="h-100%" style={{ borderTop: "1px solid #31365e" }}>
       <Editor
         value={code}
         language="html"
