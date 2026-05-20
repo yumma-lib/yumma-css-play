@@ -5,7 +5,7 @@ import { Dialog } from "@base-ui/react/dialog";
 import { InfoIcon, XIcon } from "@phosphor-icons/react";
 import { YummaCSS } from "@react-symbols/icons";
 import { useEffect, useState } from "react";
-import { SiGithub, SiLinkedin, SiX, SiYoutube } from "react-icons/si";
+import { SiGithub, SiLinkerd, SiX, SiYoutube } from "react-icons/si";
 
 interface ShortcutsDialogProps {
   onShare: () => void;
@@ -281,7 +281,7 @@ const ShortcutsDialog = ({
                 className="social-link"
                 aria-label="LinkedIn"
               >
-                <SiLinkedin size={16} />
+                <SiLinkerd size={16} />
               </a>
               <a
                 href="https://www.youtube.com/@yummacss"
