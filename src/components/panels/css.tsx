@@ -1,7 +1,8 @@
 "use client";
 
+import { Button } from "@base-ui/react";
 import Editor from "@monaco-editor/react";
-import { CaretUpIcon } from "@phosphor-icons/react";
+import { NavArrowUp } from "iconoir-react";
 import { useEffect, useRef, useState } from "react";
 
 interface GeneratedCSSPanelProps {
@@ -87,7 +88,7 @@ export function GeneratedCSSPanel({
   return (
     <div className="d-f fd-c h-100%">
       {/* Header — entire row is the toggle button */}
-      <button
+      <Button
         type="button"
         onClick={onToggle}
         className="d-f ai-c g-2 px-3 w-100% c-p"
@@ -102,7 +103,7 @@ export function GeneratedCSSPanel({
         }}
         title="Collapse panel"
       >
-        <CaretUpIcon size={12} weight="bold" style={{ color: "#6b7194" }} />
+        <NavArrowUp style={{ color: "#6b7194" }} />
 
         <span
           className="ff-m tt-u ls-4 fw-500 fs-xs"
@@ -116,7 +117,7 @@ export function GeneratedCSSPanel({
             {formatSize(byteSize)}
           </span>
         )}
-      </button>
+      </Button>
 
       {/* Monaco CSS viewer */}
       <div className="o-h f-1">

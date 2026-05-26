@@ -2,10 +2,12 @@
 
 import { Button } from "@base-ui/react";
 import { Dialog } from "@base-ui/react/dialog";
-import { InfoIcon, XIcon } from "@phosphor-icons/react";
 import { YummaCSS } from "@react-symbols/icons";
+import { InfoCircle, Xmark } from "iconoir-react";
+import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import { SiGithub, SiLinkerd, SiX, SiYoutube } from "react-icons/si";
+import { SiGithub, SiX, SiYoutube } from "react-icons/si";
 
 interface ShortcutsDialogProps {
   onShare: () => void;
@@ -57,11 +59,9 @@ const ShortcutsDialog = ({
 
   // handle keyboard shortcuts when dialog is closed and editor is not focused
   useEffect(() => {
-    // only listen when dialog is closed
     if (open) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      // don't trigger shortcuts if user is typing in the editor or any input
       const activeElement = document.activeElement;
       const isEditorFocused = activeElement?.closest(".monaco-editor") !== null;
       const isInputFocused =
@@ -108,220 +108,138 @@ const ShortcutsDialog = ({
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger
-        className="d-f ai-c g-2 px-3 py-1 c-white fs-sm"
-        style={{
-          background: "transparent",
-          border: "1px solid #31365e",
-          borderRadius: "4px",
-          cursor: "pointer",
-        }}
+        render={
+          <Button className="d-f ai-c g-2 px-3 py-1 bc-border bg-transparent c-accent bw-1 fs-sm tp-c tdu-150 ttf-io us-none h:c-white fv:oo-2" />
+        }
       >
-        <InfoIcon className="w-4 h-4" weight="bold" />
+        <InfoCircle className="w-4 h-4" />
         <span>About</span>
       </Dialog.Trigger>
-      <Dialog.Portal>
-        <Dialog.Backdrop
-          className="dialog-backdrop"
-          style={{
-            position: "fixed",
-            inset: 0,
-            backgroundColor: "rgba(30, 32, 57, 0.9)",
-            backdropFilter: "blur(4px)",
-            opacity: 1,
-            transition: "opacity 150ms ease-out",
-          }}
-        />
-        <Dialog.Popup
-          className="dialog-popup"
-          style={{
-            position: "fixed",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            backgroundColor: "#1e2039",
-            border: "1px solid #31365e",
-            borderRadius: "12px",
-            width: "min(700px, 90vw)",
-            maxHeight: "80vh",
-            overflow: "hidden",
-            opacity: 1,
-            transition: "opacity 150ms ease-out, transform 150ms ease-out",
-          }}
-        >
-          {/* Close button */}
-          <Dialog.Close
-            className="d-f ai-c jc-c"
-            style={{
-              position: "absolute",
-              top: "12px",
-              right: "12px",
-              width: "28px",
-              height: "28px",
-              background: "transparent",
-              border: "1px solid #31365e",
-              borderRadius: "6px",
-              color: "#bec6f2",
-              cursor: "pointer",
-              zIndex: 10,
-            }}
-          >
-            <XIcon className="w-4 h-4" weight="bold" />
-          </Dialog.Close>
-
-          {/* Two column layout */}
-          <div className="d-f" style={{ minHeight: "400px" }}>
-            {/* Left column - About */}
-            <div
-              className="f-1 p-6"
-              style={{ borderRight: "1px solid #31365e" }}
-            >
-              <h2 className="mb-4 fs-lg fw-600" style={{ color: "#fff" }}>
-                About
-              </h2>
-              <p className="mb-4 fs-sm lh-5" style={{ color: "#bec6f2" }}>
-                Yumma CSS Play is an advanced playground for experimenting with
-                Yumma CSS utility classes in real-time.
-              </p>
-              <p className="mb-4 fs-sm lh-5" style={{ color: "#bec6f2" }}>
-                It catches utility conflicts, shows hover information when
-                hovering a utility class, and provides intelligent completions
-                as you type.
-              </p>
-
-              <h3 className="mb-3 mt-6 fs-md fw-600" style={{ color: "#fff" }}>
-                Documentation
-              </h3>
-              <p className="fs-sm lh-5" style={{ color: "#bec6f2" }}>
-                Visit{" "}
-                <a
-                  href="https://yummacss.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="c-white tdl-u"
+      <AnimatePresence>
+        {open && (
+          <Dialog.Portal keepMounted>
+            <Dialog.Backdrop
+              render={
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                />
+              }
+              className="p-f i-0 bg-page/90 bf-b-xs"
+            />
+            <div className="d-f p-f i-0 ai-c jc-c">
+              <Dialog.Popup
+                render={
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                  />
+                }
+                className="o-h p-r bc-border bg-surface bw-1"
+                style={{ width: "min(700px, 90vw)", maxHeight: "80vh" }}
+              >
+                <Dialog.Close
+                  render={
+                    <Button className="d-f p-a t-3 r-3 ai-c jc-c w-7 h-7 p-0 bc-border bg-transparent c-accent bw-1 tp-c tdu-150 ttf-io z-10 h:c-white fv:oo-2" />
+                  }
                 >
-                  yummacss.com
-                </a>{" "}
-                for documentation and examples.
-              </p>
-            </div>
+                  <Xmark className="w-4 h-4" />
+                </Dialog.Close>
 
-            {/* Right column - Shortcuts */}
-            <div className="f-1 p-6">
-              <h2 className="mb-4 c-white fs-lg fw-600">Shortcuts</h2>
-              <div className="d-f fd-c g-1">
-                {SHORTCUTS.map((shortcut) => (
-                  <Button
-                    key={shortcut.key}
-                    type="button"
-                    onClick={() => executeAction(shortcut.action)}
-                    className="d-f ai-c jc-sb px-3 py-2 br-sm bg-transparent ta-l c-p"
-                    style={{
-                      border: "none",
-                      color: "#bec6f2",
-                      transition: "background-color 100ms ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = "#151724";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = "transparent";
-                    }}
-                  >
-                    <span className="fs-sm">{shortcut.label}</span>
-                    <kbd
-                      className="px-2 py-1 min-w-6 br-sm fs-xs ff-m ta-c"
-                      style={{
-                        backgroundColor: "#21243f",
-                        border: "1px solid #31365e",
-                        color: "#bec6f2",
-                      }}
+                <div className="d-f" style={{ minHeight: "400px" }}>
+                  <div className="f-1 p-6 bc-border brw-1">
+                    <h2 className="mb-4 c-white fs-lg fw-600">About</h2>
+                    <p className="mb-4 c-accent fs-sm lh-5">
+                      Yumma CSS Play is an advanced playground for experimenting
+                      with Yumma CSS utility classes in real-time.
+                    </p>
+                    <p className="mb-4 c-accent fs-sm lh-5">
+                      It catches utility conflicts, shows hover information when
+                      hovering a utility class, and provides intelligent
+                      completions as you type.
+                    </p>
+
+                    <h3 className="mb-3 mt-6 c-white fs-md fw-600">
+                      Documentation
+                    </h3>
+                    <p className="c-accent fs-sm lh-5">
+                      Visit{" "}
+                      <a
+                        href="https://yummacss.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="c-white tdl-u"
+                      >
+                        yummacss.com
+                      </a>{" "}
+                      for documentation and examples.
+                    </p>
+                  </div>
+
+                  <div className="f-1 p-6">
+                    <h2 className="mb-4 c-white fs-lg fw-600">Shortcuts</h2>
+                    <div className="d-f fd-c g-1">
+                      {SHORTCUTS.map((shortcut) => (
+                        <Button
+                          key={shortcut.key}
+                          type="button"
+                          onClick={() => executeAction(shortcut.action)}
+                          className="d-f ai-c jc-sb px-3 py-2 bg-transparent c-accent bw-0 ta-l tp-c tdu-100 h:bg-page"
+                        >
+                          <span className="fs-sm">{shortcut.label}</span>
+                          <kbd className="px-2 py-1 min-w-6 bc-border bg-surface-dim c-accent bw-1 fs-xs ff-m ta-c">
+                            {shortcut.key}
+                          </kbd>
+                        </Button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="d-f ai-c jc-sb px-6 py-3 bc-border btw-1">
+                  <div className="d-f ai-c g-2">
+                    <YummaCSS width={16} height={16} />
+                    <span className="c-muted fs-xs">Built with Yumma CSS</span>
+                  </div>
+                  <div className="d-f ai-c g-3">
+                    <Link
+                      href="https://github.com/yummacss/play"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="c-accent"
+                      aria-label="GitHub"
                     >
-                      {shortcut.key}
-                    </kbd>
-                  </Button>
-                ))}
-              </div>
+                      <SiGithub size={16} />
+                    </Link>
+                    <Link
+                      href="https://x.com/yummacss"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="c-accent"
+                      aria-label="X (Twitter)"
+                    >
+                      <SiX size={16} />
+                    </Link>
+                    <Link
+                      href="https://www.youtube.com/@yummacss"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="c-accent"
+                      aria-label="YouTube"
+                    >
+                      <SiYoutube size={16} />
+                    </Link>
+                  </div>
+                </div>
+              </Dialog.Popup>
             </div>
-          </div>
-
-          {/* Footer */}
-          <div
-            className="d-f ai-c jc-sb px-6 py-3"
-            style={{ borderTop: "1px solid #31365e" }}
-          >
-            <div className="d-f ai-c g-2">
-              <YummaCSS width={16} height={16} />
-              <span className="fs-xs" style={{ color: "#6b7194" }}>
-                Built with Yumma CSS
-              </span>
-            </div>
-            <div className="d-f ai-c g-3">
-              <a
-                href="https://github.com/yummacss/play"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="GitHub"
-              >
-                <SiGithub size={16} />
-              </a>
-              <a
-                href="https://x.com/yummacss"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="X (Twitter)"
-              >
-                <SiX size={16} />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/yumma-css"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="LinkedIn"
-              >
-                <SiLinkerd size={16} />
-              </a>
-              <a
-                href="https://www.youtube.com/@yummacss"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="YouTube"
-              >
-                <SiYoutube size={16} />
-              </a>
-            </div>
-          </div>
-        </Dialog.Popup>
-      </Dialog.Portal>
-
-      <style jsx global>{`
-        .dialog-backdrop[data-starting-style],
-        .dialog-backdrop[data-ending-style] {
-          opacity: 0 !important;
-        }
-
-        .dialog-popup[data-starting-style] {
-          opacity: 0 !important;
-          transform: translate(-50%, -50%) scale(0.95) !important;
-        }
-
-        .dialog-popup[data-ending-style] {
-          opacity: 0 !important;
-          transform: translate(-50%, -50%) scale(0.95) !important;
-        }
-
-        .social-link {
-          color: #6b7194;
-          transition: color 200ms ease;
-        }
-
-        .social-link:hover {
-          color: #bec6f2;
-        }
-      `}</style>
+          </Dialog.Portal>
+        )}
+      </AnimatePresence>
     </Dialog.Root>
   );
 };

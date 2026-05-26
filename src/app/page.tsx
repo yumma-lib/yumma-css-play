@@ -1,6 +1,7 @@
 "use client";
 
-import { CaretDownIcon } from "@phosphor-icons/react";
+import { Button } from "@base-ui/react";
+import { NavArrowDown } from "iconoir-react";
 import type React from "react";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -144,7 +145,7 @@ const Home: React.FC = () => {
 
               {/* Collapsed bar — only rendered when panel is fully collapsed */}
               {!cssPanelOpen && (
-                <button
+                <Button
                   type="button"
                   onClick={handleToggleCSSPanel}
                   className="d-f ai-c g-2 px-3 w-100% c-p"
@@ -157,18 +158,14 @@ const Home: React.FC = () => {
                     cursor: "pointer",
                   }}
                 >
-                  <CaretDownIcon
-                    size={12}
-                    weight="bold"
-                    style={{ color: "#6b7194" }}
-                  />
+                  <NavArrowDown style={{ color: "#6b7194" }} />
                   <span
                     className="ff-m tt-u ls-4 fw-500 fs-xs"
                     style={{ color: "#9ea5cd" }}
                   >
                     Generated CSS
                   </span>
-                </button>
+                </Button>
               )}
             </div>
           </Panel>

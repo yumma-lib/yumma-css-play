@@ -116,6 +116,10 @@ summary {
   bottom: 0;
 }
 
+.bc-border {
+  border-color: #31365e;
+}
+
 .bc-silver-4 {
   border-color: #c6cad1;
 }
@@ -124,8 +128,24 @@ summary {
   border-color: #ffffff33;
 }
 
+.bf-b-xs {
+  backdrop-filter: blur(4px);
+}
+
 .bg-indigo-5 {
   background-color: #8f91f5;
+}
+
+.bg-page\/90 {
+  background-color: #151724e6;
+}
+
+.bg-surface {
+  background-color: #1e2039;
+}
+
+.bg-surface-dim {
+  background-color: #21243f;
 }
 
 .bg-transparent {
@@ -136,14 +156,6 @@ summary {
   background-color: #ffffff;
 }
 
-.br-9999 {
-  border-radius: 9999px;
-}
-
-.br-sm {
-  border-radius: 0.25rem;
-}
-
 .brw-1 {
   border-right-width: 1px;
 }
@@ -152,12 +164,28 @@ summary {
   border-top-width: 1px;
 }
 
+.bw-0 {
+  border-width: 0;
+}
+
+.bw-1 {
+  border-width: 1px;
+}
+
+.c-accent {
+  color: #bec6f2;
+}
+
 .c-gray {
   color: #6b7280;
 }
 
 .c-gray-12 {
   color: #111214;
+}
+
+.c-muted {
+  color: #6b7194;
 }
 
 .c-p {
@@ -224,6 +252,10 @@ summary {
   font-size: 0.75rem;
 }
 
+.fv\:oo-2:focus-visible {
+  outline-offset: 2px;
+}
+
 .fw-100 {
   font-weight: 100;
 }
@@ -272,6 +304,10 @@ summary {
   height: 1rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .h-auto {
   height: auto;
 }
@@ -284,12 +320,24 @@ summary {
   background-color: #797bf3;
 }
 
+.h\:bg-page:hover {
+  background-color: #151724;
+}
+
 .h\:c-slate-6:hover {
   color: #7a879b;
 }
 
+.h\:c-white:hover {
+  color: #ffffff;
+}
+
 .h\:td-u:hover {
   text-decoration: underline;
+}
+
+.i-0 {
+  inset: 0;
 }
 
 .jc-c {
@@ -356,8 +404,24 @@ summary {
   overflow: hidden;
 }
 
+.p-0 {
+  padding: 0;
+}
+
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-a {
+  position: absolute;
+}
+
+.p-f {
+  position: fixed;
+}
+
+.p-r {
+  position: relative;
 }
 
 .pr-6 {
@@ -400,6 +464,14 @@ summary {
   padding-block: .75rem;
 }
 
+.r-3 {
+  right: .75rem;
+}
+
+.t-3 {
+  top: .75rem;
+}
+
 .ta-c {
   text-align: center;
 }
@@ -416,8 +488,24 @@ summary {
   text-decoration-line: underline;
 }
 
+.tdu-100 {
+  transition-duration: 100ms;
+}
+
+.tdu-150 {
+  transition-duration: 150ms;
+}
+
+.tp-c {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+}
+
 .tt-u {
   text-transform: uppercase;
+}
+
+.ttf-io {
+  transition-timing-function: ease-in-out;
 }
 
 .tuo-4 {
@@ -434,6 +522,10 @@ summary {
 
 .w-4 {
   width: 1rem;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .w-px {

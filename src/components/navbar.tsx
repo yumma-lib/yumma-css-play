@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@base-ui/react";
-import { CheckIcon, LinkBreakIcon, ShareIcon } from "@phosphor-icons/react";
+import { Check, Copy, LinkSlash } from "iconoir-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import ShortcutsDialog from "@/components/shortcuts-dialog";
@@ -67,33 +67,30 @@ const Navbar = ({
     }
   };
 
-  const renderShareIcon = () => {
+  const renderShareIos = () => {
     switch (shareState) {
       case "success":
-        return <CheckIcon className="w-4 h-4" weight="bold" />;
+        return <Check className="w-4 h-4" />;
       case "error":
-        return <LinkBreakIcon className="w-4 h-4" weight="bold" />;
+        return <LinkSlash className="w-4 h-4" />;
       default:
-        return <ShareIcon className="w-4 h-4" weight="bold" />;
+        return <Copy className="w-4 h-4" />;
     }
   };
 
   const getShareLabel = () => {
     switch (shareState) {
       case "success":
-        return "Copied!";
+        return "Link copied";
       case "error":
         return "Failed";
       default:
-        return "Share";
+        return "Share code";
     }
   };
 
   return (
-    <div
-      className="d-f ai-c jc-sb px-3 py-2"
-      style={{ backgroundColor: "#1e2039" }}
-    >
+    <div className="d-f ai-c jc-sb px-3 py-2 bg-surface">
       <Image
         className="h-auto"
         height={30}
@@ -109,15 +106,9 @@ const Navbar = ({
         <Button
           type="button"
           onClick={handleShare}
-          className="d-f ai-c g-2 px-3 py-1 c-white fs-sm"
-          style={{
-            background: "transparent",
-            border: "1px solid #31365e",
-            borderRadius: "4px",
-            cursor: "pointer",
-          }}
+          className="d-f ai-c g-2 px-3 py-1 bc-border bg-transparent c-accent bw-1 fs-sm tp-c tdu-150 ttf-io h:c-white"
         >
-          {renderShareIcon()}
+          {renderShareIos()}
           <span>{getShareLabel()}</span>
         </Button>
 
