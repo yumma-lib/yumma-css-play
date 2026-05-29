@@ -150,7 +150,7 @@ const ShortcutsDialog = ({
                   <Xmark className="w-4 h-4" />
                 </Dialog.Close>
 
-                <div className="d-f" style={{ minHeight: "400px" }}>
+                <div className="d-f min-h-100">
                   <div className="f-1 p-6 bc-border brw-1">
                     <h2 className="mb-4 c-white fs-lg fw-600">About</h2>
                     <p className="mb-4 c-accent fs-sm lh-5">

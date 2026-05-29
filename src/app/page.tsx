@@ -10,7 +10,6 @@ import {
   PanelGroup,
   PanelResizeHandle,
 } from "react-resizable-panels";
-import MobileNavbar from "@/components/mobile-navbar";
 import Navbar from "@/components/navbar";
 import GeneratedCSSPanel from "@/components/panels/css";
 import MonacoEditor from "@/components/panels/editor";
@@ -48,10 +47,7 @@ const Home: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div
-        className="d-f ai-c jc-c h-dvh c-white"
-        style={{ backgroundColor: "#1e2039" }}
-      >
+      <div className="d-f ai-c jc-c h-dvh bg-surface c-white">
         <div className="ta-c">
           <div className="fs-lg">Loading...</div>
         </div>
@@ -60,132 +56,82 @@ const Home: React.FC = () => {
   }
 
   return (
-    <>
-      <div className="d-b md:d-none">
-        <MobileNavbar />
-        <div
-          className="d-f ai-c jc-c p-6 c-white"
-          style={{ backgroundColor: "#1e2039", height: "calc(100dvh - 52px)" }}
-        >
-          <div className="ta-c">
-            <div className="mb-2 fs-xl fw-600">Desktop Only</div>
-            <p
-              className="fs-sm"
-              style={{ color: "#bec6f2", maxWidth: "280px" }}
-            >
-              Yumma CSS Play is designed for desktop browsers. Please visit on a
-              larger screen.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="h-dvh">
+      <PanelGroup direction="horizontal" className="h-100%">
+        {/* Left column */}
+        <Panel ref={editorPanelRef} maxSize={80} minSize={20} defaultSize={50}>
+          {/*
+           * Navbar sits OUTSIDE the vertical PanelGroup so the CSS panel
+           * can expand all the way up to the navbar's bottom edge.
+           */}
+          <div className="d-f fd-c h-100%">
+            <Navbar
+              code={code}
+              editorRef={editorRef}
+              onResetLayout={handleResetLayout}
+              onFullPreview={handleFullPreview}
+            />
 
-      <div className="d-none h-dvh md:d-b">
-        <PanelGroup direction="horizontal" className="h-100%">
-          {/* Left column */}
-          <Panel
-            ref={editorPanelRef}
-            maxSize={80}
-            minSize={20}
-            defaultSize={50}
-          >
-            {/*
-             * Navbar sits OUTSIDE the vertical PanelGroup so the CSS panel
-             * can expand all the way up to the navbar's bottom edge.
-             */}
-            <div className="d-f fd-c h-100%">
-              <Navbar
-                code={code}
-                editorRef={editorRef}
-                onResetLayout={handleResetLayout}
-                onFullPreview={handleFullPreview}
-              />
-
-              {/* Vertical split: editor on top, CSS panel on bottom */}
-              <div className="o-h f-1">
-                <PanelGroup direction="vertical" className="h-100%">
-                  {/* Editor */}
-                  <Panel minSize={0} defaultSize={78}>
-                    <MonacoEditor
-                      code={code}
-                      onChange={setCode}
-                      onMount={(editor) => {
-                        editorRef.current = editor;
-                      }}
-                    />
-                  </Panel>
-
-                  {/* Vertical resize handle */}
-                  <PanelResizeHandle
-                    style={{
-                      height: "1px",
-                      backgroundColor: "#31365e",
-                      cursor: "row-resize",
-                      flexShrink: 0,
+            {/* Vertical split: editor on top, CSS panel on bottom */}
+            <div className="o-h f-1">
+              <PanelGroup direction="vertical" className="h-100%">
+                {/* Editor */}
+                <Panel minSize={0} defaultSize={78}>
+                  <MonacoEditor
+                    code={code}
+                    onChange={setCode}
+                    onMount={(editor) => {
+                      editorRef.current = editor;
                     }}
                   />
+                </Panel>
 
-                  {/* CSS panel — collapsible, starts collapsed */}
-                  <Panel
-                    ref={cssPanelRef}
-                    collapsible
-                    minSize={10}
-                    defaultSize={0}
-                    onCollapse={() => setCssPanelOpen(false)}
-                    onExpand={() => setCssPanelOpen(true)}
-                    style={{ overflow: "hidden" }}
-                  >
-                    <GeneratedCSSPanel
-                      iframeRef={iframeRef}
-                      onToggle={handleToggleCSSPanel}
-                    />
-                  </Panel>
-                </PanelGroup>
-              </div>
+                {/* Vertical resize handle */}
+                <PanelResizeHandle className="fs-0 h-px bg-border c-rr" />
 
-              {/* Collapsed bar — only rendered when panel is fully collapsed */}
-              {!cssPanelOpen && (
-                <Button
-                  type="button"
-                  onClick={handleToggleCSSPanel}
-                  className="d-f ai-c g-2 px-3 w-100% c-p"
-                  style={{
-                    borderTop: "1px solid #31365e",
-                    backgroundColor: "#151724",
-                    border: "none",
-                    height: "33px",
-                    flexShrink: 0,
-                    cursor: "pointer",
-                  }}
+                {/* CSS panel — collapsible, starts collapsed */}
+                <Panel
+                  ref={cssPanelRef}
+                  collapsible
+                  minSize={10}
+                  defaultSize={0}
+                  onCollapse={() => setCssPanelOpen(false)}
+                  onExpand={() => setCssPanelOpen(true)}
+                  className="o-h"
                 >
-                  <NavArrowDown style={{ color: "#6b7194" }} />
-                  <span
-                    className="ff-m tt-u ls-4 fw-500 fs-xs"
-                    style={{ color: "#9ea5cd" }}
-                  >
-                    Generated CSS
-                  </span>
-                </Button>
-              )}
+                  <GeneratedCSSPanel
+                    iframeRef={iframeRef}
+                    onToggle={handleToggleCSSPanel}
+                  />
+                </Panel>
+              </PanelGroup>
             </div>
-          </Panel>
 
-          {/* Horizontal resize handle */}
-          <PanelResizeHandle
-            className="w-px"
-            style={{
-              backgroundColor: "#31365e",
-              cursor: "col-resize",
-            }}
-          />
+            {/* Collapsed bar — only rendered when panel is fully collapsed */}
+            {!cssPanelOpen && (
+              <Button
+                type="button"
+                onClick={handleToggleCSSPanel}
+                className="d-f ai-c g-2 fs-0 px-3 w-100% h-8 bc-border bg-page btw-1 bw-0 c-p"
+              >
+                <NavArrowDown className="c-muted" />
+                <span className="c-accent-dim ff-m tt-u ls-4 fw-500 fs-xs">
+                  Generated CSS
+                </span>
+              </Button>
+            )}
+          </div>
+        </Panel>
 
-          {/* Preview pane */}
-          <Panel defaultSize={50} minSize={20} maxSize={80}>
-            <Preview ref={iframeRef} code={code} />
-          </Panel>
-        </PanelGroup>
-      </div>
-    </>
+        {/* Horizontal resize handle */}
+        <PanelResizeHandle className="w-px bg-border c-cr" />
+
+        {/* Preview pane */}
+        <Panel defaultSize={50} minSize={20} maxSize={80}>
+          <Preview ref={iframeRef} code={code} />
+        </Panel>
+      </PanelGroup>
+    </div>
   );
 };
 

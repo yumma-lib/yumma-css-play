@@ -91,31 +91,17 @@ export function GeneratedCSSPanel({
       <Button
         type="button"
         onClick={onToggle}
-        className="d-f ai-c g-2 px-3 w-100% c-p"
-        style={{
-          backgroundColor: "#151724",
-          borderTop: "1px solid #31365e",
-          borderBottom: "1px solid #31365e",
-          border: "none",
-          height: "33px",
-          flexShrink: 0,
-          cursor: "pointer",
-        }}
+        className="d-f ai-c g-2 fs-0 px-3 w-100% h-8 bc-border bg-page btw-1 bbw-1 bw-0 c-p"
         title="Collapse panel"
       >
-        <NavArrowUp style={{ color: "#6b7194" }} />
+        <NavArrowUp className="c-muted" />
 
-        <span
-          className="ff-m tt-u ls-4 fw-500 fs-xs"
-          style={{ color: "#9ea5cd" }}
-        >
+        <span className="c-accent-dim ff-m tt-u ls-4 fw-500 fs-xs">
           Generated CSS
         </span>
 
         {css && (
-          <span className="ff-m fs-xs" style={{ color: "#464a6e" }}>
-            {formatSize(byteSize)}
-          </span>
+          <span className="c-muted-dim ff-m fs-xs">{formatSize(byteSize)}</span>
         )}
       </Button>
 
@@ -142,10 +128,7 @@ export function GeneratedCSSPanel({
             theme="eclipsa"
           />
         ) : (
-          <div
-            className="d-f ai-c jc-c h-100% ff-m"
-            style={{ color: "#464a6e" }}
-          >
+          <div className="d-f ai-c jc-c h-100% c-muted-dim ff-m">
             No CSS generated yet.
           </div>
         )}

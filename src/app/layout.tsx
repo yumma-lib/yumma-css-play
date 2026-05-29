@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body style={{ backgroundColor: "#1e2039" }}>
+      <body className="bg-surface">
         {children}
         <Analytics />
         <SpeedInsights />

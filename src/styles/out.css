@@ -116,6 +116,10 @@ summary {
   bottom: 0;
 }
 
+.bbw-1 {
+  border-bottom-width: 1px;
+}
+
 .bc-border {
   border-color: #31365e;
 }
@@ -132,8 +136,16 @@ summary {
   backdrop-filter: blur(4px);
 }
 
+.bg-border {
+  background-color: #31365e;
+}
+
 .bg-indigo-5 {
   background-color: #8f91f5;
+}
+
+.bg-page {
+  background-color: #151724;
 }
 
 .bg-page\/90 {
@@ -176,6 +188,10 @@ summary {
   color: #bec6f2;
 }
 
+.c-accent-dim {
+  color: #9ea5cd;
+}
+
 .c-gray {
   color: #6b7280;
 }
@@ -186,6 +202,10 @@ summary {
 
 .c-muted {
   color: #6b7194;
+}
+
+.c-muted-dim {
+  color: #464a6e;
 }
 
 .c-p {
@@ -200,16 +220,8 @@ summary {
   color: #ffffff;
 }
 
-.d-b {
-  display: block;
-}
-
 .d-f {
   display: flex;
-}
-
-.d-none {
-  display: none;
 }
 
 .f-1 {
@@ -222,6 +234,10 @@ summary {
 
 .ff-m {
   font-family: ui-monospace, Cascadia Code, Source Code Pro, Menlo, Roboto Mono, Ubuntu Mono, Consolas, Liberation Mono, Courier New, monospace;
+}
+
+.fs-0 {
+  flex-shrink: 0;
 }
 
 .fs-4xl {
@@ -242,10 +258,6 @@ summary {
 
 .fs-sm {
   font-size: 0.875rem;
-}
-
-.fs-xl {
-  font-size: 1.25rem;
 }
 
 .fs-xs {
@@ -306,6 +318,10 @@ summary {
 
 .h-7 {
   height: 1.75rem;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .h-auto {
@@ -370,10 +386,6 @@ summary {
 
 .max-w-sm {
   max-width: 40rem;
-}
-
-.mb-2 {
-  margin-bottom: .5rem;
 }
 
 .mb-3 {
@@ -530,14 +542,4 @@ summary {
 
 .w-px {
   width: 1px;
-}
-
-@media (min-width: 48rem) {
-  .md\:d-b {
-    display: block;
-  }
-
-  .md\:d-none {
-    display: none;
-  }
 }
