@@ -124,10 +124,6 @@ summary {
   border-color: #31365e;
 }
 
-.bc-silver-4 {
-  border-color: #c6cad1;
-}
-
 .bc-white\/20 {
   border-color: #ffffff33;
 }
@@ -138,10 +134,6 @@ summary {
 
 .bg-border {
   background-color: #31365e;
-}
-
-.bg-indigo-5 {
-  background-color: #8f91f5;
 }
 
 .bg-page {
@@ -192,6 +184,10 @@ summary {
   color: #9ea5cd;
 }
 
+.c-cr {
+  cursor: col-resize;
+}
+
 .c-gray {
   color: #6b7280;
 }
@@ -210,10 +206,6 @@ summary {
 
 .c-p {
   cursor: pointer;
-}
-
-.c-slate-7 {
-  color: #566478;
 }
 
 .c-white {
@@ -284,10 +276,6 @@ summary {
   font-weight: 600;
 }
 
-.fw-w {
-  flex-wrap: wrap;
-}
-
 .g-1 {
   gap: .25rem;
 }
@@ -302,10 +290,6 @@ summary {
 
 .g-5 {
   gap: 1.25rem;
-}
-
-.g-6 {
-  gap: 1.5rem;
 }
 
 .h-100\% {
@@ -332,24 +316,16 @@ summary {
   height: 100dvh;
 }
 
-.h\:bg-indigo-6:hover {
-  background-color: #797bf3;
+.h-px {
+  height: 1px;
 }
 
 .h\:bg-page:hover {
   background-color: #151724;
 }
 
-.h\:c-slate-6:hover {
-  color: #7a879b;
-}
-
 .h\:c-white:hover {
   color: #ffffff;
-}
-
-.h\:td-u:hover {
-  text-decoration: underline;
 }
 
 .i-0 {
@@ -396,6 +372,10 @@ summary {
   margin-bottom: 1rem;
 }
 
+.min-h-100 {
+  min-height: 25rem;
+}
+
 .min-h-vh {
   min-height: 100vh;
 }
@@ -440,20 +420,12 @@ summary {
   padding-right: 1.5rem;
 }
 
-.pt-5 {
-  padding-top: 1.25rem;
-}
-
 .px-2 {
   padding-inline: .5rem;
 }
 
 .px-3 {
   padding-inline: .75rem;
-}
-
-.px-5 {
-  padding-inline: 1.25rem;
 }
 
 .px-6 {
@@ -492,10 +464,6 @@ summary {
   text-align: left;
 }
 
-.td-none {
-  text-decoration: none;
-}
-
 .tdl-u {
   text-decoration-line: underline;
 }
@@ -518,10 +486,6 @@ summary {
 
 .ttf-io {
   transition-timing-function: ease-in-out;
-}
-
-.tuo-4 {
-  text-underline-offset: 4px;
 }
 
 .us-none {
