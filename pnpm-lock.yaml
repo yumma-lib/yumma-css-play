@@ -27,8 +27,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(next@16.2.6(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.92.1))(react@19.2.6)
       '@yummacss/intellisense':
-        specifier: ^3.24.12
-        version: 3.24.12
+        specifier: ^3.24.13
+        version: 3.24.13
       emmet-monaco-es:
         specifier: ^5.7.0
         version: 5.7.0(monaco-editor@0.52.2)
@@ -82,8 +82,8 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
       yummacss:
-        specifier: ^3.24.12
-        version: 3.24.12
+        specifier: ^3.24.13
+        version: 3.24.13
 
 packages:
 
@@ -595,14 +595,14 @@ packages:
       vue-router:
         optional: true
 
-  '@yummacss/core@3.24.12':
-    resolution: {integrity: sha512-SNtMBRO5DJEsTevysLSMGqWGfWVaZBuMDhkY4LiRIZA8TT+RW+9tj5lOdsa70Rd1lnxXAN/kLPq44Y7Sivtd6Q==}
+  '@yummacss/core@3.24.13':
+    resolution: {integrity: sha512-YCou0KL6VHXIX2T5xNvQNUQ2LsyQz2q5LynIWxdSrH+ywNIvfADtNRe1sjemZ4jfbVP0LDRf2XLXgd7fyGGtZA==}
 
-  '@yummacss/intellisense@3.24.12':
-    resolution: {integrity: sha512-5Fdu3WQQ3GM2bFiWJ45mmRop8IYZgcKhdvpJPeIzUk3iY9PRhjzXUT95ZzSNenJvFWC6uV+VW/NIgI/YpxCRnA==}
+  '@yummacss/intellisense@3.24.13':
+    resolution: {integrity: sha512-IgQn2JgPw1YCNjZ1aA1NK8f9n4vIvSRjaxiOZvCq8V8dJ5h/PCiySVKFfVOLAGssvK0Y7Mj9iBDNb+VX41WHSA==}
 
-  '@yummacss/nitro@3.24.12':
-    resolution: {integrity: sha512-5k5UK7VI5SfsnypCS6ldXAjNNDLaSNcNKrQGjEBFd9oAHG+NdkDwHvAThgR3cM5j2MIvpuQjJZNCD1lShkxGZQ==}
+  '@yummacss/nitro@3.24.13':
+    resolution: {integrity: sha512-ARlwEaN2zUaJ972LZn6/L0K78vhmNy/l2svUtumbkUNCAgMKAPU/ZbAdIWalcfNioUYnAIiLHGs28wLRCIZRVw==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -944,8 +944,8 @@ packages:
     resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
     engines: {node: '>=12'}
 
-  yummacss@3.24.12:
-    resolution: {integrity: sha512-RZu8o8Gp7NndoUwbIm5u9BAuhfPfr3r4J9CVh96KjfrX8MnagokzX5oyIxKCz90Tms/hmUrqf3H0N41FKMaUQw==}
+  yummacss@3.24.13:
+    resolution: {integrity: sha512-duw+gKWU7X0tGOOQ69pgQq9ty3gBLWCkUEkKOvTRdbMVMn89y/MW+l1N1y6cplydBxIO68S8DmqTmsVMp5et6g==}
     hasBin: true
 
 snapshots:
@@ -1280,15 +1280,15 @@ snapshots:
       next: 16.2.6(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.92.1)
       react: 19.2.6
 
-  '@yummacss/core@3.24.12': {}
+  '@yummacss/core@3.24.13': {}
 
-  '@yummacss/intellisense@3.24.12':
+  '@yummacss/intellisense@3.24.13':
     dependencies:
-      '@yummacss/core': 3.24.12
+      '@yummacss/core': 3.24.13
 
-  '@yummacss/nitro@3.24.12':
+  '@yummacss/nitro@3.24.13':
     dependencies:
-      '@yummacss/core': 3.24.12
+      '@yummacss/core': 3.24.13
 
   ansi-regex@5.0.1: {}
 
@@ -1604,6 +1604,6 @@ snapshots:
       y18n: 5.0.8
       yargs-parser: 21.1.1
 
-  yummacss@3.24.12:
+  yummacss@3.24.13:
     dependencies:
-      '@yummacss/nitro': 3.24.12
+      '@yummacss/nitro': 3.24.13
