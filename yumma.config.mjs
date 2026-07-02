@@ -2,11 +2,7 @@ import { defineConfig } from "yummacss";
 
 export default defineConfig({
   source: ["src/**/*.{ts,tsx}"],
-  output: "src/styles/out.css",
   safelist: ["bg-page/90"],
-  buildOptions: {
-    reset: true,
-  },
   theme: {
     colors: {
       "accent-dim": "#9ea5cd",
