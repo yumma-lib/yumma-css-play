@@ -115,7 +115,7 @@ const Home: React.FC = () => {
                 className="d-f ai-c g-2 fs-0 px-3 w-100% h-8 bc-border bg-page btw-1 bw-0 c-p"
               >
                 <NavArrowDown className="c-muted" />
-                <span className="c-accent-dim ff-m tt-u ls-4 fw-500 fs-xs">
+                <span className="c-accent-dim ff-m tt-u ls-4 fw-500 fs-xss">
                   Generated CSS
                 </span>
               </Button>
