@@ -89,7 +89,7 @@ const Home: React.FC = () => {
                 {/* Vertical resize handle */}
                 <PanelResizeHandle className="fs-0 h-px bg-border c-rr" />
 
-                {/* CSS panel — collapsible, starts collapsed */}
+                {/* CSS panel: collapsible, starts collapsed */}
                 <Panel
                   ref={cssPanelRef}
                   collapsible
@@ -107,7 +107,7 @@ const Home: React.FC = () => {
               </PanelGroup>
             </div>
 
-            {/* Collapsed bar — only rendered when panel is fully collapsed */}
+            {/* Collapsed bar: only rendered when panel is fully collapsed */}
             {!cssPanelOpen && (
               <Button
                 type="button"

@@ -5,8 +5,8 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@yummacss/core': ^3.26.0
-  '@yummacss/nitro': ^3.26.0
+  '@yummacss/core': ^3.27.0
+  '@yummacss/nitro': ^3.27.0
 
 importers:
 
@@ -76,9 +76,12 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.15)
+      '@yummacss/canon':
+        specifier: ^3.27.0
+        version: 3.27.0
       '@yummacss/postcss':
-        specifier: ^3.26.0
-        version: 3.26.0(postcss@8.4.31)
+        specifier: ^3.27.0
+        version: 3.27.0(postcss@8.4.31)
       sort-package-json:
         specifier: ^3.6.1
         version: 3.6.1
@@ -599,17 +602,21 @@ packages:
       vue-router:
         optional: true
 
-  '@yummacss/core@3.26.0':
-    resolution: {integrity: sha512-2rB6CwrZXNPMDkFHCJTtTW3vn/UDtbi1jiElPVy/NwGcpVB7fPdXU+Be/pMK/UOJDT3+ulAs0OUuu7IOu/MAKQ==}
+  '@yummacss/canon@3.27.0':
+    resolution: {integrity: sha512-sXjtzeWkHjz3vpplzmt4D+ehR84nj2YskcJoXXoXZu+BPXev7Xxu6OLwzUhMOHcLQC9IXXgsXHyXc+wGQDP4Og==}
+    hasBin: true
+
+  '@yummacss/core@3.27.0':
+    resolution: {integrity: sha512-HbMOJFvtZG1PLDpSLnvlV0jniWogU1tHVqT5kuLs/5Fuxss7TO3jwCqjVArjrNnmiiRP6jxoD0oFkKGJQnQAaQ==}
 
   '@yummacss/intellisense@3.25.0':
     resolution: {integrity: sha512-CEWFgZ2z0NiSPpG1ep7YsiWRSHnLAUGl1A9AZfnsxJxEMzfMhyOSgLxa6KO+2mFfPmTGT4tQ4PbHcGoXntnFyw==}
 
-  '@yummacss/nitro@3.26.0':
-    resolution: {integrity: sha512-jMJe+sS7gM5kTdCCwAjGe4uJV3dFKLDLaHxLXDhjZw3Bu2EokTnTv/B4yxsCyiNbhf3F2fgehVILBQ6HF6wp2Q==}
+  '@yummacss/nitro@3.27.0':
+    resolution: {integrity: sha512-OEmIeALS2DMRgcpACUuHhP5AN12z6VvZU0fdwU2P6J6b2evsMfbwxt1M+aZqRQWyf5BwgGrpU4x/6AFOijQBgg==}
 
-  '@yummacss/postcss@3.26.0':
-    resolution: {integrity: sha512-mPHWGVlAeZjmRrbWtgg1u0GAMspmZg9LQ+0PRDzIvyXzfIBKW5/2F+pKW8X6TWhHfUkSANIGYeICgl7zxcUdKQ==}
+  '@yummacss/postcss@3.27.0':
+    resolution: {integrity: sha512-7HSPYFVG63lY1FBdqIjJSu97Amvs6FuUrSPTLfEW6VaResyPkYusoJ7+s7Yu5FN8FvnACG4vfDU+fkWvNYW1WQ==}
     peerDependencies:
       postcss: ^8.0.0
 
@@ -1198,21 +1205,26 @@ snapshots:
       next: 16.2.6(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.92.1)
       react: 19.2.6
 
-  '@yummacss/core@3.26.0': {}
+  '@yummacss/canon@3.27.0':
+    dependencies:
+      '@yummacss/nitro': 3.27.0
+      tinyglobby: 0.2.16
+
+  '@yummacss/core@3.27.0': {}
 
   '@yummacss/intellisense@3.25.0':
     dependencies:
-      '@yummacss/core': 3.26.0
+      '@yummacss/core': 3.27.0
 
-  '@yummacss/nitro@3.26.0':
+  '@yummacss/nitro@3.27.0':
     dependencies:
-      '@yummacss/core': 3.26.0
+      '@yummacss/core': 3.27.0
       tinyglobby: 0.2.16
       zod: 4.4.3
 
-  '@yummacss/postcss@3.26.0(postcss@8.4.31)':
+  '@yummacss/postcss@3.27.0(postcss@8.4.31)':
     dependencies:
-      '@yummacss/nitro': 3.26.0
+      '@yummacss/nitro': 3.27.0
       postcss: 8.4.31
 
   baseline-browser-mapping@2.10.31: {}
@@ -1441,6 +1453,6 @@ snapshots:
 
   yummacss@3.25.0:
     dependencies:
-      '@yummacss/nitro': 3.26.0
+      '@yummacss/nitro': 3.27.0
 
   zod@4.4.3: {}

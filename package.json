@@ -13,7 +13,8 @@
     "lint": "biome check --write .",
     "sort": "sort-package-json",
     "start": "next start",
-    "update-yummacss": "pnpm up yummacss @yummacss/core --latest"
+    "update-yummacss": "pnpm up yummacss @yummacss/core --latest",
+    "validate": "yummacss-canon"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
@@ -39,15 +40,16 @@
     "@types/node": "^25.9.1",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
-    "@yummacss/postcss": "^3.26.0",
+    "@yummacss/canon": "^3.27.0",
+    "@yummacss/postcss": "^3.27.0",
     "sort-package-json": "^3.6.1",
     "typescript": "^6.0.3",
     "yummacss": "^3.25.0"
   },
   "pnpm": {
     "overrides": {
-      "@yummacss/core": "^3.26.0",
-      "@yummacss/nitro": "^3.26.0"
+      "@yummacss/core": "^3.27.0",
+      "@yummacss/nitro": "^3.27.0"
     }
   },
   "packageManager": "pnpm@10.32.1"

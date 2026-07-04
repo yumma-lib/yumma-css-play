@@ -144,7 +144,7 @@ const ShortcutsDialog = ({
               >
                 <Dialog.Close
                   render={
-                    <Button className="d-f p-a t-3 r-3 ai-c jc-c w-7 h-7 p-0 bc-border bg-transparent c-accent bw-1 tp-c tdu-150 ttf-io z-10 h:c-white fv:oo-2" />
+                    <Button className="d-f p-a t-3 r-3 ai-c jc-c w-7 h-7 p-0 bc-border bg-transparent c-accent bw-1 tp-c tdu-150 ttf-io zi-10 h:c-white fv:oo-2" />
                   }
                 >
                   <Xmark className="w-4 h-4" />

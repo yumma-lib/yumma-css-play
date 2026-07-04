@@ -87,7 +87,7 @@ export function GeneratedCSSPanel({
 
   return (
     <div className="d-f fd-c h-100%">
-      {/* Header — entire row is the toggle button */}
+      {/* Header: entire row is the toggle button */}
       <Button
         type="button"
         onClick={onToggle}
