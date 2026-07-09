@@ -31,8 +31,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(next@16.2.10(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.92.1))(react@19.2.7)
       '@yummacss/intellisense':
-        specifier: ^3.28.1
-        version: 3.28.1
+        specifier: ^3.28.2
+        version: 3.28.2
       emmet-monaco-es:
         specifier: ^5.7.0
         version: 5.7.0(monaco-editor@0.52.2)
@@ -89,8 +89,8 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
       yummacss:
-        specifier: ^3.28.1
-        version: 3.28.1
+        specifier: ^3.28.2
+        version: 3.28.2
 
 packages:
 
@@ -609,17 +609,17 @@ packages:
   '@yummacss/core@3.27.0':
     resolution: {integrity: sha512-HbMOJFvtZG1PLDpSLnvlV0jniWogU1tHVqT5kuLs/5Fuxss7TO3jwCqjVArjrNnmiiRP6jxoD0oFkKGJQnQAaQ==}
 
-  '@yummacss/core@3.28.1':
-    resolution: {integrity: sha512-pXNJCnaqYR8OlQ5OZigktU7ScKZYmKyNZ7LFega4zfEMGk9Ho2GgMWX2BxiJZo3PIHGx6YDmaFCbFd4FcXtXjg==}
+  '@yummacss/core@3.28.2':
+    resolution: {integrity: sha512-9pUEqhJiQxCMavdC6Q09Nf3gvVuJGdk0IZOy1GD0EuJxuVGf6u2WcIiHxZxoGTzZvhfo7UW/J5LThMljUZmqpA==}
 
-  '@yummacss/intellisense@3.28.1':
-    resolution: {integrity: sha512-aXEkZD5S4n8XWtUtWNdF6IApHQ5rnPeroLR+CTjgauGs91GO88HrhtcDPOdkPuAqOSrV3ZwwgR9zQ5Goq2XfYQ==}
+  '@yummacss/intellisense@3.28.2':
+    resolution: {integrity: sha512-/nECcCp6+M27e9UEXCdeO9oLujIrPtMwTf4r+mmV/vEVlDR9x+ysspfbNpRfTE3bpodExKFyobMv6VDkT+2uwg==}
 
   '@yummacss/nitro@3.27.0':
     resolution: {integrity: sha512-OEmIeALS2DMRgcpACUuHhP5AN12z6VvZU0fdwU2P6J6b2evsMfbwxt1M+aZqRQWyf5BwgGrpU4x/6AFOijQBgg==}
 
-  '@yummacss/nitro@3.28.1':
-    resolution: {integrity: sha512-e3JgYTkAQoeL1462K8SqCpB89Udt0ZQkLrBaM0f+P1vRpOMm0h+40ZcdBrmxRaH5QbElrEkR6k7Xfq3Wwe3RxA==}
+  '@yummacss/nitro@3.28.2':
+    resolution: {integrity: sha512-xUmIzGQOEoom1l5WLA+qQp2WaZ4kmrp48YqQBL8ZuHzPRG0zpC9X294q7ji9HA9LSOicYMba+ay9ot2xmGWN/g==}
 
   '@yummacss/postcss@3.27.0':
     resolution: {integrity: sha512-7HSPYFVG63lY1FBdqIjJSu97Amvs6FuUrSPTLfEW6VaResyPkYusoJ7+s7Yu5FN8FvnACG4vfDU+fkWvNYW1WQ==}
@@ -878,8 +878,8 @@ packages:
   vscode-languageserver-types@3.18.0:
     resolution: {integrity: sha512-8TsGPNMIMiiBdkORgRSvLjuiEIiAFtO+KssmYWxQ+uSVvlf7RjK8YKCOjPzZ+YA04jXEV7+7LvkSmHkhpNS99g==}
 
-  yummacss@3.28.1:
-    resolution: {integrity: sha512-0JhcD9jCE7BEcRCPIRI04KjE9FuYX2Dj0PIVQHyGaJAa6MW2tygSrXomgXp1aHesdiyQzHBuuQymgOGWQrzPZg==}
+  yummacss@3.28.2:
+    resolution: {integrity: sha512-1Il/BMpH0zveVSgYN4eXjL1H3mLZ338mX8A0tLd7ONXi3ictzQV7Mfze83bOKNpV5FxDuHrBXlHPA165yUxNTg==}
     hasBin: true
 
   zod@4.4.3:
@@ -1224,12 +1224,12 @@ snapshots:
 
   '@yummacss/core@3.27.0': {}
 
-  '@yummacss/core@3.28.1': {}
+  '@yummacss/core@3.28.2': {}
 
-  '@yummacss/intellisense@3.28.1':
+  '@yummacss/intellisense@3.28.2':
     dependencies:
-      '@yummacss/core': 3.28.1
-      '@yummacss/nitro': 3.28.1
+      '@yummacss/core': 3.28.2
+      '@yummacss/nitro': 3.28.2
       tinycolor2: 1.6.0
       vscode-languageserver-types: 3.18.0
 
@@ -1239,9 +1239,9 @@ snapshots:
       tinyglobby: 0.2.17
       zod: 4.4.3
 
-  '@yummacss/nitro@3.28.1':
+  '@yummacss/nitro@3.28.2':
     dependencies:
-      '@yummacss/core': 3.28.1
+      '@yummacss/core': 3.28.2
       tinyglobby: 0.2.17
       zod: 4.4.3
 
@@ -1478,8 +1478,8 @@ snapshots:
 
   vscode-languageserver-types@3.18.0: {}
 
-  yummacss@3.28.1:
+  yummacss@3.28.2:
     dependencies:
-      '@yummacss/nitro': 3.28.1
+      '@yummacss/nitro': 3.28.2
 
   zod@4.4.3: {}
