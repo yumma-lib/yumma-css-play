@@ -3,6 +3,10 @@ name: Update Yumma CSS
 on:
   repository_dispatch:
     types: [yummacss-released]
+  # Manually runnable so the workflow can be exercised without cutting a
+  # release. Being unable to test a release path except by releasing is how
+  # the dead `release` branch ref went unnoticed.
+  workflow_dispatch:
 
 permissions:
   contents: write
