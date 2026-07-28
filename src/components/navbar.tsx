@@ -106,7 +106,7 @@ const Navbar = ({
         <Button
           type="button"
           onClick={handleShare}
-          className="d-f ai-c g-2 px-3 py-1 bc-border bg-transparent c-accent bw-1 fs-sm tp-c tdu-150 ttf-io h:c-white"
+          className="d-f ai-c g-2 px-4 py-1 bc-border bg-transparent c-accent bw-1 fs-sm tp-c tdu-150 ttf-io h:c-white"
         >
           {renderShareIos()}
           <span>{getShareLabel()}</span>
