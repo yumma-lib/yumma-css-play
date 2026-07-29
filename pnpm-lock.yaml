@@ -77,11 +77,11 @@ importers:
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.17)
       '@yummacss/canon':
-        specifier: ^3.27.0
-        version: 3.27.0
+        specifier: ^3.29.1
+        version: 3.29.1
       '@yummacss/postcss':
-        specifier: ^3.27.0
-        version: 3.27.0(postcss@8.4.31)
+        specifier: ^3.29.1
+        version: 3.29.1(postcss@8.4.31)
       sort-package-json:
         specifier: ^4.0.0
         version: 4.0.0
@@ -596,12 +596,12 @@ packages:
       vue-router:
         optional: true
 
-  '@yummacss/canon@3.27.0':
-    resolution: {integrity: sha512-sXjtzeWkHjz3vpplzmt4D+ehR84nj2YskcJoXXoXZu+BPXev7Xxu6OLwzUhMOHcLQC9IXXgsXHyXc+wGQDP4Og==}
+  '@yummacss/canon@3.29.1':
+    resolution: {integrity: sha512-3W7SOw88TrQyK0R0l+5rB7jNQmH+hoqj5PLkI6XELGCCBVYHx+PHLk7SXXD1zGi7YsqiFy5SJBXEoq9OeJfd5Q==}
     hasBin: true
 
-  '@yummacss/core@3.27.0':
-    resolution: {integrity: sha512-HbMOJFvtZG1PLDpSLnvlV0jniWogU1tHVqT5kuLs/5Fuxss7TO3jwCqjVArjrNnmiiRP6jxoD0oFkKGJQnQAaQ==}
+  '@yummacss/core@3.29.1':
+    resolution: {integrity: sha512-TNRSMQvkyCy/VDVG3FZKkKlDjr1EEONX2qDHgrxTOtB5Bo9pinIF0q8h4Ku1Z9qbpl9I2nyDEH70dtRW2esr9w==}
 
   '@yummacss/core@3.29.1':
     resolution: {integrity: sha512-TNRSMQvkyCy/VDVG3FZKkKlDjr1EEONX2qDHgrxTOtB5Bo9pinIF0q8h4Ku1Z9qbpl9I2nyDEH70dtRW2esr9w==}
@@ -1207,12 +1207,12 @@ snapshots:
       next: 16.2.10(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(sass@1.92.1)
       react: 19.2.7
 
-  '@yummacss/canon@3.27.0':
+  '@yummacss/canon@3.29.1':
     dependencies:
-      '@yummacss/nitro': 3.27.0
+      '@yummacss/nitro': 3.29.1
       tinyglobby: 0.2.17
 
-  '@yummacss/core@3.27.0': {}
+  '@yummacss/core@3.29.1': {}
 
   '@yummacss/core@3.29.1': {}
 
@@ -1235,9 +1235,9 @@ snapshots:
       tinyglobby: 0.2.17
       zod: 4.4.3
 
-  '@yummacss/postcss@3.27.0(postcss@8.4.31)':
+  '@yummacss/postcss@3.29.1(postcss@8.4.31)':
     dependencies:
-      '@yummacss/nitro': 3.27.0
+      '@yummacss/nitro': 3.29.1
       postcss: 8.4.31
 
   baseline-browser-mapping@2.10.42: {}
