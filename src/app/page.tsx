@@ -5,10 +5,10 @@ import { NavArrowDown } from "iconoir-react";
 import type React from "react";
 import { useEffect, useRef, useState } from "react";
 import {
-  type ImperativePanelHandle,
+  Group,
   Panel,
-  PanelGroup,
-  PanelResizeHandle,
+  type PanelImperativeHandle,
+  Separator,
 } from "react-resizable-panels";
 import Navbar from "@/components/navbar";
 import GeneratedCSSPanel from "@/components/panels/css";
@@ -22,8 +22,8 @@ const Home: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [cssPanelOpen, setCssPanelOpen] = useState(false);
 
-  const editorPanelRef = useRef<ImperativePanelHandle>(null);
-  const cssPanelRef = useRef<ImperativePanelHandle>(null);
+  const editorPanelRef = useRef<PanelImperativeHandle>(null);
+  const cssPanelRef = useRef<PanelImperativeHandle>(null);
   // biome-ignore lint/suspicious/noExplicitAny: monaco-editor types not installed directly
   const editorRef = useRef<any>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -57,11 +57,21 @@ const Home: React.FC = () => {
 
   return (
     <div className="h-dvh">
-      <PanelGroup direction="horizontal" className="h-100%">
+      <Group orientation="horizontal" className="h-100%">
         {/* Left column */}
-        <Panel ref={editorPanelRef} maxSize={80} minSize={20} defaultSize={50}>
+        {/*
+         * collapsible is required for handleFullPreview: v4 ignores collapse()
+         * on a panel that cannot collapse, so without it the button no-ops.
+         */}
+        <Panel
+          panelRef={editorPanelRef}
+          collapsible
+          maxSize={80}
+          minSize={20}
+          defaultSize={50}
+        >
           {/*
-           * Navbar sits OUTSIDE the vertical PanelGroup so the CSS panel
+           * Navbar sits OUTSIDE the vertical Group so the CSS panel
            * can expand all the way up to the navbar's bottom edge.
            */}
           <div className="d-f fd-c h-100%">
@@ -74,7 +84,7 @@ const Home: React.FC = () => {
 
             {/* Vertical split: editor on top, CSS panel on bottom */}
             <div className="o-h f-1">
-              <PanelGroup direction="vertical" className="h-100%">
+              <Group orientation="vertical" className="h-100%">
                 {/* Editor */}
                 <Panel minSize={0} defaultSize={78}>
                   <MonacoEditor
@@ -87,16 +97,17 @@ const Home: React.FC = () => {
                 </Panel>
 
                 {/* Vertical resize handle */}
-                <PanelResizeHandle className="fs-0 h-px bg-border c-rr" />
+                <Separator className="fs-0 h-px bg-border c-rr" />
 
                 {/* CSS panel: collapsible, starts collapsed */}
                 <Panel
-                  ref={cssPanelRef}
+                  panelRef={cssPanelRef}
                   collapsible
                   minSize={10}
                   defaultSize={0}
-                  onCollapse={() => setCssPanelOpen(false)}
-                  onExpand={() => setCssPanelOpen(true)}
+                  // v4 dropped onCollapse/onExpand, so open state comes from
+                  // the size instead. collapsedSize defaults to 0%.
+                  onResize={(size) => setCssPanelOpen(size.asPercentage > 0)}
                   className="o-h"
                 >
                   <GeneratedCSSPanel
@@ -104,7 +115,7 @@ const Home: React.FC = () => {
                     onToggle={handleToggleCSSPanel}
                   />
                 </Panel>
-              </PanelGroup>
+              </Group>
             </div>
 
             {/* Collapsed bar: only rendered when panel is fully collapsed */}
@@ -124,13 +135,13 @@ const Home: React.FC = () => {
         </Panel>
 
         {/* Horizontal resize handle */}
-        <PanelResizeHandle className="w-px bg-border c-cr" />
+        <Separator className="w-px bg-border c-cr" />
 
         {/* Preview pane */}
         <Panel defaultSize={50} minSize={20} maxSize={80}>
           <Preview ref={iframeRef} code={code} />
         </Panel>
-      </PanelGroup>
+      </Group>
     </div>
   );
 };
