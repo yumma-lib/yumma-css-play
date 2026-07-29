@@ -34,14 +34,27 @@ const Home: React.FC = () => {
     setIsLoading(false);
   }, []);
 
-  const handleResetLayout = () => editorPanelRef.current?.resize(50);
+  // v4 never fires onResize - not for drags, keyboard resizes, or imperative
+  // collapse/expand - so the panel's own size is the only reliable signal for
+  // whether the collapsed bar should show.
+
+  // "50%" not 50: v4 reads bare numbers as pixels, strings as percentages.
+  const handleResetLayout = () => editorPanelRef.current?.resize("50%");
   const handleFullPreview = () => editorPanelRef.current?.collapse();
 
+  // isCollapsed() is the source of truth for direction: v4 never fires
+  // onResize, so cssPanelOpen alone would drift. The Group's onLayoutChange
+  // covers drag-driven collapses; this covers the button.
   const handleToggleCSSPanel = () => {
-    if (cssPanelOpen) {
-      cssPanelRef.current?.collapse();
+    const panel = cssPanelRef.current;
+    if (!panel) return;
+
+    if (panel.isCollapsed()) {
+      panel.expand();
+      setCssPanelOpen(true);
     } else {
-      cssPanelRef.current?.expand();
+      panel.collapse();
+      setCssPanelOpen(false);
     }
   };
 
@@ -66,9 +79,9 @@ const Home: React.FC = () => {
         <Panel
           panelRef={editorPanelRef}
           collapsible
-          maxSize={80}
-          minSize={20}
-          defaultSize={50}
+          maxSize="80%"
+          minSize="20%"
+          defaultSize="50%"
         >
           {/*
            * Navbar sits OUTSIDE the vertical Group so the CSS panel
@@ -84,9 +97,17 @@ const Home: React.FC = () => {
 
             {/* Vertical split: editor on top, CSS panel on bottom */}
             <div className="o-h f-1">
-              <Group orientation="vertical" className="h-100%">
+              <Group
+                orientation="vertical"
+                className="h-100%"
+                // Keeps the collapsed bar in sync when the panel is dragged
+                // shut, which the button handler cannot see.
+                onLayoutChange={(layout) =>
+                  setCssPanelOpen((layout.css ?? 0) > 0)
+                }
+              >
                 {/* Editor */}
-                <Panel minSize={0} defaultSize={78}>
+                <Panel minSize="0%" defaultSize="78%">
                   <MonacoEditor
                     code={code}
                     onChange={setCode}
@@ -97,17 +118,15 @@ const Home: React.FC = () => {
                 </Panel>
 
                 {/* Vertical resize handle */}
-                <Separator className="fs-0 h-px bg-border c-rr" />
+                <Separator className="h-px bg-border c-rr" />
 
                 {/* CSS panel: collapsible, starts collapsed */}
                 <Panel
+                  id="css"
                   panelRef={cssPanelRef}
                   collapsible
-                  minSize={10}
-                  defaultSize={0}
-                  // v4 dropped onCollapse/onExpand, so open state comes from
-                  // the size instead. collapsedSize defaults to 0%.
-                  onResize={(size) => setCssPanelOpen(size.asPercentage > 0)}
+                  minSize="10%"
+                  defaultSize="0%"
                   className="o-h"
                 >
                   <GeneratedCSSPanel
@@ -138,7 +157,7 @@ const Home: React.FC = () => {
         <Separator className="w-px bg-border c-cr" />
 
         {/* Preview pane */}
-        <Panel defaultSize={50} minSize={20} maxSize={80}>
+        <Panel defaultSize="50%" minSize="20%" maxSize="80%">
           <Preview ref={iframeRef} code={code} />
         </Panel>
       </Group>
