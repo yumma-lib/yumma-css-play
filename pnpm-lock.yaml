@@ -603,14 +603,20 @@ packages:
   '@yummacss/core@3.29.1':
     resolution: {integrity: sha512-TNRSMQvkyCy/VDVG3FZKkKlDjr1EEONX2qDHgrxTOtB5Bo9pinIF0q8h4Ku1Z9qbpl9I2nyDEH70dtRW2esr9w==}
 
+  '@yummacss/core@3.29.1':
+    resolution: {integrity: sha512-TNRSMQvkyCy/VDVG3FZKkKlDjr1EEONX2qDHgrxTOtB5Bo9pinIF0q8h4Ku1Z9qbpl9I2nyDEH70dtRW2esr9w==}
+
   '@yummacss/intellisense@3.29.1':
     resolution: {integrity: sha512-528JJgkGM2zKfVU1gjJmJCftuhl5DxMDUh9+wfGM6oiLbYct4Fg7b8/NqanfNYRb3iSw6u7jJKlW1pWlucawDw==}
+
+  '@yummacss/nitro@3.27.0':
+    resolution: {integrity: sha512-OEmIeALS2DMRgcpACUuHhP5AN12z6VvZU0fdwU2P6J6b2evsMfbwxt1M+aZqRQWyf5BwgGrpU4x/6AFOijQBgg==}
 
   '@yummacss/nitro@3.29.1':
     resolution: {integrity: sha512-jM0YktQKLeT1jFaZVFFxniGoNrQvYP0CNuLK940x16F7CcUoaOargcQ70e1sBiBn4GS6i5+kcO4aHe8IPWfmpw==}
 
-  '@yummacss/postcss@3.29.1':
-    resolution: {integrity: sha512-PJ3wcwa/eAlsxNEgMJMkEI0TqbaxOODTWs+U2dymGYCSeSKr0LWayl6dba+zEJdrqU7JTSivmQ+hMmOWYVJ22g==}
+  '@yummacss/postcss@3.27.0':
+    resolution: {integrity: sha512-7HSPYFVG63lY1FBdqIjJSu97Amvs6FuUrSPTLfEW6VaResyPkYusoJ7+s7Yu5FN8FvnACG4vfDU+fkWvNYW1WQ==}
     peerDependencies:
       postcss: ^8.0.0
 
@@ -1208,12 +1214,20 @@ snapshots:
 
   '@yummacss/core@3.29.1': {}
 
+  '@yummacss/core@3.29.1': {}
+
   '@yummacss/intellisense@3.29.1':
     dependencies:
       '@yummacss/core': 3.29.1
       '@yummacss/nitro': 3.29.1
       tinycolor2: 1.6.0
       vscode-languageserver-types: 3.18.0
+
+  '@yummacss/nitro@3.27.0':
+    dependencies:
+      '@yummacss/core': 3.27.0
+      tinyglobby: 0.2.17
+      zod: 4.4.3
 
   '@yummacss/nitro@3.29.1':
     dependencies:
