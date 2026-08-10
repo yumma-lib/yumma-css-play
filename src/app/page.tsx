@@ -15,7 +15,7 @@ import GeneratedCSSPanel from "@/components/panels/css";
 import MonacoEditor from "@/components/panels/editor";
 import Preview from "@/components/panels/preview";
 import { initialCode } from "@/constants/code";
-import { getCodeFromUrl } from "@/utils/share";
+import { getEmbedCodeFromUrl } from "@/utils/share";
 
 const Home: React.FC = () => {
   const [code, setCode] = useState<string>(initialCode);
@@ -28,8 +28,11 @@ const Home: React.FC = () => {
   const editorRef = useRef<any>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
+  // Accepts `#share/<compressed>` as before, plus the `?code=` form the
+  // /embed route hands over when someone opens an embed in the full
+  // playground.
   useEffect(() => {
-    const sharedCode = getCodeFromUrl();
+    const sharedCode = getEmbedCodeFromUrl();
     if (sharedCode) setCode(sharedCode);
     setIsLoading(false);
   }, []);
@@ -145,7 +148,7 @@ const Home: React.FC = () => {
                 className="d-f ai-c g-2 fs-0 px-3 w-100% h-8 bc-border bg-page btw-1 bw-0 c-p"
               >
                 <NavArrowDown className="c-muted" />
-                <span className="c-accent-dim ff-m tt-u ls-4 fw-500 fs-xss">
+                <span className="c-accent-dim ff-m tt-u ls-4 fw-500 fs-xs">
                   Generated CSS
                 </span>
               </Button>
