@@ -13,7 +13,7 @@
     "lint": "biome check --write .",
     "sort": "sort-package-json",
     "start": "next start",
-    "update-yummacss": "pnpm up yummacss @yummacss/core --latest",
+    "update-yummacss": "pnpm up yummacss \"@yummacss/*\" --latest",
     "validate": "yummacss-canon"
   },
   "dependencies": {

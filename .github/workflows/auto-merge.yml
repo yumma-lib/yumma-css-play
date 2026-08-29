@@ -1,0 +1,32 @@
+name: Dependabot Auto-Merge
+
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+
+    steps:
+      - name: Fetch metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v3
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+      # The yummacss packages only. Everything else waits for a human, which is
+      # the point of an allow list.
+      #
+      # A plain squash, not `--auto`: this repo has auto-merge switched off in
+      # settings, and `--auto` fails outright there rather than merging. That is
+      # what left the old dispatch workflow red on every run.
+      - name: Auto-merge
+        if: contains(steps.metadata.outputs.dependency-names, 'yummacss')
+        run: gh pr merge --squash --delete-branch "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
