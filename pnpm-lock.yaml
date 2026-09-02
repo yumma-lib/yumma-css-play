@@ -77,11 +77,11 @@ importers:
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.17)
       '@yummacss/canon':
-        specifier: ^3.29.1
-        version: 3.29.2
+        specifier: ^3.30.0
+        version: 3.30.0
       '@yummacss/postcss':
-        specifier: ^3.29.1
-        version: 3.29.2(postcss@8.4.31)
+        specifier: ^3.30.0
+        version: 3.30.0(postcss@8.4.31)
       sort-package-json:
         specifier: ^4.0.0
         version: 4.0.0
@@ -517,12 +517,9 @@ packages:
       vue-router:
         optional: true
 
-  '@yummacss/canon@3.29.2':
-    resolution: {integrity: sha512-+7FAJ8huIoH8p8ADwuPHWHIqbLQFzpgF4P7Zu3M39+PGT7yowYjFVmMzYC+Nv3pCoS0BYppJb740FzGY9Wmv4g==}
+  '@yummacss/canon@3.30.0':
+    resolution: {integrity: sha512-f02rxIt6n9JY/zK+ue4wwio8m5uE8faWEsaHUmwlEXDy24BTXYWMs8qBwOkbsl+RGWq/tc6kXgu+T8QgGlJdog==}
     hasBin: true
-
-  '@yummacss/core@3.29.2':
-    resolution: {integrity: sha512-KAXRGn1YtIxCl8OY2ai10dkSuozM4phLCtRoSXbNpdH7ekQGVvchgynJCWxK7YRtegKt0oclpa06PAIS+Mi6gw==}
 
   '@yummacss/core@3.30.0':
     resolution: {integrity: sha512-PSU2AetJ66TFm0Dn4qSX5+fGPTHetFlmeH+3tZfQb18grhukAvOIEfHwl73b06QSp/+Jg0SmKM37W44qhCogzQ==}
@@ -530,14 +527,11 @@ packages:
   '@yummacss/intellisense@3.30.0':
     resolution: {integrity: sha512-g4RSztLn9Xu68M7MX5A4FIAGHqPBeXqbflXd3GVM9pcA0Z7omMRiik8PsqmJbR4s5FAYjOLr89DGwlcRwAfDXA==}
 
-  '@yummacss/nitro@3.29.2':
-    resolution: {integrity: sha512-DszIX1COvg6QCR35VW7TEhrVY2zI3gx5p229EWQ3TSCFIfM08akhP3GNoBgbPtkiEaoIuBosaewhHduUpkHcyw==}
-
   '@yummacss/nitro@3.30.0':
     resolution: {integrity: sha512-Dh6gvIS39doZRDLmyc/MYMBHDIk2++MoFJrTY7PcaeYPQXLsR/0pAAK1DqkNyHjCtl3VcLP9N72OSkTss5cT2w==}
 
-  '@yummacss/postcss@3.29.2':
-    resolution: {integrity: sha512-4ez9gi1tD/8W/ochpDssCB0/RDd9WLgaekJLmV6DgEaCR1chSw18xBw0/cK5/RXWm4YnhoHCTdkiZS0jqRtPBA==}
+  '@yummacss/postcss@3.30.0':
+    resolution: {integrity: sha512-z5hCLJJQBpaw6o3ieqO8SihCm9/LsQr1Q72UDsKILsa4bzUYu2qSvxgvN1c8+FJWl2I3Qcaj4YAdfFcNiss/Sw==}
     peerDependencies:
       postcss: ^8.0.0
 
@@ -674,8 +668,8 @@ packages:
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
-  picomatch@4.0.5:
-    resolution: {integrity: sha512-RvwwcruNjI1ncT5xRakeyS9Lf8lcItv34KD+aif+VH9kduAyfYBipGh12274xtenIPZ119/R9BdTBa8gAwSh0A==}
+  picomatch@4.0.7:
+    resolution: {integrity: sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==}
     engines: {node: '>=12'}
 
   postcss@8.4.31:
@@ -774,9 +768,6 @@ packages:
   yummacss@3.30.0:
     resolution: {integrity: sha512-UtHcLytJeuUWrYxB7OxnG7s0HJeY53Bkk8j7bpYQoATs1nBnMGF6P9HWw6SIYVEKKCBW0/Ci9WgYX1JgiQfqqA==}
     hasBin: true
-
-  zod@4.4.3:
-    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
 
   zod@4.5.4:
     resolution: {integrity: sha512-sC95tT5iHHH9gtpj6A81kh+NEaRAUFN+qlUPDUbRfOMvNf5QCBqsb3WgvnpVtK5Y+4UfA6KqufotuTvMGiTlsA==}
@@ -1055,12 +1046,10 @@ snapshots:
       next: 16.2.12(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       react: 19.2.8
 
-  '@yummacss/canon@3.29.2':
+  '@yummacss/canon@3.30.0':
     dependencies:
-      '@yummacss/nitro': 3.29.2
+      '@yummacss/nitro': 3.30.0
       tinyglobby: 0.2.17
-
-  '@yummacss/core@3.29.2': {}
 
   '@yummacss/core@3.30.0': {}
 
@@ -1070,21 +1059,15 @@ snapshots:
       '@yummacss/nitro': 3.30.0
       tinycolor2: 1.6.0
 
-  '@yummacss/nitro@3.29.2':
-    dependencies:
-      '@yummacss/core': 3.29.2
-      tinyglobby: 0.2.17
-      zod: 4.4.3
-
   '@yummacss/nitro@3.30.0':
     dependencies:
       '@yummacss/core': 3.30.0
       tinyglobby: 0.2.17
       zod: 4.5.4
 
-  '@yummacss/postcss@3.29.2(postcss@8.4.31)':
+  '@yummacss/postcss@3.30.0(postcss@8.4.31)':
     dependencies:
-      '@yummacss/nitro': 3.29.2
+      '@yummacss/nitro': 3.30.0
       postcss: 8.4.31
 
   baseline-browser-mapping@2.11.7: {}
@@ -1116,9 +1099,9 @@ snapshots:
       '@emmetio/abbreviation': 2.3.3
       '@emmetio/css-abbreviation': 2.1.8
 
-  fdir@6.5.0(picomatch@4.0.5):
+  fdir@6.5.0(picomatch@4.0.7):
     optionalDependencies:
-      picomatch: 4.0.5
+      picomatch: 4.0.7
 
   framer-motion@12.43.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
     dependencies:
@@ -1188,7 +1171,7 @@ snapshots:
 
   picocolors@1.1.1: {}
 
-  picomatch@4.0.5: {}
+  picomatch@4.0.7: {}
 
   postcss@8.4.31:
     dependencies:
@@ -1275,8 +1258,8 @@ snapshots:
 
   tinyglobby@0.2.17:
     dependencies:
-      fdir: 6.5.0(picomatch@4.0.5)
-      picomatch: 4.0.5
+      fdir: 6.5.0(picomatch@4.0.7)
+      picomatch: 4.0.7
 
   tslib@2.8.1: {}
 
@@ -1294,7 +1277,5 @@ snapshots:
     dependencies:
       '@yummacss/core': 3.30.0
       '@yummacss/nitro': 3.30.0
-
-  zod@4.4.3: {}
 
   zod@4.5.4: {}

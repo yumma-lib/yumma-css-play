@@ -40,8 +40,8 @@
     "@types/node": "^26.1.0",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "@yummacss/canon": "^3.29.1",
-    "@yummacss/postcss": "^3.29.1",
+    "@yummacss/canon": "^3.30.0",
+    "@yummacss/postcss": "^3.30.0",
     "sort-package-json": "^4.0.0",
     "typescript": "^6.0.3",
     "yummacss": "^3.30.0"
